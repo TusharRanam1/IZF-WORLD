@@ -1,1 +1,441 @@
-{"sections":{"slideshow":{"type":"slideshow","blocks":{"image_wgTiYy":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner1.png","mobile_image":"shopify:\/\/shop_images\/1_7f0e50e5-98d7-46b0-9494-4920a3fa68c2.png","slide_link":"","subheading":"","title":"","title_size":60,"title_width":12,"heading_h1":false,"text":"","enlarge_text":true,"button_label":"","overlay_position":"position--hcenter position--vcenter","overlay_position_mobile":"position--hcenter-xs position--vcenter-xs"}},"1499426736627":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_2_c7a8be8e-bd49-4e1f-9e36-864eca694c06.png","mobile_image":"shopify:\/\/shop_images\/2_2a9eb019-9fce-4d99-9714-b3a9cb7ced6d.png","slide_link":"https:\/\/izfworld.com\/collections\/new-arrivals","subheading":"","title":"","title_size":60,"title_width":12,"heading_h1":false,"text":"","enlarge_text":false,"button_label":"","overlay_position":"position--hcenter position--bottom","overlay_position_mobile":"position--hcenter-xs position--vcenter-xs"}},"image_VnpKnr":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_3_2216f1e7-d545-4b81-953b-fa812cca9499.png","mobile_image":"shopify:\/\/shop_images\/3_ac50bc2c-da43-46be-a7ae-3758638f5d8a.png","slide_link":"","subheading":"","title":"","title_size":60,"title_width":12,"heading_h1":false,"text":"","enlarge_text":true,"button_label":"","overlay_position":"position--hcenter position--vcenter","overlay_position_mobile":"position--hcenter-xs position--vcenter-xs"}}},"block_order":["image_wgTiYy","1499426736627","image_VnpKnr"],"settings":{"height":"adapt","height_desktop":800,"height_mobile":400,"full_width":true,"mobile_overlay_under":false,"overlay_style_tint":true,"slide_transition":"zoom","slide_navigation":"dots","autoplay":true,"autoplay_speed":8}},"homepage_category_slider_q7arVt":{"type":"Homepage-category-slider","blocks":{"collection_kAUatT":{"type":"collection","settings":{"custom_label":"Mens","custom_link":"shopify:\/\/collections\/men","icon":"shopify:\/\/shop_images\/1_2.svg"}},"collection_NgKJPx":{"type":"collection","settings":{"custom_label":"Womens","custom_link":"shopify:\/\/collections\/women","icon":"shopify:\/\/shop_images\/3_1.svg"}},"collection_6Ewzg7":{"type":"collection","settings":{"custom_label":"Tribe","custom_link":"shopify:\/\/pages\/tribe","icon":"shopify:\/\/shop_images\/2_2.svg"}}},"block_order":["collection_kAUatT","collection_NgKJPx","collection_6Ewzg7"],"custom_css":[],"settings":{"heading":"Shop by Category","heading_alignment":"center","block_alignment":"center"}},"scrolling_banner_yRjeMi":{"type":"scrolling-banner","settings":{"text":"Be Future Ready Design Your Future","link":"","text_size":100,"line_height":2.5,"speed":10,"direction":"left","font":"heading","space_x":true,"stencil_all_text":false,"stencil_text":"Design Your Future","overlay_style_tint":false,"color_scheme":"custom","color_bg":"#f7f5ff","color_text":"#321c66"}},"0e323b9b-ca82-42d7-be1a-d8a8cc987681":{"type":"featured-collection","custom_css":[".image {border-radius: 1rem; overflow: hidden;}",".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"],"settings":{"title":"New In","collection":"new-arrivals","layout":"carousel","custom_sale_label":"SALE","show_vendor":false,"grid":4,"rows":3,"grid_mobile":"2","hide_swatches":false,"alternate_bg_color":true,"show_view_all":true}},"featured_collection_f4tenq":{"type":"featured-collection","custom_css":[".image {border-radius: 1rem; overflow: hidden;}",".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"],"settings":{"title":"Bestsellers","collection":"new-best-sellers","layout":"carousel","custom_sale_label":"BEST SELLER","show_vendor":false,"grid":3,"rows":1,"grid_mobile":"2","hide_swatches":false,"alternate_bg_color":false,"show_view_all":true}},"look_book_VTT4ja":{"type":"look-book","blocks":{"image_PMUQCx":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/i1zekkschfz9chunzpen.webp","mobile_image":"shopify:\/\/shop_images\/Z557G_1_2_1.webp","slide_link":"","subheading":"","title":"","title_size":60,"title_width":12,"heading_h1":false,"text":"","enlarge_text":true,"button_label":"","overlay_position":"position--left position--top","overlay_position_mobile":"position--hcenter-xs position--vcenter-xs","product_1":"a-line-printed-mesh-mini-skirt","vertical_position_1":36,"horizontal_position_1":68,"mb_vertical_position_1":23,"mb_horizontal_position_1":45,"product_2":"baggy-cargo-air-parachute-pants","vertical_position_2":60,"horizontal_position_2":28,"mb_vertical_position_2":62,"mb_horizontal_position_2":31,"product_3":"grey-blue-air-parachute-pants","vertical_position_3":65,"horizontal_position_3":85,"mb_vertical_position_3":54,"mb_horizontal_position_3":77}},"image_4jRN8U":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/IZF_Banner_3_11zon.webp","mobile_image":"shopify:\/\/shop_images\/air-parachute-pants-combo-black-blue-692712.webp","slide_link":"","subheading":"","title":"","title_size":60,"title_width":12,"heading_h1":false,"text":"","enlarge_text":true,"button_label":"","overlay_position":"position--left position--top","overlay_position_mobile":"position--hcenter-xs position--vcenter-xs","product_1":"","vertical_position_1":45,"horizontal_position_1":45,"mb_vertical_position_1":45,"mb_horizontal_position_1":45,"product_2":"living-loud-grey-oversize-t-shirt-for-women","vertical_position_2":39,"horizontal_position_2":33,"mb_vertical_position_2":30,"mb_horizontal_position_2":32,"product_3":"be-you-white-pink-color-block-cropped-fitted-baby-tee","vertical_position_3":51,"horizontal_position_3":80,"mb_vertical_position_3":60,"mb_horizontal_position_3":66}}},"block_order":["image_PMUQCx","image_4jRN8U"],"custom_css":["{padding: 50px 0 0px; background: #ebe8f9;}"],"settings":{"title":"The Co-Ord Club","height":"adapt","height_desktop":600,"height_mobile":500,"full_width":true,"mobile_overlay_under":false,"overlay_style_tint":true,"slide_transition":"slide","slide_navigation":"arrows","autoplay":false,"autoplay_speed":7}},"video_reels_dimT4K":{"type":"video-reels","blocks":{"video_LEfjnc":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Untitled (1).mp4","product":"baggy-jeans-white-crop-linen-shirts"}},"video_AG3MUr":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4","product":"baggy-jeans-corset-crop-top"}},"video_jPVtj6":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4","product":"black-blue-air-parachute-pants"}}},"block_order":["video_LEfjnc","video_AG3MUr","video_jPVtj6"],"custom_css":[".section-heading.centered {justify-content: left;}"],"settings":{"title":"Buy What You See","slide_full":4,"slide_992_1200":3.5,"slide_768_992":2.5}},"testimonials_cV4qFm":{"type":"testimonials","blocks":{"testimonial_4B4txA":{"type":"testimonial","settings":{"star_rating":5,"title":"Rima","text":"<p><strong>Pleated Relaxed pants<\/strong><\/p><p>Very comfortable & Great looking. Great quality!<\/p>","button_label":"","link":"","image1_caption":"","image2_caption":"","layout":"right"}},"testimonial_ELgi9N":{"type":"testimonial","settings":{"star_rating":4,"title":"Nayan","text":"<p><strong>Great style ,comfortable material <\/strong><\/p>","button_label":"","link":"","image1_caption":"","image2_caption":"","layout":"right"}},"testimonial_LDQJHh":{"type":"testimonial","disabled":true,"settings":{"star_rating":5,"title":"Smiriti Thakur","text":"<p>I love shopping from IZF! Their collection is beautiful and will definitely keep coming back. 💕<\/p>","button_label":"","link":"","image1_caption":"","image2_caption":"","layout":"left"}}},"block_order":["testimonial_4B4txA","testimonial_ELgi9N","testimonial_LDQJHh"],"custom_css":[".cc-testimonial__star svg {fill: #4f2aaa;}"," {border-top: 2px dashed #00008b21; border-bottom: 2px dashed #00008b21;}"],"settings":{"title":"Customer Feedback","button_style":"primary","alternate_bg_color":true}},"image-with-text":{"type":"image-with-text","custom_css":[".rimage-outer-wrapper {border-radius: 1rem; overflow: hidden;}","@media (max-width: 768px) {.rimage-outer-wrapper {margin: 30px 20px 0px; border-radius: 1rem; overflow: hidden; }}"],"settings":{"subheading":"","title":"I Z F \"Into Zhe Future\"","title_size":32,"title_width":12,"text":"<p>Creating Identities. Zero-Waste. Powered at India<\/p>","button_label":"Be a Founder!","button_link":"shopify:\/\/pages\/new-about-us","text_alignment":"left","text_width":50,"button_style":"secondary","image":"shopify:\/\/shop_images\/banner_1_4ef8eba9-55c8-4403-839d-9c0516f7ed45.webp","image_width":72,"image_position":"right","media_size":"cover","color_scheme":"standard","color_bg":"#ffffff","color_text":""}},"featured-blog":{"type":"featured-blog","custom_css":[".article-block__image {border-radius: 1rem;}"," {background: #ebe8f9;}"],"settings":{"title":"Blogs-Craft Your Fashion","blog":"news","post_limit":10,"show_view_all":true,"blog_show_author":false,"blog_show_date":false,"layout":"carousel","blog_first_post_big":true,"alternate_bg_color":false,"height":"fixed","height_desktop":700,"height_mobile":420,"full_width":true,"overlay_style_tint":true,"autoplay":true,"autoplay_speed":4,"slide_transition":"slide"}}},"order":["slideshow","homepage_category_slider_q7arVt","scrolling_banner_yRjeMi","0e323b9b-ca82-42d7-be1a-d8a8cc987681","featured_collection_f4tenq","look_book_VTT4ja","video_reels_dimT4K","testimonials_cV4qFm","image-with-text","featured-blog"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow": {
+      "type": "slideshow",
+      "blocks": {
+        "image_wgTiYy": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner1.png",
+            "mobile_image": "shopify://shop_images/1_7f0e50e5-98d7-46b0-9494-4920a3fa68c2.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 60,
+            "title_width": 12,
+            "heading_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label": "",
+            "overlay_position": "position--hcenter position--vcenter",
+            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs"
+          }
+        },
+        "1499426736627": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_2_c7a8be8e-bd49-4e1f-9e36-864eca694c06.png",
+            "mobile_image": "shopify://shop_images/2_2a9eb019-9fce-4d99-9714-b3a9cb7ced6d.png",
+            "slide_link": "https://izfworld.com/collections/new-arrivals",
+            "subheading": "",
+            "title": "",
+            "title_size": 60,
+            "title_width": 12,
+            "heading_h1": false,
+            "text": "",
+            "enlarge_text": false,
+            "button_label": "",
+            "overlay_position": "position--hcenter position--bottom",
+            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs"
+          }
+        },
+        "image_VnpKnr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_3_2216f1e7-d545-4b81-953b-fa812cca9499.png",
+            "mobile_image": "shopify://shop_images/3_ac50bc2c-da43-46be-a7ae-3758638f5d8a.png",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 60,
+            "title_width": 12,
+            "heading_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label": "",
+            "overlay_position": "position--hcenter position--vcenter",
+            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs"
+          }
+        }
+      },
+      "block_order": [
+        "image_wgTiYy",
+        "1499426736627",
+        "image_VnpKnr"
+      ],
+      "settings": {
+        "height": "adapt",
+        "height_desktop": 800,
+        "height_mobile": 400,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style_tint": true,
+        "slide_transition": "zoom",
+        "slide_navigation": "dots",
+        "autoplay": true,
+        "autoplay_speed": 8
+      }
+    },
+    "homepage_category_slider_q7arVt": {
+      "type": "Homepage-category-slider",
+      "blocks": {
+        "collection_kAUatT": {
+          "type": "collection",
+          "settings": {
+            "custom_label": "Mens",
+            "custom_link": "shopify://collections/men",
+            "icon": "shopify://shop_images/1_2.svg"
+          }
+        },
+        "collection_NgKJPx": {
+          "type": "collection",
+          "settings": {
+            "custom_label": "Womens",
+            "custom_link": "shopify://collections/women",
+            "icon": "shopify://shop_images/3_1.svg"
+          }
+        },
+        "collection_6Ewzg7": {
+          "type": "collection",
+          "settings": {
+            "custom_label": "Tribe",
+            "custom_link": "shopify://pages/tribe",
+            "icon": "shopify://shop_images/2_2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "collection_kAUatT",
+        "collection_NgKJPx",
+        "collection_6Ewzg7"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "Shop by Category",
+        "heading_alignment": "center",
+        "block_alignment": "center"
+      }
+    },
+    "scrolling_banner_yRjeMi": {
+      "type": "scrolling-banner",
+      "settings": {
+        "text": "Be Future Ready Design Your Future",
+        "link": "",
+        "text_size": 100,
+        "line_height": 2.5,
+        "speed": 10,
+        "direction": "left",
+        "font": "heading",
+        "space_x": true,
+        "stencil_all_text": false,
+        "stencil_text": "Design Your Future",
+        "overlay_style_tint": false,
+        "color_scheme": "custom",
+        "color_bg": "#f7f5ff",
+        "color_text": "#321c66"
+      }
+    },
+    "0e323b9b-ca82-42d7-be1a-d8a8cc987681": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".image {border-radius: 1rem; overflow: hidden;}",
+        ".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"
+      ],
+      "settings": {
+        "title": "New In",
+        "collection": "new-arrivals",
+        "layout": "carousel",
+        "custom_sale_label": "SALE",
+        "show_vendor": false,
+        "grid": 4,
+        "rows": 3,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": true,
+        "show_view_all": true
+      }
+    },
+    "featured_collection_f4tenq": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".image {border-radius: 1rem; overflow: hidden;}",
+        ".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"
+      ],
+      "settings": {
+        "title": "Bestsellers",
+        "collection": "new-best-sellers",
+        "layout": "carousel",
+        "custom_sale_label": "BEST SELLER",
+        "show_vendor": false,
+        "grid": 3,
+        "rows": 1,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": false,
+        "show_view_all": true
+      }
+    },
+    "look_book_VTT4ja": {
+      "type": "look-book",
+      "blocks": {
+        "image_PMUQCx": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/i1zekkschfz9chunzpen.webp",
+            "mobile_image": "shopify://shop_images/Z557G_1_2_1.webp",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 60,
+            "title_width": 12,
+            "heading_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label": "",
+            "overlay_position": "position--left position--top",
+            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs",
+            "product_1": "a-line-printed-mesh-mini-skirt",
+            "vertical_position_1": 36,
+            "horizontal_position_1": 68,
+            "mb_vertical_position_1": 23,
+            "mb_horizontal_position_1": 45,
+            "product_2": "baggy-cargo-air-parachute-pants",
+            "vertical_position_2": 60,
+            "horizontal_position_2": 28,
+            "mb_vertical_position_2": 62,
+            "mb_horizontal_position_2": 31,
+            "product_3": "grey-blue-air-parachute-pants",
+            "vertical_position_3": 65,
+            "horizontal_position_3": 85,
+            "mb_vertical_position_3": 54,
+            "mb_horizontal_position_3": 77
+          }
+        },
+        "image_4jRN8U": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IZF_Banner_3_11zon.webp",
+            "mobile_image": "shopify://shop_images/air-parachute-pants-combo-black-blue-692712.webp",
+            "slide_link": "",
+            "subheading": "",
+            "title": "",
+            "title_size": 60,
+            "title_width": 12,
+            "heading_h1": false,
+            "text": "",
+            "enlarge_text": true,
+            "button_label": "",
+            "overlay_position": "position--left position--top",
+            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs",
+            "product_1": "",
+            "vertical_position_1": 45,
+            "horizontal_position_1": 45,
+            "mb_vertical_position_1": 45,
+            "mb_horizontal_position_1": 45,
+            "product_2": "living-loud-grey-oversize-t-shirt-for-women",
+            "vertical_position_2": 39,
+            "horizontal_position_2": 33,
+            "mb_vertical_position_2": 30,
+            "mb_horizontal_position_2": 32,
+            "product_3": "be-you-white-pink-color-block-cropped-fitted-baby-tee",
+            "vertical_position_3": 51,
+            "horizontal_position_3": 80,
+            "mb_vertical_position_3": 60,
+            "mb_horizontal_position_3": 66
+          }
+        }
+      },
+      "block_order": [
+        "image_PMUQCx",
+        "image_4jRN8U"
+      ],
+      "custom_css": [
+        "{padding: 50px 0 0px; background: #ebe8f9;}"
+      ],
+      "settings": {
+        "title": "The Co-Ord Club",
+        "height": "adapt",
+        "height_desktop": 600,
+        "height_mobile": 500,
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style_tint": true,
+        "slide_transition": "slide",
+        "slide_navigation": "arrows",
+        "autoplay": false,
+        "autoplay_speed": 7
+      }
+    },
+    "video_reels_dimT4K": {
+      "type": "video-reels",
+      "blocks": {
+        "video_LEfjnc": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Untitled (1).mp4",
+            "product": "baggy-jeans-white-crop-linen-shirts"
+          }
+        },
+        "video_AG3MUr": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4",
+            "product": "baggy-jeans-corset-crop-top"
+          }
+        },
+        "video_jPVtj6": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4",
+            "product": "black-blue-air-parachute-pants"
+          }
+        }
+      },
+      "block_order": [
+        "video_LEfjnc",
+        "video_AG3MUr",
+        "video_jPVtj6"
+      ],
+      "custom_css": [
+        ".section-heading.centered {justify-content: left;}"
+      ],
+      "settings": {
+        "title": "Buy What You See",
+        "slide_full": 4,
+        "slide_992_1200": 3.5,
+        "slide_768_992": 2.5
+      }
+    },
+    "testimonials_cV4qFm": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_4B4txA": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "title": "Rima",
+            "text": "<p><strong>Pleated Relaxed pants</strong></p><p>Very comfortable & Great looking. Great quality!</p>",
+            "button_label": "",
+            "link": "",
+            "image1_caption": "",
+            "image2_caption": "",
+            "layout": "right"
+          }
+        },
+        "testimonial_ELgi9N": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "title": "Shivani Jai",
+            "text": "<p><strong>The pants are amazing perfect fit<br/></strong>It's not too lose or too tight so if you're looking for a perfect pair of bf jeans this is it</p>",
+            "button_label": "",
+            "link": "",
+            "image1_caption": "",
+            "image2_caption": "",
+            "layout": "right"
+          }
+        },
+        "testimonial_LDQJHh": {
+          "type": "testimonial",
+          "settings": {
+            "star_rating": 5,
+            "title": "Mohammed Mishal",
+            "text": "<p><strong>Quality is amazing 🤩<br/></strong>It feels so comfortable and is a different style... In short i love it ❤️</p>",
+            "button_label": "",
+            "link": "",
+            "image1_caption": "",
+            "image2_caption": "",
+            "layout": "left"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_4B4txA",
+        "testimonial_ELgi9N",
+        "testimonial_LDQJHh"
+      ],
+      "custom_css": [
+        ".cc-testimonial__star svg {fill: #4f2aaa;}",
+        " {border-top: 2px dashed #00008b21; border-bottom: 2px dashed #00008b21;}"
+      ],
+      "settings": {
+        "title": "Customer Feedback",
+        "button_style": "primary",
+        "alternate_bg_color": true
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".rimage-outer-wrapper {border-radius: 1rem; overflow: hidden;}",
+        "@media (max-width: 768px) {.rimage-outer-wrapper {margin: 30px 20px 0px; border-radius: 1rem; overflow: hidden; }}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "I Z F \"Into Zhe Future\"",
+        "title_size": 32,
+        "title_width": 12,
+        "text": "<p>Creating Identities. Zero-Waste. Powered at India</p>",
+        "button_label": "Be a Founder!",
+        "button_link": "shopify://pages/new-about-us",
+        "text_alignment": "left",
+        "text_width": 50,
+        "button_style": "secondary",
+        "image": "shopify://shop_images/banner_1_4ef8eba9-55c8-4403-839d-9c0516f7ed45.webp",
+        "image_width": 72,
+        "image_position": "right",
+        "media_size": "cover",
+        "color_scheme": "standard",
+        "color_bg": "#ffffff",
+        "color_text": ""
+      }
+    },
+    "featured-blog": {
+      "type": "featured-blog",
+      "custom_css": [
+        ".article-block__image {border-radius: 1rem;}",
+        " {background: #ebe8f9;}"
+      ],
+      "settings": {
+        "title": "Blogs-Craft Your Fashion",
+        "blog": "news",
+        "post_limit": 10,
+        "show_view_all": true,
+        "blog_show_author": false,
+        "blog_show_date": false,
+        "layout": "carousel",
+        "blog_first_post_big": true,
+        "alternate_bg_color": false,
+        "height": "fixed",
+        "height_desktop": 700,
+        "height_mobile": 420,
+        "full_width": true,
+        "overlay_style_tint": true,
+        "autoplay": true,
+        "autoplay_speed": 4,
+        "slide_transition": "slide"
+      }
+    }
+  },
+  "order": [
+    "slideshow",
+    "homepage_category_slider_q7arVt",
+    "scrolling_banner_yRjeMi",
+    "0e323b9b-ca82-42d7-be1a-d8a8cc987681",
+    "featured_collection_f4tenq",
+    "look_book_VTT4ja",
+    "video_reels_dimT4K",
+    "testimonials_cV4qFm",
+    "image-with-text",
+    "featured-blog"
+  ]
+}

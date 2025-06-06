@@ -14,7 +14,7 @@ Use:
         {% assign src = split_content | split: 'src="' %}
         {% assign src = src[1] | split: '"' | first | replace: '//cdn', 'http://cdn' | replace: 'http:http://', 'http://' %}
         {% if src %}
-            {% capture split_images %}{{ split_images }}<div class="split-image"><img src="{{ src }}" alt="{{ article.title }}" /></div>{% endcapture %}
+            {% capture split_images %}{{ split_images }}<div class="split-image"><img src="{{ src }}" alt="{{ article.title }}" loading="lazy" /></div>{% endcapture %}
         {% endif %}
     {% endif %}
     {% assign split_content = split_content | replace_first: '<img ', '<meta ' | replace_first: ' src="', ' srcX="' %}

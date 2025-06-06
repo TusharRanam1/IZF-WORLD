@@ -21,13 +21,14 @@
              height="{{ media.preview_image.height }}"
              width="{{ media.preview_image.width }}"
              alt="{{ media.preview_image.alt | escape }}"
+             loading="lazy"
              {% if animate %}
                 data-cc-animate="{{ animation_type }}"
                 data-cc-animate-delay="{{ animate }}s"
              {% endif %}
         >
         <noscript>
-          <img data-src="{{ media.preview_image | img_url: '1024x1024' }}" alt="{{ media.preview_image.alt | escape }}">
+          <img data-src="{{ media.preview_image | img_url: '1024x1024' }}" alt="{{ media.preview_image.alt | escape }}" loading="lazy">
         </noscript>
       </div>
 

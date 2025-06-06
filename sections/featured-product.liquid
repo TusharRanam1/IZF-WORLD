@@ -825,7 +825,7 @@
                         <div class="product-detail__trust-img" style="height: {{ block.settings.icon_size }}px;width: {{ block.settings.icon_size }}px;">
                           {% if block.settings.image1 %}
                             {%- assign image_width = block.settings.icon_size | times: 2 | append: "x" -%}
-                            <img class="cc-icon" src="{{ block.settings.image1 | img_url: image_width }}" alt="{{ block.settings.image1.alt }}" width="{{ block.settings.icon_size }}"/>
+                            <img class="cc-icon" src="{{ block.settings.image1 | img_url: image_width }}" alt="{{ block.settings.image1.alt }}" width="{{ block.settings.icon_size }}" loading="lazy"/>
                           {% else %}
                             {% render 'icon', icon: block.settings.icon1, width: block.settings.icon_size %}
                           {% endif %}
@@ -844,7 +844,7 @@
                         <div class="product-detail__trust-img" style="height: {{ block.settings.icon_size }}px;width: {{ block.settings.icon_size }}px;">
                           {% if block.settings.image2 %}
                             {%- assign image_width = block.settings.icon_size | times: 2 | append: "x" -%}
-                            <img class="cc-icon" src="{{ block.settings.image2 | img_url: image_width }}" alt="{{ block.settings.image2.alt }}" width="{{ block.settings.icon_size }}"/>
+                            <img class="cc-icon" src="{{ block.settings.image2 | img_url: image_width }}" alt="{{ block.settings.image2.alt }}" width="{{ block.settings.icon_size }}" loading="lazy"/>
                           {% else %}
                             {% render 'icon', icon: block.settings.icon2, width: block.settings.icon_size %}
                           {% endif %}
@@ -863,7 +863,7 @@
                         <div class="product-detail__trust-img" style="height: {{ block.settings.icon_size }}px;width: {{ block.settings.icon_size }}px;">
                           {% if block.settings.image3 %}
                             {%- assign image_width = block.settings.icon_size | times: 2 | append: "x" -%}
-                            <img class="cc-icon" src="{{ block.settings.image3 | img_url: image_width }}" alt="{{ block.settings.image3.alt }}" width="{{ block.settings.icon_size }}"/>
+                            <img class="cc-icon" src="{{ block.settings.image3 | img_url: image_width }}" alt="{{ block.settings.image3.alt }}" width="{{ block.settings.icon_size }}" loading="lazy"/>
                           {% else %}
                             {% render 'icon', icon: block.settings.icon3, width: block.settings.icon_size %}
                           {% endif %}
@@ -882,7 +882,7 @@
                         <div class="product-detail__trust-img" style="height: {{ block.settings.icon_size }}px;width: {{ block.settings.icon_size }}px;">
                           {% if block.settings.image4 %}
                             {%- assign image_width = block.settings.icon_size | times: 2 | append: "x" -%}
-                            <img class="cc-icon" src="{{ block.settings.image4 | img_url: image_width }}" alt="{{ block.settings.image4.alt }}" width="{{ block.settings.icon_size }}"/>
+                            <img class="cc-icon" src="{{ block.settings.image4 | img_url: image_width }}" alt="{{ block.settings.image4.alt }}" width="{{ block.settings.icon_size }}" loading="lazy"/>
                           {% else %}
                             {% render 'icon', icon: block.settings.icon4, width: block.settings.icon_size %}
                           {% endif %}

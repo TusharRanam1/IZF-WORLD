@@ -1,0 +1,65 @@
+<!-- sections/wavy-divider.liquid -->
+<div class="wavy-divider-section"></div>
+
+<style>
+  .wavy-divider-section {
+    position: relative;
+    width: 100%;
+    height: {{ section.settings.height }}px;
+    background: linear-gradient(to bottom, {{ section.settings.color_top }}, {{ section.settings.color_bottom }});
+    overflow: hidden;
+  }
+
+  .wavy-divider-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 100' xmlns='http://www.w3.org/2000/svg'><path fill='{{ section.settings.wave_color | url_encode }}' d='M0,0 C360,100 1080,0 1440,100 L1440,0 L0,0 Z'></path></svg>") no-repeat bottom;
+    background-size: cover;
+    z-index: 2;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Wavy Divider",
+  "settings": [
+    {
+      "type": "range",
+      "id": "height",
+      "label": "Section Height (px)",
+      "min": 80,
+      "max": 400,
+      "step": 10,
+      "default": 200
+    },
+    {
+      "type": "color",
+      "id": "color_top",
+      "label": "Top Gradient Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "color_bottom",
+      "label": "Bottom Gradient Color",
+      "default": "#f4e9ff"
+    },
+    {
+      "type": "color",
+      "id": "wave_color",
+      "label": "Wave Color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Wavy Divider",
+      "category": "Layout"
+    }
+  ]
+}
+{% endschema %}

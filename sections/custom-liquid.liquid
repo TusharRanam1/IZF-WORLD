@@ -1,0 +1,153 @@
+<div class="{% unless section.settings.no_margins %}section-spacing container{% endunless %}" data-cc-animate>
+  {% assign now_ts = 'now' | date: "%s" %}
+  {% assign seconds_in_day = 86400 %}
+  {% assign seconds_in_hour = 3600 %}
+
+  {%- comment -%} Countdown target = tomorrow at 9:00 AM {%- endcomment -%}
+  {% assign midnight_tomorrow = now_ts | divided_by: seconds_in_day | floor | plus: 1 | times: seconds_in_day %}
+  {% assign countdown_target = midnight_tomorrow | plus: 32400 %}
+
+  {%- comment -%} Dispatch = Today + 1 day; Delivery = Today + 5 to 9 days {%- endcomment -%}
+  {% assign one_day = 1 | times: seconds_in_day %}
+  {% assign five_days = 5 | times: seconds_in_day %}
+  {% assign nine_days = 9 | times: seconds_in_day %}
+
+  {% assign today_date = now_ts | date: "%b %d" %}
+  {% assign dispatch_ts = now_ts | plus: one_day %}
+  {% assign dispatch_date = dispatch_ts | date: "%b %d" %}
+  {% assign delivery_start_ts = now_ts | plus: five_days %}
+  {% assign delivery_start_date = delivery_start_ts | date: "%b %d" %}
+  {% assign delivery_end_ts = now_ts | plus: nine_days %}
+  {% assign delivery_end_date = delivery_end_ts | date: "%b %d" %}
+
+  <!-- Timeline -->
+  <div class="order-timeline-wrapper">
+    <div class="timeline-step">
+      <div class="timeline-icon"><span class="icon">🛒</span></div>
+      <p><strong>Order Today</strong><br>{{ today_date }}</p>
+    </div>
+
+    <div class="timeline-line"></div>
+
+    <div class="timeline-step">
+      <div class="timeline-icon"><span class="icon">🚚</span></div>
+      <p><strong>Dispatched By</strong><br>{{ dispatch_date }}</p>
+    </div>
+
+    <div class="timeline-line"></div>
+
+    <div class="timeline-step">
+      <div class="timeline-icon"><span class="icon">📦</span></div>
+      <p><strong>Delivered By</strong><br>{{ delivery_start_date }} - {{ delivery_end_date }}</p>
+    </div>
+  </div>
+
+  <!-- Countdown -->
+  <p id="countdown" class="countdown-message"
+     data-target="{{ countdown_target }}"
+     data-start="{{ delivery_start_date }}"
+     data-end="{{ delivery_end_date }}">
+     Loading countdown...
+  </p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const el = document.getElementById('countdown');
+    const target = parseInt(el.dataset.target, 10) * 1000;
+    const deliveryStart = el.dataset.start;
+    const deliveryEnd = el.dataset.end;
+
+    function update() {
+      const now = new Date().getTime();
+      let left = Math.max(target - now, 0);
+
+      const hrs = Math.floor(left / 3600000);
+      const mins = Math.floor((left % 3600000) / 60000);
+      const secs = Math.floor((left % 60000) / 1000);
+
+      el.innerHTML = `<strong>Order in ${hrs}h ${mins}m ${secs}s</strong> to get it by ${deliveryStart}–${deliveryEnd}`;
+      if (left <= 0) clearInterval(timer);
+    }
+
+    update();
+    const timer = setInterval(update, 1000);
+  });
+</script>
+
+
+<style>
+.order-timeline-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 120px;
+}
+
+.timeline-icon {
+  background-color: #000;
+  color: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-icon:hover {
+  transform: scale(1.1);
+}
+
+.timeline-line {
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+}
+
+.countdown-message {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+</style>
+
+
+{% schema %}
+  {
+    "name": "Custom Liquid/HTML",
+    "class": "section--custom-html",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "no_margins",
+        "label": "No section spacing",
+        "default": false
+      },
+      {
+        "type": "liquid",
+        "id": "custom_liquid",
+        "label": "Custom Liquid/HTML"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom Liquid/HTML"
+      }
+    ]
+  }
+{% endschema %}

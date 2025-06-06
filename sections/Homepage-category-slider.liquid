@@ -1,0 +1,273 @@
+{% if section.blocks.size > 0 %}
+<div class="collection-slider-wrapper">
+  <h2 class="slider-heading {{ section.settings.heading_alignment }}">{{ section.settings.heading }}</h2>
+  <div class="collection-slider">
+    {% for block in section.blocks %}
+      {% assign link_url = block.settings.custom_link %}
+      {% assign label = block.settings.custom_label %}
+      <div class="collection-slide {{ section.settings.block_alignment }}">
+        <a href="{{ link_url }}">
+          <div class="icon-circle">
+            {% if block.settings.icon %}
+              <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="{{ label }}">
+            {% endif %}
+          </div>
+          <p class="slide-label">
+            {{ label }} 
+      <!-- <span class="arrow-icon">➜</span> -->
+          </p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+  {% endif %}
+
+<style>
+.collection-slider-wrapper {
+  padding: 60px 40px;
+  overflow-x: hidden; /* avoid full wrapper shifting on scroll */
+}
+ 
+.slider-heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.slider-heading.left { text-align: left; }
+.slider-heading.center { text-align: center; }
+ 
+.collection-slider {
+  display: flex;
+  flex-wrap: nowrap;
+
+  gap: 50px;
+  overflow-x: auto;
+  white-space: normal;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.collection-slide {
+  flex: 0 0 auto;
+  min-width: 140px; /* <--- use min-width for stable scrolling */
+  scroll-snap-align: start;
+  text-align: center;
+}
+ 
+.collection-slide.left { text-align: left; }
+ 
+.icon-circle {
+  background: linear-gradient(to bottom, #e9f2f9, #d4e9f7);
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+ 
+.collection-slide.left .icon-circle {
+  margin-left: 0;
+}
+ 
+.icon-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+ 
+.collection-slide:hover .icon-circle img {
+  transform: scale(1.1);
+}
+ 
+.slide-label {
+  font-size: 1rem;
+  color: #2e3a59;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  display: block;               /* <-- block instead of inline-block */
+  width: 100%;                   /* full width */
+  max-width: 140px;               /* match the slide width */
+  word-break: break-word;         /* break long words */
+  overflow-wrap: break-word;
+  text-align: center;             /* center the text */
+}
+
+ 
+.collection-slide:hover .slide-label {
+  color: #4f2aaa;
+}
+ 
+.arrow-icon {
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.3s ease;
+  margin-left: 4px;
+}
+ 
+.collection-slide:hover .arrow-icon {
+  opacity: 1;
+  transform: translateX(0);
+}
+ 
+/* Tablet */
+@media (max-width: 767px) {
+  .collection-slider-wrapper {
+    padding: 50px 20px;
+  }
+  .collection-slider {
+    
+    gap: 24px;
+  }
+  .collection-slide {
+    min-width: 100px;
+  }
+ 
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+  }
+ 
+  .slide-label {
+    font-size: 0.85rem;
+  }
+}
+ 
+/* Mobile */
+/* Mobile */
+@media (max-width: 426px) {
+  .collection-slider-wrapper {
+    padding: 30px 16px; /* slightly less padding */
+  }
+
+  .collection-slider {
+    
+    gap: 24px; /* more gap between icons */
+  }
+
+  .collection-slide {
+    min-width: 100px; /* slightly larger */
+  }
+
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .slide-label {
+    font-size: 0.75rem;
+    max-width: 100px; /* match slide */
+  }
+}
+
+ 
+/* Optional: Hide scrollbars for Webkit (Chrome/Safari) */
+.collection-slider::-webkit-scrollbar {
+  display: none;
+}
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Homepage-category-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Slider Heading",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "block_alignment",
+      "label": "Block Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "custom_label",
+          "label": "Custom Label"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Homepage-category-slider",
+      "category": "Custom",
+      "settings": {
+        "heading_alignment": "left",
+        "block_alignment": "left"
+      },
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const slider = document.querySelector('.collection-slider');
+
+  function adjustSliderAlignment() {
+    if (slider.scrollWidth > slider.clientWidth) {
+      slider.style.justifyContent = 'flex-start'; // More content, allow scroll from left
+    } else {
+      slider.style.justifyContent = 'center'; // All items visible, center them
+    }
+  }
+
+  // Run on page load
+  adjustSliderAlignment();
+
+  // Optional: run again if window resizes
+  window.addEventListener('resize', adjustSliderAlignment);
+});
+</script>

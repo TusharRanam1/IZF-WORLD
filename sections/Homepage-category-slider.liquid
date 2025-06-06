@@ -9,7 +9,7 @@
         <a href="{{ link_url }}">
           <div class="icon-circle">
             {% if block.settings.icon %}
-              <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="{{ label }}">
+              <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="{{ label }}" loading="lazy">
             {% endif %}
           </div>
           <p class="slide-label">

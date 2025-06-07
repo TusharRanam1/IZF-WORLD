@@ -138,7 +138,7 @@
           "type": "accordion",
           "settings": {
             "icon": "box",
-            "title": "Shippings & Returns",
+            "title": "Shipping",
             "content": "<p>Add the content to appear when the content is expanded</p>",
             "page": "shipping-and-delivery-policy",
             "open": false

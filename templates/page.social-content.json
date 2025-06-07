@@ -152,7 +152,7 @@
       "name": "Gallery",
       "settings": {
         "title": "",
-        "grid": 1,
+        "grid": 3,
         "desktop_image_height": 500,
         "mobile_image_height": 400,
         "title_size": 44,

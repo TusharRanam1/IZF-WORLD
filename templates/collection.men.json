@@ -1,1 +1,188 @@
-{"sections":{"image_with_text_overlay_zjPLGj":{"type":"image-with-text-overlay","settings":{"image":"{{ collection.image }}","height":"fixed","height_desktop":450,"height_mobile":300,"subheading":"","title":"{{ collection.title }}","title_size":60,"title_width":12,"heading_h1":false,"text":"","enlarge_text":true,"button_label":"","image_link":"","overlay_position":"position--hcenter position--vcenter","full_width":true,"mobile_overlay_under":false,"overlay_style_tint":true}},"homepage_category_slider_a7ExCL":{"type":"Homepage-category-slider","blocks":{"collection_4ebD6U":{"type":"collection","repeater":"{{ collection.metafields.custom.subcategory_meta.value }}","settings":{"custom_label":"{{ block.repeater.subcategory_title.value }}","custom_link":"{{ block.repeater.subcategory_url.value }}","icon":"{{ block.repeater.subcategory_image.value }}"}}},"block_order":["collection_4ebD6U"],"settings":{"heading":"Shop by Product","heading_alignment":"center","block_alignment":"center"}},"main":{"type":"main-collection","disabled":true,"custom_css":[".image {border-radius: 1rem; overflow: hidden;}"],"settings":{"show_collection_content":false,"show_collection_image":false,"description_position":"top","layout":"rows","grid":3,"grid_mobile":"2","products_per_page":48,"enable_infinite_scroll":true,"show_vendor":false,"show_filter_counts":true,"show_filter_deadends":false,"ajax_products":true,"filter_mode":"sidebar","sticky_sidebar":false,"collapse_filters_method":"over-12","collapse_sort_by":false,"enable_sorting":true,"show_featured_in_sort":false}},"featured_collection_F3R68K":{"type":"featured-collection","custom_css":[".image {border-radius: 1rem; overflow: hidden;}",".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"],"settings":{"title":"New Arrivals","collection":"{{ collection.metafields.custom.new_arrivals.value }}","layout":"carousel","custom_sale_label":"SALE","show_vendor":false,"grid":4,"rows":2,"grid_mobile":"2","hide_swatches":false,"alternate_bg_color":true,"show_view_all":true}},"featured_collection_EWgbmU":{"type":"featured-collection","custom_css":[".image {border-radius: 1rem; overflow: hidden;}",".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"," {border-top: 2px dashed #00008b31;}"],"settings":{"title":"Best Seller","collection":"{{ collection.metafields.custom.best_seller.value }}","layout":"carousel","custom_sale_label":"SALE","show_vendor":false,"grid":4,"rows":2,"grid_mobile":"2","hide_swatches":false,"alternate_bg_color":true,"show_view_all":true}},"video_reels_VYDfe3":{"type":"video-reels","blocks":{"video_6pGDax":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4","product":"be-you-white-pink-color-block-cropped-fitted-baby-tee"}},"video_aTd6QG":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4","product":"living-loud-blue-oversize-t-shirt-for-mens"}},"video_hCxBCj":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Untitled (1).mp4","product":"no-16-oversize-varsity-red-t-shirt"}}},"block_order":["video_6pGDax","video_aTd6QG","video_hCxBCj"],"settings":{"title":"Shoppable Videos","slide_full":4,"slide_992_1200":3.5,"slide_768_992":2.5}}},"order":["image_with_text_overlay_zjPLGj","homepage_category_slider_a7ExCL","main","featured_collection_F3R68K","featured_collection_EWgbmU","video_reels_VYDfe3"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_with_text_overlay_zjPLGj": {
+      "type": "image-with-text-overlay",
+      "settings": {
+        "image": "{{ collection.image }}",
+        "height": "fixed",
+        "height_desktop": 450,
+        "height_mobile": 300,
+        "subheading": "",
+        "title": "{{ collection.title }}",
+        "title_size": 60,
+        "title_width": 12,
+        "heading_h1": false,
+        "text": "",
+        "enlarge_text": true,
+        "button_label": "",
+        "image_link": "",
+        "overlay_position": "position--hcenter position--vcenter",
+        "full_width": true,
+        "mobile_overlay_under": false,
+        "overlay_style_tint": true
+      }
+    },
+    "homepage_category_slider_a7ExCL": {
+      "type": "Homepage-category-slider",
+      "blocks": {
+        "collection_4ebD6U": {
+          "type": "collection",
+          "repeater": "{{ collection.metafields.custom.subcategory_meta.value }}",
+          "settings": {
+            "custom_label": "{{ block.repeater.subcategory_title.value }}",
+            "custom_link": "{{ block.repeater.subcategory_url.value }}",
+            "icon": "{{ block.repeater.subcategory_image.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "collection_4ebD6U"
+      ],
+      "settings": {
+        "heading": "Shop by Product",
+        "heading_alignment": "center",
+        "block_alignment": "center"
+      }
+    },
+    "main": {
+      "type": "main-collection",
+      "disabled": true,
+      "custom_css": [
+        ".image {border-radius: 1rem; overflow: hidden;}"
+      ],
+      "settings": {
+        "show_collection_content": false,
+        "show_collection_image": false,
+        "description_position": "top",
+        "layout": "rows",
+        "grid": 3,
+        "grid_mobile": "2",
+        "products_per_page": 48,
+        "enable_infinite_scroll": true,
+        "show_vendor": false,
+        "show_filter_counts": true,
+        "show_filter_deadends": false,
+        "ajax_products": true,
+        "filter_mode": "sidebar",
+        "sticky_sidebar": false,
+        "collapse_filters_method": "over-12",
+        "collapse_sort_by": false,
+        "enable_sorting": true,
+        "show_featured_in_sort": false
+      }
+    },
+    "featured_collection_F3R68K": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".image {border-radius: 1rem; overflow: hidden;}",
+        ".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"
+      ],
+      "settings": {
+        "title": "New Arrivals",
+        "collection": "{{ collection.metafields.custom.new_arrivals.value }}",
+        "layout": "carousel",
+        "custom_sale_label": "SALE",
+        "show_vendor": false,
+        "grid": 4,
+        "rows": 2,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": true,
+        "show_view_all": true
+      }
+    },
+    "featured_collection_EWgbmU": {
+      "type": "featured-collection",
+      "custom_css": [
+        ".image {border-radius: 1rem; overflow: hidden;}",
+        ".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}",
+        " {border-top: 2px dashed #00008b31;}"
+      ],
+      "settings": {
+        "title": "Best Seller",
+        "collection": "{{ collection.metafields.custom.best_seller.value }}",
+        "layout": "carousel",
+        "custom_sale_label": "SALE",
+        "show_vendor": false,
+        "grid": 4,
+        "rows": 2,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": true,
+        "show_view_all": true
+      }
+    },
+    "featured_collection_DLDwqJ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Combos",
+        "collection": "",
+        "layout": "carousel",
+        "custom_sale_label": "SALE",
+        "show_vendor": false,
+        "grid": 3,
+        "rows": 2,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": false,
+        "show_view_all": true
+      }
+    },
+    "video_reels_VYDfe3": {
+      "type": "video-reels",
+      "blocks": {
+        "video_6pGDax": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4",
+            "product": "be-you-white-pink-color-block-cropped-fitted-baby-tee"
+          }
+        },
+        "video_aTd6QG": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4",
+            "product": "living-loud-blue-oversize-t-shirt-for-mens"
+          }
+        },
+        "video_hCxBCj": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Untitled (1).mp4",
+            "product": "no-16-oversize-varsity-red-t-shirt"
+          }
+        }
+      },
+      "block_order": [
+        "video_6pGDax",
+        "video_aTd6QG",
+        "video_hCxBCj"
+      ],
+      "settings": {
+        "title": "Shoppable Videos",
+        "slide_full": 4,
+        "slide_992_1200": 3.5,
+        "slide_768_992": 2.5
+      }
+    }
+  },
+  "order": [
+    "image_with_text_overlay_zjPLGj",
+    "homepage_category_slider_a7ExCL",
+    "main",
+    "featured_collection_F3R68K",
+    "featured_collection_EWgbmU",
+    "featured_collection_DLDwqJ",
+    "video_reels_VYDfe3"
+  ]
+}

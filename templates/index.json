@@ -190,7 +190,7 @@
         "image_PMUQCx": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Co-Ord_Club.png",
+            "image": "shopify://shop_images/i1zekkschfz9chunzpen.webp",
             "mobile_image": "shopify://shop_images/Z557G_1_2_1.webp",
             "slide_link": "",
             "subheading": "",
@@ -368,7 +368,7 @@
         " {border-top: 2px dashed #00008b21; border-bottom: 2px dashed #00008b21;}"
       ],
       "settings": {
-        "title": "Customer Feedback",
+        "title": "Consumer  Opinion",
         "button_style": "primary",
         "alternate_bg_color": true
       }

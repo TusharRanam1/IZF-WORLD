@@ -1,1 +1,258 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"rich_text_mLLNz4":{"type":"rich-text","custom_css":[".section-spacing {padding-top: 50px; padding-bottom: 0;}"],"name":"Rich text","settings":{"subheading":"","title":"STYLE FOR YOU","title_size":48,"title_width":12,"heading_h1":false,"text":"","image_width":120,"button_label":"","button_link":"","button_style":"auto","text_alignment":"center","enlarge_text":false,"full_width":false,"no_padding_bottom":false,"color_scheme":"standard","color_bg":"#ffffff","color_text":"#4f2aaa"}},"video_reels_LDirJV":{"type":"video-reels","blocks":{"video_qc3VRe":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4","product":"be-you-white-pink-color-block-cropped-fitted-baby-tee"}},"video_HdKjMX":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Parapants_reel spot (2).MP4","product":"never-ending-madness-blue-oversize-t-shirt-for-men"}},"video_VqM98P":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Untitled (1).mp4","product":"no-16-oversize-varsity-red-t-shirt"}},"video_YMNUtH":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4","product":"living-loud-blue-oversize-t-shirt-for-men"}}},"block_order":["video_qc3VRe","video_HdKjMX","video_VqM98P","video_YMNUtH"],"custom_css":["#tranding {padding: 1rem 0 2rem 0;}"],"name":"Shoppable Video","settings":{"title":"Shoppable Videos","slide_full":4,"slide_992_1200":3.5,"slide_768_992":2.5}},"gallery_tY8gDf":{"type":"gallery","blocks":{"image_QB7MP9":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/IZFMarch242348lr_bc98e25a-5fcd-4027-babe-c3aba2e2f7ae.jpg","video_external":"","enlarge_image":false,"subheading":"","title":"Our Youtube Channel","title_width":18,"heading_h1":false,"button_label":"Watch Now","link":"https:\/\/www.youtube.com\/@izfworldclothing","text_alignment":"position--left position--bottom"}},"image_hbeVnW":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/krispcrisp_Focused_college_student_dressed_in_a_chic_yet_comf_3779daa3-92e0-46cb-9a31-f74de6e96fb4_2.png","video_external":"","enlarge_image":false,"subheading":"","title":"Our Blog Posts","title_width":6,"heading_h1":false,"button_label":"Watch Now","link":"#","text_alignment":"position--left position--bottom"}},"image_4ciFVC":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Instagram_Black_friday_Sale_Post.png","video_external":"","enlarge_image":false,"subheading":"","title":"Our Instafeed","title_width":12,"heading_h1":false,"button_label":"Visit Now","link":"https:\/\/www.instagram.com\/izfworld\/","text_alignment":"position--left position--bottom"}}},"block_order":["image_QB7MP9","image_hbeVnW","image_4ciFVC"],"custom_css":[".gallery--with-vertical-outer-padding {padding-top: 0; padding-left: 0; padding-right: 0;}",".gallery__item {overflow: hidden; border-radius: 1.5rem; box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3); margin: 1rem;}","@media and (max-width: 767px) {.gallery__item {overflow: hidden; border-radius: 1.5rem; }}"],"name":"Gallery","settings":{"title":"","grid":3,"desktop_image_height":500,"mobile_image_height":400,"title_size":44,"enable_margin":true,"full_width":true,"enable_carousel":true,"overlay_style_tint":true,"alternate_bg_color":false}},"gallery_DcqmDp":{"type":"gallery","blocks":{"image_GaEYCp":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Instagram_Black_friday_Sale_Post.png","video_external":"","enlarge_image":false,"subheading":"","title":"Our Instafeeds","title_width":6,"heading_h1":false,"button_label":"Visit Now","link":"https:\/\/www.instagram.com\/izfworld\/","text_alignment":"position--left position--bottom"}}},"block_order":["image_GaEYCp"],"disabled":true,"custom_css":["@media screen and (min-width: 850px) {{width: 50%; float: left; } .section-spacing {padding-top: 0; padding-bottom: 0; padding-right: 10px; }}","@media (max-width: 767px) {.wide-container {padding: 0 !important; }}"],"name":"Gallery","settings":{"title":"","grid":1,"desktop_image_height":500,"mobile_image_height":400,"title_size":48,"enable_margin":true,"full_width":false,"enable_carousel":false,"overlay_style_tint":true,"alternate_bg_color":false}},"video_reels_RCQFYT":{"type":"video-reels","blocks":{"video_qWaBzK":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4","product":"be-you-white-pink-color-block-cropped-fitted-baby-tee"}},"video_zkJazz":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4","product":"living-loud-blue-oversize-t-shirt-for-mens"}},"video_mwgx8R":{"type":"video","settings":{"video":"shopify:\/\/files\/videos\/Untitled (1).mp4","product":"beige-printed-quick-dry-beach-shorts-for-men"}}},"block_order":["video_qWaBzK","video_zkJazz","video_mwgx8R"],"disabled":true,"custom_css":["@media screen and (min-width: 850px) {{padding: 10px 70px 0 10px; } #tranding {overflow: hidden; border: 1px solid; } .container {max-width: 700px; width: 100%; } .tranding-slide-produc-img {min-width: 50px; width: 50px; } .tranding-slide-produc-img img {max-height: 70px; border-radius: 12px; } .video-reels-product_vendor, .video-reels-product_title, .video-reels-product_price span:last-child {font-size: 10px; line-height: 14px; } .video-reels-product_price {font-size: 12px; line-height: 12px; }}","#tranding {padding: 0 !important;}"],"name":"Shoppable Video","settings":{"title":"Shoppable Videos","slide_full":3.5,"slide_992_1200":2.5,"slide_768_992":2}}},"order":["main","rich_text_mLLNz4","video_reels_LDirJV","gallery_tY8gDf","gallery_DcqmDp","video_reels_RCQFYT"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {}
+    },
+    "rich_text_mLLNz4": {
+      "type": "rich-text",
+      "custom_css": [
+        ".section-spacing {padding-top: 50px; padding-bottom: 0;}"
+      ],
+      "name": "Rich text",
+      "settings": {
+        "subheading": "",
+        "title": "STYLE FOR YOU",
+        "title_size": 48,
+        "title_width": 12,
+        "heading_h1": false,
+        "text": "",
+        "image_width": 120,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "auto",
+        "text_alignment": "center",
+        "enlarge_text": false,
+        "full_width": false,
+        "no_padding_bottom": false,
+        "color_scheme": "standard",
+        "color_bg": "#ffffff",
+        "color_text": "#4f2aaa"
+      }
+    },
+    "video_reels_LDirJV": {
+      "type": "video-reels",
+      "blocks": {
+        "video_qc3VRe": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4",
+            "product": "be-you-white-pink-color-block-cropped-fitted-baby-tee"
+          }
+        },
+        "video_HdKjMX": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Parapants_reel spot (2).MP4",
+            "product": "never-ending-madness-blue-oversize-t-shirt-for-men"
+          }
+        },
+        "video_VqM98P": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Untitled (1).mp4",
+            "product": "no-16-oversize-varsity-red-t-shirt"
+          }
+        },
+        "video_YMNUtH": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4",
+            "product": "living-loud-blue-oversize-t-shirt-for-men"
+          }
+        }
+      },
+      "block_order": [
+        "video_qc3VRe",
+        "video_HdKjMX",
+        "video_VqM98P",
+        "video_YMNUtH"
+      ],
+      "custom_css": [
+        "#tranding {padding: 1rem 0 2rem 0;}"
+      ],
+      "name": "Shoppable Video",
+      "settings": {
+        "title": "Shoppable Videos",
+        "slide_full": 4,
+        "slide_992_1200": 3.5,
+        "slide_768_992": 2.5
+      }
+    },
+    "gallery_tY8gDf": {
+      "type": "gallery",
+      "blocks": {
+        "image_QB7MP9": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IZFMarch242348lr_bc98e25a-5fcd-4027-babe-c3aba2e2f7ae.jpg",
+            "video_external": "",
+            "enlarge_image": false,
+            "subheading": "",
+            "title": "IZF @ Youtube",
+            "title_width": 18,
+            "heading_h1": false,
+            "button_label": "Watch Now",
+            "link": "https://www.youtube.com/@izfworldclothing",
+            "text_alignment": "position--hcenter position--bottom"
+          }
+        },
+        "image_hbeVnW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/krispcrisp_Focused_college_student_dressed_in_a_chic_yet_comf_3779daa3-92e0-46cb-9a31-f74de6e96fb4_2.png",
+            "video_external": "",
+            "enlarge_image": false,
+            "subheading": "",
+            "title": "Fit & Find",
+            "title_width": 6,
+            "heading_h1": false,
+            "button_label": "Watch Now",
+            "link": "#",
+            "text_alignment": "position--left position--bottom"
+          }
+        },
+        "image_4ciFVC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_Black_friday_Sale_Post.png",
+            "video_external": "",
+            "enlarge_image": false,
+            "subheading": "",
+            "title": "Instagram",
+            "title_width": 12,
+            "heading_h1": false,
+            "button_label": "Visit Now",
+            "link": "https://www.instagram.com/izfworld/",
+            "text_alignment": "position--left position--bottom"
+          }
+        }
+      },
+      "block_order": [
+        "image_QB7MP9",
+        "image_hbeVnW",
+        "image_4ciFVC"
+      ],
+      "custom_css": [
+        ".gallery--with-vertical-outer-padding {padding-top: 0; padding-left: 0; padding-right: 0;}",
+        ".gallery__item {overflow: hidden; border-radius: 1.5rem; box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3); margin: 1rem;}",
+        "@media and (max-width: 767px) {.gallery__item {overflow: hidden; border-radius: 1.5rem; }}"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "title": "",
+        "grid": 3,
+        "desktop_image_height": 500,
+        "mobile_image_height": 400,
+        "title_size": 44,
+        "enable_margin": true,
+        "full_width": true,
+        "enable_carousel": true,
+        "overlay_style_tint": true,
+        "alternate_bg_color": false
+      }
+    },
+    "gallery_DcqmDp": {
+      "type": "gallery",
+      "blocks": {
+        "image_GaEYCp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Instagram_Black_friday_Sale_Post.png",
+            "video_external": "",
+            "enlarge_image": false,
+            "subheading": "",
+            "title": "Our Instafeeds",
+            "title_width": 6,
+            "heading_h1": false,
+            "button_label": "Visit Now",
+            "link": "https://www.instagram.com/izfworld/",
+            "text_alignment": "position--left position--bottom"
+          }
+        }
+      },
+      "block_order": [
+        "image_GaEYCp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 850px) {{width: 50%; float: left; } .section-spacing {padding-top: 0; padding-bottom: 0; padding-right: 10px; }}",
+        "@media (max-width: 767px) {.wide-container {padding: 0 !important; }}"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "title": "",
+        "grid": 1,
+        "desktop_image_height": 500,
+        "mobile_image_height": 400,
+        "title_size": 48,
+        "enable_margin": true,
+        "full_width": false,
+        "enable_carousel": false,
+        "overlay_style_tint": true,
+        "alternate_bg_color": false
+      }
+    },
+    "video_reels_RCQFYT": {
+      "type": "video-reels",
+      "blocks": {
+        "video_qWaBzK": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4",
+            "product": "be-you-white-pink-color-block-cropped-fitted-baby-tee"
+          }
+        },
+        "video_zkJazz": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4",
+            "product": "living-loud-blue-oversize-t-shirt-for-mens"
+          }
+        },
+        "video_mwgx8R": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Untitled (1).mp4",
+            "product": "beige-printed-quick-dry-beach-shorts-for-men"
+          }
+        }
+      },
+      "block_order": [
+        "video_qWaBzK",
+        "video_zkJazz",
+        "video_mwgx8R"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "@media screen and (min-width: 850px) {{padding: 10px 70px 0 10px; } #tranding {overflow: hidden; border: 1px solid; } .container {max-width: 700px; width: 100%; } .tranding-slide-produc-img {min-width: 50px; width: 50px; } .tranding-slide-produc-img img {max-height: 70px; border-radius: 12px; } .video-reels-product_vendor, .video-reels-product_title, .video-reels-product_price span:last-child {font-size: 10px; line-height: 14px; } .video-reels-product_price {font-size: 12px; line-height: 12px; }}",
+        "#tranding {padding: 0 !important;}"
+      ],
+      "name": "Shoppable Video",
+      "settings": {
+        "title": "Shoppable Videos",
+        "slide_full": 3.5,
+        "slide_992_1200": 2.5,
+        "slide_768_992": 2
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_mLLNz4",
+    "video_reels_LDirJV",
+    "gallery_tY8gDf",
+    "gallery_DcqmDp",
+    "video_reels_RCQFYT"
+  ]
+}

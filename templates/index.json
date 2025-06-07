@@ -368,7 +368,7 @@
         " {border-top: 2px dashed #00008b21; border-bottom: 2px dashed #00008b21;}"
       ],
       "settings": {
-        "title": "Customer Feedback",
+        "title": "Consumer Opinion",
         "button_style": "primary",
         "alternate_bg_color": true
       }

@@ -158,7 +158,7 @@
         "title_size": 44,
         "enable_margin": true,
         "full_width": true,
-        "enable_carousel": true,
+        "enable_carousel": false,
         "overlay_style_tint": true,
         "alternate_bg_color": false
       }

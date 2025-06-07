@@ -74,6 +74,7 @@
     "buttons_style": "normal",
     "buttons_shape": "rounded",
     "social_facebook_url": "https://www.facebook.com/izfworldonline/",
+    "social_youtube_url": "https://www.youtube.com/channel/UC2DWfN6v5E6ZYkRSE7xNIiA",
     "social_instagram_url": "https://www.instagram.com/izfworld/",
     "social_whatsapp_url": "https://api.whatsapp.com/send/?phone=918861183481&text=Hi&type=phone_number&app_absent=0",
     "social_tiktok_url": "",
@@ -221,8 +222,8 @@
           "1601536191916": {
             "type": "text",
             "settings": {
-              "image": "shopify://shop_images/izf_fill_white_bg_tagline_finalcrop_f99321b6-2641-4824-96dd-7b54bd58068d.png",
-              "image_width": 170,
+              "image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_17.png",
+              "image_width": 200,
               "title": "",
               "text": "",
               "show_social_icons": false,

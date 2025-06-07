@@ -190,7 +190,7 @@
         "image_PMUQCx": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/i1zekkschfz9chunzpen.webp",
+            "image": "shopify://shop_images/Co-Ord_Club.png",
             "mobile_image": "shopify://shop_images/Z557G_1_2_1.webp",
             "slide_link": "",
             "subheading": "",
@@ -205,11 +205,11 @@
             "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs",
             "product_1": "a-line-printed-mesh-mini-skirt",
             "vertical_position_1": 36,
-            "horizontal_position_1": 68,
+            "horizontal_position_1": 16,
             "mb_vertical_position_1": 23,
             "mb_horizontal_position_1": 45,
             "product_2": "baggy-cargo-air-parachute-pants",
-            "vertical_position_2": 60,
+            "vertical_position_2": 35,
             "horizontal_position_2": 28,
             "mb_vertical_position_2": 62,
             "mb_horizontal_position_2": 31,
@@ -368,7 +368,7 @@
         " {border-top: 2px dashed #00008b21; border-bottom: 2px dashed #00008b21;}"
       ],
       "settings": {
-        "title": "Consumer  Opinion",
+        "title": "Customer Feedback",
         "button_style": "primary",
         "alternate_bg_color": true
       }

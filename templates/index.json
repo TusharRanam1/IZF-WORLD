@@ -274,7 +274,7 @@
         "slide_transition": "slide",
         "slide_navigation": "arrows",
         "autoplay": false,
-        "autoplay_speed": 7
+        "autoplay_speed": 3
       }
     },
     "video_reels_dimT4K": {

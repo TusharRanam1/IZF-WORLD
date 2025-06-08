@@ -12,8 +12,8 @@
     "image_with_text_overlay_zjPLGj": {
       "type": "image-with-text-overlay",
       "settings": {
-        "image": "{{ collection.image }}",
-        "height": "fixed",
+        "image": "shopify://shop_images/Mens_1.png",
+        "height": "natural",
         "height_desktop": 450,
         "height_mobile": 300,
         "subheading": "",

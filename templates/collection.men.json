@@ -126,7 +126,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Combos",
-        "collection": "",
+        "collection": "mens-combos",
         "layout": "carousel",
         "custom_sale_label": "SALE",
         "show_vendor": false,

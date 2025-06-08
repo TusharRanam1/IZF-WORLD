@@ -17,7 +17,7 @@
         "height_desktop": 450,
         "height_mobile": 300,
         "subheading": "",
-        "title": "{{ collection.title }}",
+        "title": "",
         "title_size": 60,
         "title_width": 12,
         "heading_h1": false,

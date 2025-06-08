@@ -296,6 +296,7 @@
         },
         "video_Vf6HH9": {
           "type": "video",
+          "disabled": true,
           "settings": {
             "video": "shopify://files/videos/z330.mp4.mp4",
             "product": "a-line-mesh-mini-skirt"

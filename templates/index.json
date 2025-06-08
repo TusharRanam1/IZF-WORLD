@@ -300,12 +300,36 @@
             "video": "shopify://files/videos/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4",
             "product": "black-blue-air-parachute-pants"
           }
+        },
+        "video_GhaLWF": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Z009.mp4.mp4",
+            "product": ""
+          }
+        },
+        "video_9TfN8f": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Z564.mp4.mp4",
+            "product": ""
+          }
+        },
+        "video_Vf6HH9": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/z330.mp4.mp4",
+            "product": "a-line-mesh-mini-skirt"
+          }
         }
       },
       "block_order": [
         "video_LEfjnc",
         "video_AG3MUr",
-        "video_jPVtj6"
+        "video_jPVtj6",
+        "video_GhaLWF",
+        "video_9TfN8f",
+        "video_Vf6HH9"
       ],
       "custom_css": [
         ".section-heading.centered {justify-content: left;}"

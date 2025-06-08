@@ -280,27 +280,6 @@
     "video_reels_dimT4K": {
       "type": "video-reels",
       "blocks": {
-        "video_LEfjnc": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Untitled (1).mp4",
-            "product": "baggy-jeans-white-crop-linen-shirts"
-          }
-        },
-        "video_AG3MUr": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/Parapants_reel spot (2)_005ee0b3-800d-464c-a7d9-2e02d9820371.mp4",
-            "product": "baggy-jeans-corset-crop-top"
-          }
-        },
-        "video_jPVtj6": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/1724084211208190 (1)_0c555305-ee77-4903-b3e8-6d6428389326.mp4",
-            "product": "black-blue-air-parachute-pants"
-          }
-        },
         "video_GhaLWF": {
           "type": "video",
           "settings": {
@@ -324,9 +303,6 @@
         }
       },
       "block_order": [
-        "video_LEfjnc",
-        "video_AG3MUr",
-        "video_jPVtj6",
         "video_GhaLWF",
         "video_9TfN8f",
         "video_Vf6HH9"

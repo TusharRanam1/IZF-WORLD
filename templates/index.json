@@ -300,12 +300,20 @@
             "video": "shopify://files/videos/z330.mp4.mp4",
             "product": "a-line-mesh-mini-skirt"
           }
+        },
+        "video_fTDnUE": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/Z509.mp4.mp4",
+            "product": "white-relaxed-fit-full-sleeve-linen-shirt"
+          }
         }
       },
       "block_order": [
         "video_GhaLWF",
         "video_9TfN8f",
-        "video_Vf6HH9"
+        "video_Vf6HH9",
+        "video_fTDnUE"
       ],
       "custom_css": [
         ".section-heading.centered {justify-content: left;}"

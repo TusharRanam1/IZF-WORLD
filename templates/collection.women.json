@@ -126,7 +126,7 @@
       "name": "Featured collection",
       "settings": {
         "title": "Combos",
-        "collection": "",
+        "collection": "womens-combos",
         "layout": "carousel",
         "custom_sale_label": "SALE",
         "show_vendor": false,

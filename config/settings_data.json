@@ -159,6 +159,22 @@
               "cta_link2": "shopify://collections/normcore"
             }
           },
+          "image_r3kcwL": {
+            "type": "image",
+            "settings": {
+              "menu_item": "",
+              "subheading1": "Subheading",
+              "title1": "Tell your story",
+              "text1": "<p>Pair text with an image to tell a story</p>",
+              "button_label1": "",
+              "cta_link1": "",
+              "subheading2": "Subheading",
+              "title2": "Tell your story",
+              "text2": "<p>Pair text with an image to tell a story</p>",
+              "button_label2": "",
+              "cta_link2": ""
+            }
+          },
           "dc0e312c-6f6d-49be-bcd7-013bb483f0ab": {
             "type": "image",
             "settings": {
@@ -180,6 +196,7 @@
         "block_order": [
           "42d05068-4637-46b4-a2e8-d1068dc6a908",
           "42873abf-e226-4f82-b25b-824831d453d0",
+          "image_r3kcwL",
           "dc0e312c-6f6d-49be-bcd7-013bb483f0ab"
         ],
         "settings": {

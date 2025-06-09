@@ -129,13 +129,13 @@
             "settings": {
               "menu_item": "Men",
               "subheading1": "",
-              "title1": "New Arrivals",
+              "title1": "",
               "text1": "",
               "button_label1": "",
               "cta_link1": "shopify://collections/men",
-              "subheading2": "Subheading",
-              "title2": "Tell your story",
-              "text2": "<p>Pair text with an image to tell a story</p>",
+              "subheading2": "",
+              "title2": "",
+              "text2": "",
               "button_label2": "",
               "cta_link2": ""
             }
@@ -144,16 +144,16 @@
             "type": "image",
             "settings": {
               "menu_item": "Women",
-              "subheading1": "Explore",
-              "title1": "Baddie Collection",
+              "subheading1": "",
+              "title1": "",
               "text1": "",
               "button_label1": "",
-              "cta_link1": "shopify://collections/baddie",
+              "cta_link1": "",
               "subheading2": "",
               "title2": "",
               "text2": "",
               "button_label2": "",
-              "cta_link2": "shopify://collections/normcore"
+              "cta_link2": ""
             }
           },
           "image_r3kcwL": {
@@ -202,10 +202,9 @@
           "desktop_navigation": "inline",
           "nav_opacity": "opaque",
           "nav_positioning": "sticky",
-          "logo": "shopify://shop_images/IZF_Logo_b0eb0f98-fa19-4d81-a124-52940be9f52a.png",
-          "alt_logo": "shopify://shop_images/IZF_Logo_c57fe3c6-7c83-462a-b391-eb0456a3ab77.png",
+          "logo": "shopify://shop_images/izf_fill_white_bg_tagline_finalcrop_f99321b6-2641-4824-96dd-7b54bd58068d.png",
           "desktop_logo_width": 100,
-          "mobile_logo_width": 75,
+          "mobile_logo_width": 50,
           "use_alt_logo_when_active": true,
           "logo_h1": true,
           "show_announcement": true,

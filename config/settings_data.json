@@ -145,13 +145,11 @@
             "type": "image",
             "settings": {
               "menu_item": "Women",
-              "image1": "shopify://shop_images/Baddy.jpg",
               "subheading1": "Explore",
               "title1": "Baddie Collection",
               "text1": "",
               "button_label1": "",
               "cta_link1": "shopify://collections/baddie",
-              "image2": "shopify://shop_images/Normcore.jpg",
               "subheading2": "Explore",
               "title2": "Normcore",
               "text2": "",

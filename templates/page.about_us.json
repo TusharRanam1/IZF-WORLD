@@ -20,17 +20,17 @@
         "1663567024ceb62482-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/desktop_banners_5.png",
-            "mobile_image": "shopify://shop_images/3_2d07123e-6bf0-4930-87ed-783b86717aba.png",
+            "image": "shopify://shop_images/desktop_banners_6.png",
+            "mobile_image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_29.png",
             "slide_link": "",
             "subheading": "",
-            "title": "style",
+            "title": "",
             "title_size": 60,
             "title_width": 12,
             "heading_h1": false,
             "text": "",
             "enlarge_text": true,
-            "button_label": "Design Your Future",
+            "button_label": "",
             "overlay_position": "position--hcenter position--vcenter",
             "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
           }

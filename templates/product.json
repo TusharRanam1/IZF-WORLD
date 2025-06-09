@@ -103,7 +103,7 @@
         "inventory_level": {
           "type": "inventory_level",
           "settings": {
-            "inventory_threshold": 10,
+            "inventory_threshold": 15,
             "show_inventory_notice": "low",
             "show_inventory_count": "never",
             "show_inventory_indicator_bar": true,

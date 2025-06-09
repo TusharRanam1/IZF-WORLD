@@ -252,7 +252,7 @@
               {% if option_name == "material" or option_name == "fabric" %}
 
              {% else %}
-             {% comment %}
+             {% comment %} hide in collection page
                <ul class="clickyboxes options-size-size-guide-size-chart cc-init product-block-variants">
             {%- for product_option_value in product_option.values -%}
               <li value="{{ product_option_value | escape }}"> <a>{{ product_option_value }}</a></li>

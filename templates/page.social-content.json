@@ -144,9 +144,8 @@
         "image_4ciFVC"
       ],
       "custom_css": [
-        ".gallery--with-vertical-outer-padding {padding-top: 0; padding-left: 0; padding-right: 10;}",
-        ".gallery__item {overflow: hidden; border-radius: 1.5rem; box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3); margin: 1rem;}",
-        "@media and (max-width: 767px) {.gallery__item {overflow: hidden; border-radius: 1.5rem; }}"
+        "@media screen and (min-width: 850px) {{width: 50%; float: left; } .section-spacing {padding-top: 0; padding-bottom: 0; padding-right: 10px; }}",
+        "@media (max-width: 767px) {.wide-container {padding: 0 !important; }}"
       ],
       "name": "Gallery",
       "settings": {

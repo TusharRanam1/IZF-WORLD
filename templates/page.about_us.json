@@ -39,6 +39,7 @@
       "block_order": [
         "1663567024ceb62482-0"
       ],
+      "disabled": true,
       "settings": {
         "height": "adapt",
         "height_desktop": 480,
@@ -65,7 +66,7 @@
         "text_alignment": "left",
         "text_width": 50,
         "button_style": "auto",
-        "image": "shopify://shop_images/Screenshot_2023-05-09_at_11.41.53_AM.png",
+        "image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_29.png",
         "image_width": 81,
         "image_position": "right",
         "media_size": "contain",

@@ -175,16 +175,15 @@
           "dc0e312c-6f6d-49be-bcd7-013bb483f0ab": {
             "type": "image",
             "settings": {
-              "menu_item": "Shop by Occasion",
-              "image1": "shopify://shop_images/VSCO.jpg",
-              "subheading1": "Shop",
-              "title1": "Casuals",
+              "menu_item": "",
+              "subheading1": "",
+              "title1": "",
               "text1": "",
               "button_label1": "",
-              "cta_link1": "shopify://collections/casual-day-out",
-              "subheading2": "Subheading",
-              "title2": "Tell your story",
-              "text2": "<p>Pair text with an image to tell a story</p>",
+              "cta_link1": "",
+              "subheading2": "",
+              "title2": "",
+              "text2": "",
               "button_label2": "",
               "cta_link2": ""
             }

@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "date_formats": {
     "month_date_year": "%B %d, %Y",
@@ -124,7 +133,7 @@
     },
     "labels": {
       "only_x_left": "{{ quantity }} in stock",
-      "low_stock": "Low stock",
+      "low_stock": "Selling Fast",
       "in_stock": "In stock",
       "sold_out": "Sold Out",
       "new_in": "New in"

@@ -252,8 +252,14 @@
               {% if option_name == "material" or option_name == "fabric" %}
 
              {% else %}
-             
-         
+             {% comment %}
+               <ul class="clickyboxes options-size-size-guide-size-chart cc-init product-block-variants">
+            {%- for product_option_value in product_option.values -%}
+              <li value="{{ product_option_value | escape }}"> <a>{{ product_option_value }}</a></li>
+            {% endfor %}
+          </ul>
+             {% endcomment %}
+          
              {% endif %}
         {%- endif -%}
       {%- endfor -%}

@@ -129,10 +129,10 @@
         "text_alignment": "left",
         "text_width": 60,
         "button_style": "auto",
-        "image": "shopify://shop_images/Screenshot_2023-05-09_at_11.35.40_AM.png",
+        "image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_30.png",
         "image_width": 100,
         "image_position": "left",
-        "media_size": "cover",
+        "media_size": "contain",
         "color_scheme": "alt",
         "color_bg": "",
         "color_text": ""

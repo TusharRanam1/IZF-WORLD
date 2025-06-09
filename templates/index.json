@@ -51,7 +51,7 @@
         "image_VnpKnr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/banner_3_-_3.png",
+            "image": "shopify://shop_images/banner_3_-_3_1.png",
             "mobile_image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_20.png",
             "slide_link": "",
             "subheading": "",
@@ -62,7 +62,7 @@
             "text": "",
             "enlarge_text": true,
             "button_label": "Shop Now",
-            "overlay_position": "position--hcenter position--vcenter",
+            "overlay_position": "position--hcenter position--bottom",
             "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
           }
         }

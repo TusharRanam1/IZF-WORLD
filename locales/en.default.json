@@ -133,7 +133,7 @@
     },
     "labels": {
       "only_x_left": "{{ quantity }} in stock",
-      "low_stock": "Selling fast",
+      "low_stock": "Selling Fast",
       "in_stock": "In stock",
       "sold_out": "Sold Out",
       "new_in": "New in"

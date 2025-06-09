@@ -251,7 +251,7 @@
             "type": "menu",
             "settings": {
               "title": "Shop All",
-              "menu": ""
+              "menu": "footer-menu"
             }
           },
           "1601536195594": {

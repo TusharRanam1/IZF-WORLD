@@ -35,7 +35,7 @@
           "settings": {
             "image": "shopify://shop_images/desktop_banners_4.png",
             "mobile_image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_26.png",
-            "slide_link": "shopify://collections/all-pants",
+            "slide_link": "https://izfworld.com/collections/new-arrivals",
             "subheading": "",
             "title": "",
             "title_size": 60,
@@ -378,7 +378,7 @@
         " {border-top: 2px dashed #00008b21; border-bottom: 2px dashed #00008b21;}"
       ],
       "settings": {
-        "title": "Consumer Opinion",
+        "title": "Consumer Feedback",
         "button_style": "primary",
         "alternate_bg_color": true
       }
@@ -426,10 +426,10 @@
         "text_alignment": "left",
         "text_width": 50,
         "button_style": "secondary",
-        "image": "shopify://shop_images/envato-labs-image-edit_2.png",
-        "image_width": 72,
+        "image": "shopify://shop_images/desktop_banners_6.png",
+        "image_width": 100,
         "image_position": "right",
-        "media_size": "cover",
+        "media_size": "contain",
         "color_scheme": "standard",
         "color_bg": "#ffffff",
         "color_text": ""

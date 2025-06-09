@@ -33,8 +33,8 @@
         "1499426736627": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/2_cta_dt.png",
-            "mobile_image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_11.png",
+            "image": "shopify://shop_images/desktop_banners_1.png",
+            "mobile_image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_18.png",
             "slide_link": "https://izfworld.com/collections/new-arrivals",
             "subheading": "",
             "title": "",
@@ -400,7 +400,7 @@
         "text_alignment": "left",
         "text_width": 50,
         "button_style": "secondary",
-        "image": "shopify://shop_images/banner_1_4ef8eba9-55c8-4403-839d-9c0516f7ed45.webp",
+        "image": "shopify://shop_images/envato-labs-ai-5a9aa317-f7c2-4809-b519-5e8b89147ac0.jpg",
         "image_width": 72,
         "image_position": "right",
         "media_size": "cover",

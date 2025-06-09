@@ -383,32 +383,6 @@
         "alternate_bg_color": true
       }
     },
-    "image-with-text": {
-      "type": "image-with-text",
-      "custom_css": [
-        ".rimage-outer-wrapper {border-radius: 1rem; overflow: hidden;}",
-        "@media (max-width: 768px) {.rimage-outer-wrapper {margin: 30px 20px 0px; border-radius: 1rem; overflow: hidden; }}"
-      ],
-      "settings": {
-        "subheading": "",
-        "title": "I Z F \"Into Zhe Future\"",
-        "title_size": 32,
-        "title_width": 12,
-        "text": "<p>Creating Identities. Zero-Waste. Powered at India</p>",
-        "button_label": "Be a Founder!",
-        "button_link": "shopify://pages/new-about-us",
-        "text_alignment": "left",
-        "text_width": 50,
-        "button_style": "secondary",
-        "image": "shopify://shop_images/envato-labs-image-edit_2.png",
-        "image_width": 72,
-        "image_position": "right",
-        "media_size": "cover",
-        "color_scheme": "standard",
-        "color_bg": "#ffffff",
-        "color_text": ""
-      }
-    },
     "featured-blog": {
       "type": "featured-blog",
       "custom_css": [
@@ -434,6 +408,32 @@
         "autoplay_speed": 4,
         "slide_transition": "slide"
       }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".rimage-outer-wrapper {border-radius: 1rem; overflow: hidden;}",
+        "@media (max-width: 768px) {.rimage-outer-wrapper {margin: 30px 20px 0px; border-radius: 1rem; overflow: hidden; }}"
+      ],
+      "settings": {
+        "subheading": "",
+        "title": "I Z F \"Into Zhe Future\"",
+        "title_size": 32,
+        "title_width": 12,
+        "text": "<p>Creating Identities. Zero-Waste. Powered at India</p>",
+        "button_label": "Be a Founder!",
+        "button_link": "shopify://pages/new-about-us",
+        "text_alignment": "left",
+        "text_width": 50,
+        "button_style": "secondary",
+        "image": "shopify://shop_images/envato-labs-image-edit_2.png",
+        "image_width": 72,
+        "image_position": "right",
+        "media_size": "cover",
+        "color_scheme": "standard",
+        "color_bg": "#ffffff",
+        "color_text": ""
+      }
     }
   },
   "order": [
@@ -445,7 +445,7 @@
     "look_book_VTT4ja",
     "video_reels_dimT4K",
     "testimonials_cV4qFm",
-    "image-with-text",
-    "featured-blog"
+    "featured-blog",
+    "image-with-text"
   ]
 }

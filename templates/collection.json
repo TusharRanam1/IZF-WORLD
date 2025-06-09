@@ -11,6 +11,7 @@
   "sections": {
     "rich_text_LWWByG": {
       "type": "rich-text",
+      "disabled": true,
       "name": "Rich text",
       "settings": {
         "subheading": "",
@@ -19,7 +20,8 @@
         "title_width": 12,
         "heading_h1": false,
         "text": "",
-        "image_width": 120,
+        "image": "shopify://shop_images/Mens_Category.png",
+        "image_width": 150,
         "button_label": "",
         "button_link": "",
         "button_style": "auto",
@@ -34,10 +36,9 @@
     },
     "image_with_text_overlay_zjPLGj": {
       "type": "image-with-text-overlay",
-      "disabled": true,
       "name": "Image with text overlay",
       "settings": {
-        "image": "{{ collection.image }}",
+        "image": "shopify://shop_images/Mens_Category.png",
         "height": "fixed",
         "height_desktop": 450,
         "height_mobile": 300,

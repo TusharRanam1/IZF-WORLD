@@ -44,8 +44,8 @@
             "text": "",
             "enlarge_text": false,
             "button_label": "SHOP NOW",
-            "overlay_position": "position--hcenter position--bottom",
-            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs"
+            "overlay_position": "position--left position--bottom",
+            "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
           }
         },
         "image_VnpKnr": {

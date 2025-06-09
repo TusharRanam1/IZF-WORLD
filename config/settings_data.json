@@ -49,7 +49,7 @@
     "show_product_block_reviews": true,
     "show_sale_label": false,
     "show_preorder_label": false,
-    "show_sold_out_label": true,
+    "show_sold_out_label": false,
     "show_new_label": false,
     "prod_new_method": "collection",
     "prod_label_layout": "marquee_on_hover",

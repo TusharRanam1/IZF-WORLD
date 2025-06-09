@@ -87,7 +87,7 @@
         ".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"
       ],
       "settings": {
-        "title": "New Arrivals",
+        "title": "New In",
         "collection": "{{ collection.metafields.custom.new_arrivals.value }}",
         "layout": "carousel",
         "custom_sale_label": "SALE",
@@ -108,7 +108,7 @@
         " {border-top: 2px dashed #00008b31;}"
       ],
       "settings": {
-        "title": "Best Seller",
+        "title": "Best-Sellers",
         "collection": "{{ collection.metafields.custom.best_seller.value }}",
         "layout": "carousel",
         "custom_sale_label": "SALE",

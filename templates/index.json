@@ -171,7 +171,7 @@
         ".product-block ul.cc-swatches.cc-swatches-prod-img-square li {border-radius: 0.3rem; overflow: hidden;}"
       ],
       "settings": {
-        "title": "Bestsellers",
+        "title": "Best-Sellers",
         "collection": "new-best-sellers",
         "layout": "carousel",
         "custom_sale_label": "BEST SELLER",

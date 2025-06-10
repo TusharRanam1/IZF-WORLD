@@ -222,10 +222,42 @@
         },
         "image_6QyxPC": {
           "type": "image",
+          "name": "Oversized Basketball Vest & Black Piping Cargo Joggers",
           "settings": {
             "image": "shopify://shop_images/supremely-gifted-oversized-unisex-cotton-basketball-vest-819686.jpg",
             "mobile_image": "shopify://shop_images/supremely-gifted-oversized-unisex-cotton-basketball-vest-819686.jpg",
             "slide_link": "shopify://collections/all",
+            "subheading": "",
+            "title": "",
+            "title_size": 60,
+            "title_width": 12,
+            "heading_h1": false,
+            "text": "<p>and optional subtext</p>",
+            "enlarge_text": true,
+            "button_label": "",
+            "overlay_position": "position--hcenter position--vcenter",
+            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs",
+            "product_1": "",
+            "vertical_position_1": 45,
+            "horizontal_position_1": 45,
+            "mb_vertical_position_1": 45,
+            "mb_horizontal_position_1": 45,
+            "product_2": "",
+            "vertical_position_2": 75,
+            "horizontal_position_2": 35,
+            "mb_vertical_position_2": 45,
+            "mb_horizontal_position_2": 45,
+            "product_3": "",
+            "vertical_position_3": 65,
+            "horizontal_position_3": 75,
+            "mb_vertical_position_3": 45,
+            "mb_horizontal_position_3": 45
+          }
+        },
+        "image_UgWhFe": {
+          "type": "image",
+          "settings": {
+            "slide_link": "",
             "subheading": "Subheading",
             "title": "Slideshow",
             "title_size": 60,
@@ -256,7 +288,8 @@
       },
       "block_order": [
         "image_PMUQCx",
-        "image_6QyxPC"
+        "image_6QyxPC",
+        "image_UgWhFe"
       ],
       "custom_css": [
         "{padding: 50px 0 0px; background: #ebe8f9;}"

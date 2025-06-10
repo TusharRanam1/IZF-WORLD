@@ -173,6 +173,7 @@
           },
           "menu_Ncmitg": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Shop All",
               "menu": "footer-menu"

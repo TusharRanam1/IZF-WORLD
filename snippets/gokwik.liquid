@@ -65,7 +65,7 @@ var templateName = '{{template.name}}'
 
   <script>
   let targetNode = document.querySelector('html');
-  let gkButtonCode = '<div class="gokwik-checkout" {% if settings.hideFlow %} style="display:none !important;" {% endif %}><button type="button" class="btn-theme" onclick="onCheckoutClick(this)" style="width: -webkit-fill-available; height: 45px;"><span class="btn-text"><span>{{ settings.main-titile }}</span><span>{{ settings.sub-titile }}</span></span><span class="pay-opt-icon"><img src="https://cdn.gokwik.co/v4/images/upi-icons.svg"><img src="https://cdn.gokwik.co/v4/images/right-arrow.svg"></span><div style="display:none"><div class="cir-loader">Loading..</div></div></button></div>';
+  let gkButtonCode = '<div class="gokwik-checkout" {% if settings.hideFlow %} style="display:none !important;" {% endif %}><button type="button" class="btn-theme" onclick="onCheckoutClick(this)" style="width:-webkit-fill-available;height:45px;background-color:inherit;color:inherit;border:none;outline:none;"><span class="btn-text" style="display:inline;"><span>{{ settings.main-titile }}</span><span>{{ settings.sub-titile }}</span></span><span class="pay-opt-icon"><img src="https://cdn.gokwik.co/v4/images/upi-icons.svg"><img src="https://cdn.gokwik.co/v4/images/right-arrow.svg"></span><div style="display:none"><div class="cir-loader">Loading..</div></div></button></div>';
   let buttonAdded = false
   let parsedBtnCode = new DOMParser().parseFromString(gkButtonCode, 'text/html').querySelectorAll('.gokwik-checkout')[0];
   const sideCartCallback = function(mutationList){

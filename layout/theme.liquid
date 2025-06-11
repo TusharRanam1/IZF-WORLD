@@ -2,12 +2,6 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}">
  
 <head>
-  <!-- Gokwik theme code start -->
-  <link rel="dns-prefetch" href="https://pdp.gokwik.co/">
-  <link rel="dns-prefetch" href="https://api.gokwik.co">
-    {% render 'gokwik' %}
- <!-- Gokwik theme code End -->
-
   <!-- Showcase 7.1.6 -->
 {% if request.path contains 'apps/return_prime' and customer == nil %}
   <script>
@@ -174,6 +168,11 @@
       }
     };
   </script>
+    <!-- Gokwik theme code start -->
+  <link rel="dns-prefetch" href="https://pdp.gokwik.co/">
+  <link rel="dns-prefetch" href="https://api.gokwik.co">
+    {% render 'gokwik' %}
+ <!-- Gokwik theme code End -->
 </head>
 
 <body class="page-{{ page_title | handle }} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if template.suffix != blank %} template-suffix-{{ template.suffix }}{% endif %}{% if template contains 'customers' %} template-customer-area{% endif %}{% if logo_html contains 'img' %} has-logo{% endif %} animation-speed-{{ settings.animation_speed }}"

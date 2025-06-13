@@ -232,7 +232,7 @@
       {% if section.settings.logo != blank %}
         {% assign double_logo_width = section.settings.logo_width | default: 250 | times: 2 %}
         {% capture img_size %}{% if double_logo_width > 2048 %}2048{% else %}{{ double_logo_width }}{% endif %}x{% endcapture %}
-        <img src="{{ section.settings.logo | img_url: img_size }}" alt="{{ shop.name | escape }}" itemprop="logo" />
+        <img src="{{ section.settings.logo | img_url: img_size }}" alt="{{ shop.name | escape }}" itemprop="logo" loading="eager" fetchpriority="high" />
       {% else %}
         {{ shop.name | escape }}
       {% endif %}
@@ -255,12 +255,12 @@
       {% assign double_logo_width = section.settings.logo_width | default: 250 | times: 2 %}
       {% capture img_size %}{% if double_logo_width > 2048 %}2048{% else %}{{ double_logo_width }}{% endif %}x{% endcapture %}
       <img src="{{ section.settings.logo | img_url: img_size }}" alt="{{ shop.name | escape }}" itemprop="logo"
-           width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}"/>
+           width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}" loading="eager" fetchpriority="high"/>
 
       {% if section.settings.alt_logo != blank %}
       <span class="alt-logo">
         <img src="{{ section.settings.alt_logo | img_url: img_size }}" alt="{{ shop.name | escape }}" itemprop="logo"
-             width="{{ section.settings.alt_logo.width }}" height="{{ section.settings.alt_logo.height }}"/>
+             width="{{ section.settings.alt_logo.width }}" height="{{ section.settings.alt_logo.height }}" loading="eager" fetchpriority="high"/>
       </span>
       {% endif %}
     {% else %}

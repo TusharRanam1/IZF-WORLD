@@ -67,7 +67,7 @@
         {%- unless block.settings.slide_link == blank or block.settings.text contains '</a>' -%}<a data-cc-animate-click href="{{ block.settings.slide_link }}">{%- endunless -%}
 
         {% if block.settings.image != blank %}
-          <div class="rimage-outer-wrapper lazyload--manual fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% if block.settings.mobile_image != blank %}desktop-only{% endif %}"
+          <div class="rimage-outer-wrapper  fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% if block.settings.mobile_image != blank %}desktop-only{% endif %}"
               data-bgset="{% render 'bgset', image: block.settings.image %}"
               data-sizes="auto"
               data-parent-fit="cover"
@@ -83,7 +83,7 @@
               </noscript>
           </div>
           {% if block.settings.mobile_image != blank %}
-            <div class="rimage-outer-wrapper lazyload--manual mobile-only fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %}"
+            <div class="rimage-outer-wrapper mobile-only fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %}"
                 data-bgset="{% render 'bgset', image: block.settings.mobile_image %}"
                 data-sizes="auto"
                 data-parent-fit="cover"
@@ -94,7 +94,7 @@
               {%- endif -%}
                 <noscript>
                   <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.mobile_image.aspect_ratio | times: 100 }}%">
-                    <img src="{{ block.settings.mobile_image | img_url: '1024x1024' }}" alt="{{ block.settings.mobile_image.alt | escape }}" class="rimage__image"/>
+                    <img src="{{ block.settings.mobile_image | img_url: '1024x1024' }}" alt="{{ block.settings.mobile_image.alt | escape }}" fetchpriority="high" loading="eager" class="rimage__image"/>
                   </div>
                 </noscript>
             </div>

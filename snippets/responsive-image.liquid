@@ -13,7 +13,7 @@
 >
   <div class="rimage-wrapper lazyload--placeholder" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%">
     {% if initial %}
-      <img class="rimage__image lazyload fade-in {% if cover %}cover{% endif %}" data-src="{{ image | img_url: initial }}" alt="{{ image.alt | escape }}">
+      <img class="rimage__image lazyload fade-in {% if cover %}cover{% endif %}" data-src="{{ image | img_url: initial }}" alt="{{ image.alt | escape }}" loading="lazy" fetchpriority="low">
       {% assign initial = false %}
     {% endif %}
     {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
@@ -26,11 +26,12 @@
       width="{{ image.width }}"
       height="{{ image.height }}"
       {% if cover %}data-parent-fit="cover"{% endif %}
-      {% if image.presentation %}style="object-position: {{ image.presentation.focal_point }}"{% endif %}>
+      {% if image.presentation %}style="object-position: {{ image.presentation.focal_point }}"{% endif %}
+      loading="lazy" fetchpriority="low">
 
     <noscript>
       {% assign img_url = image | img_url: '1024x1024' %}
-      <img src="{{ img_url }}" alt="{{ image.alt | escape }}" class="rimage__image">
+      <img src="{{ img_url }}" alt="{{ image.alt | escape }}" class="rimage__image" loading="lazy" fetchpriority="low">
     </noscript>
   </div>
 </div>

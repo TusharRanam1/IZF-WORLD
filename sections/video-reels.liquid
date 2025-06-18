@@ -258,7 +258,7 @@
                         <div class="tranding-slide-produc-img">
                           <a href="{{ block.settings.product.url }}">
                             
-                          {{ block.settings.product.featured_image | image_url: width:100 | image_tag }}
+                          {{ block.settings.product.featured_image | image_url: width:100 | image_tag: loading: "lazy"}}
                           </a>
                         </div>
                         <div class="tranding-slide-product-detailes">

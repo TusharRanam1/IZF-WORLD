@@ -83,6 +83,7 @@
               </noscript>
           </div>
           {% if block.settings.mobile_image != blank %}
+            
             {% if forloop.first %}
   <div class="rimage-outer-wrapper mobile-only {% if section.settings.height == 'full' %}fill-viewport{% endif %}"
        style="background-image: url('{{ block.settings.mobile_image | image_url: width: 1024 }}'); background-position: {{ block.settings.mobile_image.presentation.focal_point }}; background-size: cover;">

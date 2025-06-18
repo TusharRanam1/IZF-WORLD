@@ -87,7 +87,8 @@
             {% if forloop.first %}
               <div class="rimage-outer-wrapper mobile-only {% if section.settings.height == 'full' %}fill-viewport{% endif %}"
                    style="background-image: url('{{ block.settings.mobile_image | image_url: width: 1024 }}'); background-position: {{ block.settings.mobile_image.presentation.focal_point }}; background-size: cover;">
-            {% else %}
+            
+              {% else %}
               <div class="rimage-outer-wrapper lazyload--manual mobile-only fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %}"
                    data-bgset="{% render 'bgset', image: block.settings.mobile_image %}"
                    data-sizes="auto"

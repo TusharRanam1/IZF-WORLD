@@ -249,7 +249,7 @@
         {% for block in section.blocks %}
           <div class="swiper-slide tranding-slide">
             <div class="tranding-slide-img">
-              {{ block.settings.video | video_tag: autoplay: false, loop: true, muted: true, width: 500 }}
+              {{ block.settings.video | video_tag: autoplay: false, loop: true, muted: true, width: 500, loading: "lazy" }}
             </div>
             <div class="tranding-slide-content">
               <div class="tranding-slide-content-bottom">

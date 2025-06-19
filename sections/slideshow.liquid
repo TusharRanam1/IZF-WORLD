@@ -67,21 +67,36 @@
         {%- unless block.settings.slide_link == blank or block.settings.text contains '</a>' -%}<a data-cc-animate-click href="{{ block.settings.slide_link }}">{%- endunless -%}
 
         {% if block.settings.image != blank %}
-          <div class="rimage-outer-wrapper lazyload--manual fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% if block.settings.mobile_image != blank %}desktop-only{% endif %}"
-              data-bgset="{% render 'bgset', image: block.settings.image %}"
-              data-sizes="auto"
-              data-parent-fit="cover"
-              style="background-position: {{ block.settings.image.presentation.focal_point }}">
-            {%- if section.settings.height == 'adapt' -%}
-              {%- assign aspect_ratio = section.blocks.first.settings.image.aspect_ratio | default: 2.0 -%}
-              <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
-            {%- endif -%}
-              <noscript>
-                <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
-                  <img src="{{ block.settings.image | img_url: '1024x1024' }}" alt="{{ block.settings.image.alt | escape }}" fetchpriority="high" loading="eager" class="rimage__image"/>
-                </div>
-              </noscript>
-          </div>
+          <div class="rimage-outer-wrapper fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% if block.settings.mobile_image != blank %}desktop-only{% endif %}"
+     style="background-color: #f4f4f4;">
+  {%- if section.settings.height == 'adapt' -%}
+    {%- assign aspect_ratio = section.blocks.first.settings.image.aspect_ratio | default: 2.0 -%}
+    <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
+  {%- endif -%}
+
+  <img
+    src="{{ block.settings.image | image_url: width: 1600 }}"
+    alt="{{ block.settings.image.alt | escape }}"
+    width="1600"
+    height="{{ 1600 | divided_by: block.settings.image.aspect_ratio | round }}"
+    loading="eager"
+    fetchpriority="high"
+    class="rimage__image"
+    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+
+  <noscript>
+    <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
+      <img src="{{ block.settings.image | img_url: '1600x1600' }}"
+           alt="{{ block.settings.image.alt | escape }}"
+           fetchpriority="high"
+           loading="eager"
+           width="1600"
+           height="{{ 1600 | divided_by: block.settings.image.aspect_ratio | round }}"
+           class="rimage__image" />
+    </div>
+  </noscript>
+</div>
+
           {% if block.settings.mobile_image != blank %}
             
             <div class="rimage-outer-wrapper mobile-only fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %}"

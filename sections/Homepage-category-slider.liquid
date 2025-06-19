@@ -1,63 +1,72 @@
 {% if section.blocks.size > 0 %}
 <div class="collection-slider-wrapper">
   <h2 class="slider-heading {{ section.settings.heading_alignment }}">{{ section.settings.heading }}</h2>
-  <div class="collection-slider">
-    {% for block in section.blocks %}
-      {% assign link_url = block.settings.custom_link %}
-      {% assign label = block.settings.custom_label %}
-      <div class="collection-slide {{ section.settings.block_alignment }}">
-        <a href="{{ link_url }}">
-          <div class="icon-circle">
-            {% if block.settings.icon %}
-              <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="{{ label }}">
-            {% endif %}
-          </div>
-          <p class="slide-label">
-            {{ label }} 
-      <!-- <span class="arrow-icon">➜</span> -->
-          </p>
-        </a>
-      </div>
-    {% endfor %}
+
+  <div class="collection-slider-center-wrap">
+    <div class="collection-slider">
+      {% for block in section.blocks %}
+        {% assign link_url = block.settings.custom_link %}
+        {% assign label = block.settings.custom_label %}
+        <div class="collection-slide {{ section.settings.block_alignment }}">
+          <a href="{{ link_url }}">
+            <div class="icon-circle">
+              {% if block.settings.icon %}
+                <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="{{ label }}">
+              {% endif %}
+            </div>
+            <p class="slide-label">{{ label }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </div>
-  {% endif %}
+{% endif %}
+
 
 <style>
+  
 .collection-slider-wrapper {
   padding: 60px 40px;
-  overflow-x: hidden; /* avoid full wrapper shifting on scroll */
+  overflow-x: hidden;
 }
- 
+
 .slider-heading {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 .slider-heading.left { text-align: left; }
 .slider-heading.center { text-align: center; }
- 
-.collection-slider {
-  display: flex;
-  flex-wrap: nowrap;
 
-  gap: 50px;
+/* Center wrap trick */
+.collection-slider-center-wrap {
+  text-align: center;
   overflow-x: auto;
-  white-space: normal;
-  padding: 10px 0;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
- 
+
+/* Scrollable flex items, inline so it centers if narrow */
+.collection-slider {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+  scroll-snap-type: x mandatory;
+  padding: 10px 16px;
+}
+
+.collection-slider::-webkit-scrollbar {
+  display: none;
+}
+
 .collection-slide {
   flex: 0 0 auto;
-  min-width: 140px; /* <--- use min-width for stable scrolling */
+  min-width: 140px;
   scroll-snap-align: start;
   text-align: center;
 }
- 
 .collection-slide.left { text-align: left; }
- 
+
 .icon-circle {
   background: linear-gradient(to bottom, #e9f2f9, #d4e9f7);
   border-radius: 50%;
@@ -69,11 +78,9 @@
   justify-content: center;
   overflow: hidden;
 }
- 
 .collection-slide.left .icon-circle {
   margin-left: 0;
 }
- 
 .icon-circle img {
   width: 100%;
   height: 100%;
@@ -81,91 +88,60 @@
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
- 
 .collection-slide:hover .icon-circle img {
   transform: scale(1.1);
 }
- 
+
 .slide-label {
   font-size: 1rem;
   color: #2e3a59;
   font-weight: 700;
   transition: color 0.3s ease;
-  display: block;               /* <-- block instead of inline-block */
-  width: 100%;                   /* full width */
-  max-width: 140px;               /* match the slide width */
-  word-break: break-word;         /* break long words */
-  overflow-wrap: break-word;
-  text-align: center;             /* center the text */
+  display: block;
+  max-width: 140px;
+  word-break: break-word;
+  text-align: center;
 }
-
- 
 .collection-slide:hover .slide-label {
   color: #4f2aaa;
 }
- 
-.arrow-icon {
-  font-weight: 700;
-  font-size: 0.9rem;
-  display: inline-block;
-  opacity: 0;
-  transform: translateX(-4px);
-  transition: all 0.3s ease;
-  margin-left: 4px;
-}
- 
-.collection-slide:hover .arrow-icon {
-  opacity: 1;
-  transform: translateX(0);
-}
- 
-/* Tablet */
+
+/* Responsive */
 @media (max-width: 767px) {
   .collection-slider-wrapper {
     padding: 50px 20px;
   }
   .collection-slider {
-    
     gap: 24px;
   }
   .collection-slide {
     min-width: 100px;
   }
- 
   .icon-circle {
     width: 100px;
     height: 100px;
   }
- 
   .slide-label {
     font-size: 0.85rem;
   }
 }
- 
-/* Mobile */
-/* Mobile */
 @media (max-width: 426px) {
   .collection-slider-wrapper {
-    padding: 30px 16px; /* slightly less padding */
+    padding: 30px 16px;
   }
-
   .collection-slider {
-    
-    gap: 24px; /* more gap between icons */
+    gap: 24px;
   }
-
   .collection-slide {
-    min-width: 100px; /* slightly larger */
+    min-width: 100px;
   }
-
   .icon-circle {
     width: 80px;
     height: 80px;
   }
-
   .slide-label {
     font-size: 0.75rem;
-    max-width: 100px; /* match slide */
+    max-width: 100px;
   }
 }
 
@@ -251,23 +227,3 @@
   ]
 }
 {% endschema %}
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.collection-slider');
-
-  function adjustSliderAlignment() {
-    if (slider.scrollWidth > slider.clientWidth) {
-      slider.style.justifyContent = 'flex-start'; // More content, allow scroll from left
-    } else {
-      slider.style.justifyContent = 'center'; // All items visible, center them
-    }
-  }
-
-  // Run on page load
-  adjustSliderAlignment();
-
-  // Optional: run again if window resizes
-  window.addEventListener('resize', adjustSliderAlignment);
-});
-</script>

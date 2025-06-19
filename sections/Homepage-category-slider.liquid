@@ -11,14 +11,7 @@
           <a href="{{ link_url }}">
             <div class="icon-circle">
               {% if block.settings.icon %}
-                <img
-  src="{{ block.settings.icon | image_url: width: 100 }}"
-  alt="{{ label }}"
-  width="100"
-  height="100"
-  loading="eager"
-  fetchpriority="high" />
-
+                <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="{{ label }}">
               {% endif %}
             </div>
             <p class="slide-label">{{ label }}</p>
@@ -32,11 +25,6 @@
 
 
 <style>
-
-  .icon-circle {
-  aspect-ratio: 1 / 1; /* ensures it's always a square */
-}
-
   
 .collection-slider-wrapper {
   padding: 60px 40px;

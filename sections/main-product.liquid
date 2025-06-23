@@ -683,10 +683,7 @@
 
                       {% if enable_dynamic_payment_button %}
                         <!-- {{ form | payment_button }} -->
-                        <div class="shopify-payment-button">
-                      {% render 'gokwik-buy-now' %}
-                      </div>
-
+                        {% render 'gokwik-buy-now' %}
                       {% endif %}
                     </div>
 

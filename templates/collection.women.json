@@ -80,6 +80,23 @@
         "show_featured_in_sort": false
       }
     },
+    "featured_collection_CxEyUn": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Combos",
+        "collection": "womens-combos",
+        "layout": "carousel",
+        "custom_sale_label": "SALE",
+        "show_vendor": false,
+        "grid": 3,
+        "rows": 2,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": false,
+        "show_view_all": true
+      }
+    },
     "featured_collection_F3R68K": {
       "type": "featured-collection",
       "custom_css": [
@@ -118,23 +135,6 @@
         "grid_mobile": "2",
         "hide_swatches": false,
         "alternate_bg_color": true,
-        "show_view_all": true
-      }
-    },
-    "featured_collection_CxEyUn": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Combos",
-        "collection": "womens-combos",
-        "layout": "carousel",
-        "custom_sale_label": "SALE",
-        "show_vendor": false,
-        "grid": 3,
-        "rows": 2,
-        "grid_mobile": "2",
-        "hide_swatches": false,
-        "alternate_bg_color": false,
         "show_view_all": true
       }
     },
@@ -180,9 +180,9 @@
     "image_with_text_overlay_zjPLGj",
     "homepage_category_slider_a7ExCL",
     "main",
+    "featured_collection_CxEyUn",
     "featured_collection_F3R68K",
     "featured_collection_EWgbmU",
-    "featured_collection_CxEyUn",
     "video_reels_VYDfe3"
   ]
 }

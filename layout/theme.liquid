@@ -177,6 +177,32 @@
   <link rel="dns-prefetch" href="https://api.gokwik.co">
     {% render 'gokwik' %}
  <!-- Gokwik theme code End -->
+
+  {% if template contains 'product' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{ product.title | escape }}",
+      "image": "{{ product.featured_image | img_url: '800x800' }}",
+      "description": "{{ product.description | strip_html | escape }}",
+      "sku": "{{ product.variants.first.sku }}",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "INR",
+        {% if product.compare_at_price > product.price %}
+        "price": "{{ product.compare_at_price | money_without_currency | remove: ',' }}",
+        "salePrice": "{{ product.price | money_without_currency | remove: ',' }}",
+        {% else %}
+        "price": "{{ product.price | money_without_currency | remove: ',' }}",
+        {% endif %}
+        "availability": "https://schema.org/InStock",
+        "url": "{{ shop.url }}{{ product.url }}"
+      }
+    }
+    </script>
+  {% endif %}
+
 </head>
 
 <body class="page-{{ page_title | handle }} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if template.suffix != blank %} template-suffix-{{ template.suffix }}{% endif %}{% if template contains 'customers' %} template-customer-area{% endif %}{% if logo_html contains 'img' %} has-logo{% endif %} animation-speed-{{ settings.animation_speed }}"

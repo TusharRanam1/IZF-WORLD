@@ -184,7 +184,7 @@
       "@context": "https://schema.org/",
       "@type": "Product",
       "name": "{{ product.title | escape }}",
-      "image": "{{ product.featured_image | img_url: '800x800' }}",
+      "image": "{{ product.featured_image | image_url: '800x800' }}",
       "description": "{{ product.description | strip_html | escape }}",
       "sku": "{{ product.variants.first.sku }}",
       "offers": {

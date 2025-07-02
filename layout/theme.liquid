@@ -2,6 +2,14 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}">
  
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KSF3JBV');</script>
+  <!-- End Google Tag Manager -->
+  
 	<!-- Added by AVADA SEO Suite -->
 	{% include 'avada-seo' %}
 	<!-- /Added by AVADA SEO Suite -->
@@ -207,6 +215,10 @@
 
 <body class="page-{{ page_title | handle }} {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}{% if template.suffix != blank %} template-suffix-{{ template.suffix }}{% endif %}{% if template contains 'customers' %} template-customer-area{% endif %}{% if logo_html contains 'img' %} has-logo{% endif %} animation-speed-{{ settings.animation_speed }}"
       {% if settings.animation_speed == "fast" %}data-cc-animate-timeout="0"{% endif %}>
+    <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSF3JBV"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
   {% if settings.animation_enabled_mobile %}
     <script>
       if(window.innerWidth < 768 && window.localStorage.getItem('is_first_visit') !== null) {

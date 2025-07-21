@@ -377,21 +377,6 @@
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
 
-<script>
-  window.addEventListener('gokwikLoaded', function () {
-    const observer = new MutationObserver(() => {
-      const btn = document.querySelector('.quick-buy-modal #gokwik-buy-now');
-
-      if (btn && btn.disabled) {
-        btn.disabled = false;
-        btn.classList.remove('disabled');
-        console.log('✅ Enabled GoKwik Buy Now in Quick View');
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-</script>
 
   
   {% render 'body-end-tag' %}

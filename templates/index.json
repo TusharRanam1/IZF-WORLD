@@ -24,7 +24,7 @@
             "title_width": 12,
             "heading_h1": false,
             "text": "",
-            "enlarge_text": true,
+            "enlarge_text": false,
             "button_label": "",
             "overlay_position": "position--hcenter position--vcenter",
             "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs"
@@ -60,7 +60,7 @@
             "title_width": 12,
             "heading_h1": false,
             "text": "",
-            "enlarge_text": true,
+            "enlarge_text": false,
             "button_label": "",
             "overlay_position": "position--hcenter position--bottom",
             "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"

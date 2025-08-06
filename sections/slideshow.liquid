@@ -1,3 +1,22 @@
+{%- if forloop.first and block.settings.image != blank -%}
+  <link rel="preload"
+        as="image"
+        href="{{ block.settings.image | image_url: width: 1600 }}"
+        imagesrcset="{{ block.settings.image | image_url: width: 1600 }}"
+        imagesizes="100vw"
+        fetchpriority="high">
+{%- endif -%}
+
+{%- if forloop.first and block.settings.mobile_image != blank -%}
+  <link rel="preload"
+        as="image"
+        href="{{ block.settings.mobile_image | image_url: width: 1024 }}"
+        imagesrcset="{{ block.settings.mobile_image | image_url: width: 1024 }}"
+        imagesizes="100vw"
+        fetchpriority="high">
+{%- endif -%}
+
+
 <div id="section-id-{{ section.id }}" data-section-type="slideshow" data-cc-animate {% if section.settings.full_width %}class="needs-alt-logo"{% endif %}>
   {% style %}
     {%- if section.settings.height == 'fixed' -%}

@@ -43,7 +43,7 @@
             "heading_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label": "",
+            "button_label": "Shop Now",
             "overlay_position": "position--left position--bottom",
             "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
           }
@@ -61,7 +61,7 @@
             "heading_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label": "",
+            "button_label": "Shop Now",
             "overlay_position": "position--hcenter position--bottom",
             "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
           }

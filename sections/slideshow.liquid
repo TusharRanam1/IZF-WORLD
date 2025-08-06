@@ -1,4 +1,7 @@
-{%- if forloop.first and block.settings.image != blank -%}
+
+
+<div id="section-id-{{ section.id }}" data-section-type="slideshow" data-cc-animate {% if section.settings.full_width %}class="needs-alt-logo"{% endif %}>
+  {%- if forloop.first and block.settings.image != blank -%}
   <link rel="preload"
         as="image"
         href="{{ block.settings.image | image_url: width: 1600 }}"
@@ -16,8 +19,6 @@
         fetchpriority="high">
 {%- endif -%}
 
-
-<div id="section-id-{{ section.id }}" data-section-type="slideshow" data-cc-animate {% if section.settings.full_width %}class="needs-alt-logo"{% endif %}>
   {% style %}
     {%- if section.settings.height == 'fixed' -%}
       #section-id-{{ section.id }} .rimage-outer-wrapper,

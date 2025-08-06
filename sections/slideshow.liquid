@@ -112,7 +112,7 @@
     fetchpriority="high"
     loading="eager"
     class="rimage__image"
-    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"  rel="preload" />
 
   <noscript>
     <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.mobile_image.aspect_ratio | times: 100 }}%">
@@ -120,7 +120,7 @@
            alt="{{ block.settings.mobile_image.alt | escape }}"
            fetchpriority="high"
            loading="eager"
-           class="rimage__image" />
+           class="rimage__image" rel="preload" />
     </div>
   </noscript>
 </div>

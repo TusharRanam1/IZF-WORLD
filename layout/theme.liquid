@@ -377,5 +377,15 @@
   <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
 
   {% render 'body-end-tag' %}
+
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("form[action='/contact']").forEach(function (form) {
+      form.setAttribute('action', ''); // or use '#'
+    });
+  });
+</script>
+
 </body>
 </html>

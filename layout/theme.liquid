@@ -1,4 +1,10 @@
 <!doctype html>
+{%- assign is_home = request.page_type == 'index' -%}
+{%- assign is_pdp  = request.page_type == 'product' -%}
+{%- assign is_cart = request.page_type == 'cart' -%}
+{%- assign is_coll = request.page_type == 'collection' -%}
+
+
 <html class="no-js" lang="{{ request.locale.iso_code }}">
  
 <head>
@@ -11,7 +17,12 @@
   <!-- End Google Tag Manager -->
 
 	<!-- Added by AVADA SEO Suite -->
-	{% include 'avada-seo' %}
+	{% comment %} {% include 'avada-seo' %} {% endcomment %}
+
+  {% unless is_home %}
+  {% include 'avada-seo' %}
+{% endunless %}
+
 	<!-- /Added by AVADA SEO Suite -->
   
   <!-- Showcase 7.1.6 -->

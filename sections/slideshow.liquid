@@ -37,31 +37,28 @@
     }
   {% endstyle %}
 
-   {% comment %} new code {% endcomment %}
-
+  {%- comment -%} Preload first slide (desktop + mobile) {%- endcomment -%}
   {%- assign __first = section.blocks.first -%}
-{%- if __first and __first.settings.image -%}
-  {%- assign first_desktop = __first.settings.image -%}
-  <link rel="preload" as="image"
-        href="{{ first_desktop | image_url: width: 1600 }}"
-        imagesrcset="
-          {{ first_desktop | image_url: width: 768 }} 768w,
-          {{ first_desktop | image_url: width: 1200 }} 1200w,
-          {{ first_desktop | image_url: width: 1600 }} 1600w"
-        imagesizes="(min-width: 768px) 100vw, 0vw" fetchpriority="high">
-{%- endif -%}
-{%- if __first and __first.settings.mobile_image -%}
-  {%- assign first_mobile = __first.settings.mobile_image -%}
-  <link rel="preload" as="image"
-        href="{{ first_mobile | image_url: width: 1024 }}"
-        imagesrcset="
-          {{ first_mobile | image_url: width: 480 }} 480w,
-          {{ first_mobile | image_url: width: 768 }} 768w,
-          {{ first_mobile | image_url: width: 1024 }} 1024w"
-        imagesizes="(max-width: 767px) 100vw, 0vw" fetchpriority="high">
-{%- endif -%}
-
-  {% comment %} end new code {% endcomment %}
+  {%- if __first and __first.settings.image -%}
+    {%- assign first_desktop = __first.settings.image -%}
+    <link rel="preload" as="image"
+          href="{{ first_desktop | image_url: width: 1600 }}"
+          imagesrcset="
+            {{ first_desktop | image_url: width: 768 }} 768w,
+            {{ first_desktop | image_url: width: 1200 }} 1200w,
+            {{ first_desktop | image_url: width: 1600 }} 1600w"
+          imagesizes="(min-width: 768px) 100vw, 0vw" fetchpriority="high">
+  {%- endif -%}
+  {%- if __first and __first.settings.mobile_image -%}
+    {%- assign first_mobile = __first.settings.mobile_image -%}
+    <link rel="preload" as="image"
+          href="{{ first_mobile | image_url: width: 1024 }}"
+          imagesrcset="
+            {{ first_mobile | image_url: width: 480 }} 480w,
+            {{ first_mobile | image_url: width: 768 }} 768w,
+            {{ first_mobile | image_url: width: 1024 }} 1024w"
+          imagesizes="(max-width: 767px) 100vw, 0vw" fetchpriority="high">
+  {%- endif -%}
 
   {%- unless section.settings.full_width -%}<div class="wide-container half-gutter section-spacing">{%- endunless -%}
 
@@ -93,69 +90,70 @@
         {%- unless block.settings.slide_link == blank or block.settings.text contains '</a>' -%}<a data-cc-animate-click href="{{ block.settings.slide_link }}">{%- endunless -%}
 
         {% if block.settings.image != blank %}
-          <div class="rimage-outer-wrapper fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% if block.settings.mobile_image != blank %}desktop-only{% endif %}"
-     style="background-color: #f4f4f4;">
-  {%- if section.settings.height == 'adapt' -%}
-    {%- assign aspect_ratio = section.blocks.first.settings.image.aspect_ratio | default: 2.0 -%}
-    <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
-  {%- endif -%}
+          <div class="rimage-outer-wrapper {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% if block.settings.mobile_image != blank %}desktop-only{% endif %} {% unless forloop.first %}fade-in{% endunless %}"
+               style="background-color: #f4f4f4;">
+            {%- if section.settings.height == 'adapt' -%}
+              {%- assign aspect_ratio = section.blocks.first.settings.image.aspect_ratio | default: 2.0 -%}
+              <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
+            {%- endif -%}
 
-  <img
-    src="{{ block.settings.image | image_url: width: 1600 }}"
-    alt="{{ block.settings.image.alt | escape }}"
-    width="1600"
-    height="{{ 1600 | divided_by: block.settings.image.aspect_ratio | round }}"
-    loading="eager"
-    fetchpriority="high"
-    class="rimage__image"
-    style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
+            <img
+              src="{{ block.settings.image | image_url: width: 1600 }}"
+              srcset="
+                {{ block.settings.image | image_url: width: 768 }} 768w,
+                {{ block.settings.image | image_url: width: 1200 }} 1200w,
+                {{ block.settings.image | image_url: width: 1600 }} 1600w"
+              sizes="(min-width: 768px) 100vw, 0vw"
+              alt="{{ block.settings.image.alt | escape }}"
+              width="1600"
+              height="{{ 1600 | divided_by: block.settings.image.aspect_ratio | round }}"
+              {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy" fetchpriority="low"{% endif %}
+              decoding="async"
+              class="rimage__image"
+              style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" />
 
-  <noscript>
-    <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
-      <img src="{{ block.settings.image | img_url: '1600x1600' }}"
-           alt="{{ block.settings.image.alt | escape }}"
-           fetchpriority="high"
-           loading="eager"
-           width="1600"
-           height="{{ 1600 | divided_by: block.settings.image.aspect_ratio | round }}"
-           class="rimage__image" />
-    </div>
-  </noscript>
-</div>
+            <noscript>
+              <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
+                <img src="{{ block.settings.image | img_url: '1600x1600' }}"
+                     alt="{{ block.settings.image.alt | escape }}"
+                     {% if forloop.first %}fetchpriority="high" loading="eager"{% endif %}
+                     width="1600"
+                     height="{{ 1600 | divided_by: block.settings.image.aspect_ratio | round }}"
+                     class="rimage__image" />
+              </div>
+            </noscript>
+          </div>
 
           {% if block.settings.mobile_image != blank %}
-            
-            <div class="rimage-outer-wrapper mobile-only fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %}"
-     style="background-color: #f4f4f4;">
-  {%- if section.settings.height == 'adapt' -%}
-    {%- assign aspect_ratio = section.blocks.first.settings.mobile_image.aspect_ratio | default: 2.0 -%}
-    <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
-  {%- endif -%}
-<img
-  src="{{ block.settings.mobile_image | image_url: width: 1024 }}"
-  srcset="
-    {{ block.settings.mobile_image | image_url: width: 480 }} 480w,
-    {{ block.settings.mobile_image | image_url: width: 768 }} 768w,
-    {{ block.settings.mobile_image | image_url: width: 1024 }} 1024w"
-  sizes="(max-width: 767px) 100vw, 0vw"
-  alt="{{ block.settings.mobile_image.alt | escape }}"
-  {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy" fetchpriority="low"{% endif %}
-  decoding="async"
-  class="rimage__image"
-  style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
+            <div class="rimage-outer-wrapper mobile-only {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% unless forloop.first %}fade-in{% endunless %}"
+                 style="background-color: #f4f4f4;">
+              {%- if section.settings.height == 'adapt' -%}
+                {%- assign aspect_ratio = section.blocks.first.settings.mobile_image.aspect_ratio | default: 2.0 -%}
+                <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
+              {%- endif -%}
 
+              <img
+                src="{{ block.settings.mobile_image | image_url: width: 1024 }}"
+                srcset="
+                  {{ block.settings.mobile_image | image_url: width: 480 }} 480w,
+                  {{ block.settings.mobile_image | image_url: width: 768 }} 768w,
+                  {{ block.settings.mobile_image | image_url: width: 1024 }} 1024w"
+                sizes="(max-width: 767px) 100vw, 0vw"
+                alt="{{ block.settings.mobile_image.alt | escape }}"
+                {% if forloop.first %}loading="eager" fetchpriority="high"{% else %}loading="lazy" fetchpriority="low"{% endif %}
+                decoding="async"
+                class="rimage__image"
+                style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" />
 
-  <noscript>
-    <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.mobile_image.aspect_ratio | times: 100 }}%">
-      <img src="{{ block.settings.mobile_image | img_url: '1024x1024' }}"
-           alt="{{ block.settings.mobile_image.alt | escape }}"
-           fetchpriority="high"
-           loading="eager"
-           class="rimage__image" />
-    </div>
-  </noscript>
-</div>
-
+              <noscript>
+                <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.mobile_image.aspect_ratio | times: 100 }}%">
+                  <img src="{{ block.settings.mobile_image | img_url: '1024x1024' }}"
+                       alt="{{ block.settings.mobile_image.alt | escape }}"
+                       {% if forloop.first %}fetchpriority="high" loading="eager"{% endif %}
+                       class="rimage__image" />
+                </div>
+              </noscript>
+            </div>
           {% endif %}
         {% else %}
           <div class="rimage-outer-wrapper lazyload--manual fade-in placeholder-image placeholder--banner
@@ -424,42 +422,15 @@
             "id": "overlay_position",
             "label": "Desktop text alignment",
             "options": [
-              {
-                "value": "position--left position--top",
-                "label": "Top left"
-              },
-              {
-                "value": "position--hcenter position--top",
-                "label": "Top center"
-              },
-              {
-                "value": "position--right position--top",
-                "label": "Top right"
-              },
-              {
-                "value": "position--left position--vcenter",
-                "label": "Middle left"
-              },
-              {
-                "value": "position--hcenter position--vcenter",
-                "label": "Middle center"
-              },
-              {
-                "value": "position--right position--vcenter",
-                "label": "Middle right"
-              },
-              {
-                "value": "position--left position--bottom",
-                "label": "Bottom left"
-              },
-              {
-                "value": "position--hcenter position--bottom",
-                "label": "Bottom center"
-              },
-              {
-                "value": "position--right position--bottom",
-                "label": "Bottom right"
-              }
+              { "value": "position--left position--top", "label": "Top left" },
+              { "value": "position--hcenter position--top", "label": "Top center" },
+              { "value": "position--right position--top", "label": "Top right" },
+              { "value": "position--left position--vcenter", "label": "Middle left" },
+              { "value": "position--hcenter position--vcenter", "label": "Middle center" },
+              { "value": "position--right position--vcenter", "label": "Middle right" },
+              { "value": "position--left position--bottom", "label": "Bottom left" },
+              { "value": "position--hcenter position--bottom", "label": "Bottom center" },
+              { "value": "position--right position--bottom", "label": "Bottom right" }
             ],
             "default": "position--hcenter position--vcenter"
           },
@@ -468,42 +439,15 @@
             "id": "overlay_position_mobile",
             "label": "Mobile text alignment",
             "options": [
-              {
-                "value": "position--left-xs position--top-xs",
-                "label": "Top left"
-              },
-              {
-                "value": "position--hcenter-xs position--top-xs",
-                "label": "Top center"
-              },
-              {
-                "value": "position--right-xs position--top-xs",
-                "label": "Top right"
-              },
-              {
-                "value": "position--left-xs position--vcenter-xs",
-                "label": "Middle left"
-              },
-              {
-                "value": "position--hcenter-xs position--vcenter-xs",
-                "label": "Middle center"
-              },
-              {
-                "value": "position--right-xs position--vcenter-xs",
-                "label": "Middle right"
-              },
-              {
-                "value": "position--left-xs position--bottom-xs",
-                "label": "Bottom left"
-              },
-              {
-                "value": "position--hcenter-xs position--bottom-xs",
-                "label": "Bottom center"
-              },
-              {
-                "value": "position--right-xs position--bottom-xs",
-                "label": "Bottom right"
-              }
+              { "value": "position--left-xs position--top-xs", "label": "Top left" },
+              { "value": "position--hcenter-xs position--top-xs", "label": "Top center" },
+              { "value": "position--right-xs position--top-xs", "label": "Top right" },
+              { "value": "position--left-xs position--vcenter-xs", "label": "Middle left" },
+              { "value": "position--hcenter-xs position--vcenter-xs", "label": "Middle center" },
+              { "value": "position--right-xs position--vcenter-xs", "label": "Middle right" },
+              { "value": "position--left-xs position--bottom-xs", "label": "Bottom left" },
+              { "value": "position--hcenter-xs position--bottom-xs", "label": "Bottom center" },
+              { "value": "position--right-xs position--bottom-xs", "label": "Bottom right" }
             ],
             "default": "position--hcenter-xs position--vcenter-xs"
           }
@@ -513,18 +457,11 @@
     "presets": [
       {
         "name": "Slideshow",
-        "settings": {
-        },
+        "settings": {},
         "blocks": [
-          {
-            "type": "image"
-          },
-          {
-            "type": "image"
-          },
-          {
-            "type": "image"
-          }
+          { "type": "image" },
+          { "type": "image" },
+          { "type": "image" }
         ]
       }
     ]

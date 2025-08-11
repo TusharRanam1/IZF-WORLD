@@ -1,3 +1,12 @@
+
+{% if section.settings.image %}
+  <link rel="preload" as="image"
+    href="{{ section.settings.image | image_url: width: 1500 }}"
+    imagesrcset="{{ section.settings.image | image_url: width: 768 }} 768w,
+                 {{ section.settings.image | image_url: width: 1500 }} 1500w"
+    imagesizes="100vw">
+{% endif %}
+
 <div id="section-id-{{ section.id }}" class="section-id-{{ section.id }} use-{{ section.settings.color_scheme }}-bg" data-section-type="scrolling-banner" data-cc-animate>
   {% style %}
 

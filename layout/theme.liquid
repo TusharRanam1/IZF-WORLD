@@ -70,11 +70,8 @@
       --nav-height: 0;
     }
   {% endstyle %}
-{% comment %} 
-  {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }} {% endcomment %}
-   <link rel="preload" as="style" href="{{ 'styles.css' | asset_url }}" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="{{ 'styles.css' | asset_url }}"></noscript>
 
+  {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
 
   {% comment %} lazy load for third party app {% endcomment %}
 
@@ -284,18 +281,7 @@
 
   {% section 'header' %}
 
-  <!-- Reserve header height to prevent main jump (CLS) -->
-<script>
-(function(){
-  var sc = document.getElementById('site-control'); // from header section
-  var main = document.querySelector('main#page-content');
-  if(!sc || !main) return;
-  var ann = document.querySelector('.cc-announcement');
-  var total = sc.offsetHeight + (ann ? ann.offsetHeight : 0);
-  main.style.paddingTop = total + 'px';
-})();
-</script>
-
+  
 
   <main id="page-content">
     {{ content_for_layout }}

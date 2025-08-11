@@ -254,14 +254,48 @@
     {% if section.settings.logo != blank %}
       {% assign double_logo_width = section.settings.logo_width | default: 250 | times: 2 %}
       {% capture img_size %}{% if double_logo_width > 2048 %}2048{% else %}{{ double_logo_width }}{% endif %}x{% endcapture %}
-      <img src="{{ section.settings.logo | img_url: img_size }}" alt="{{ shop.name | escape }}" itemprop="logo"
-           width="{{ section.settings.logo.width }}" height="{{ section.settings.logo.height }}"/>
+
+      {% comment %} New code {% endcomment %}
+
+{% assign desktop_w = section.settings.desktop_logo_width | default: 200 %}
+{% assign mobile_w  = section.settings.mobile_logo_width  | default: 140 %}
+{% assign desktop_w2 = desktop_w | times: 2 %}
+{% assign mobile_w2  = mobile_w  | times: 2 %}
+
+<img
+  src="{{ section.settings.logo | image_url: width: desktop_w }}"
+  srcset="
+    {{ section.settings.logo | image_url: width: mobile_w }} {{ mobile_w }}w,
+    {{ section.settings.logo | image_url: width: mobile_w2 }} {{ mobile_w2 }}w,
+    {{ section.settings.logo | image_url: width: desktop_w }} {{ desktop_w }}w,
+    {{ section.settings.logo | image_url: width: desktop_w2 }} {{ desktop_w2 }}w"
+  sizes="(min-width:768px) {{ desktop_w }}px, {{ mobile_w }}px"
+  alt="{{ shop.name | escape }}"
+  width="{{ section.settings.logo.width }}"
+  height="{{ section.settings.logo.height }}"
+  decoding="async"
+  fetchpriority="low" />
+
+
+           {% comment %} new code end {% endcomment %}
 
       {% if section.settings.alt_logo != blank %}
-      <span class="alt-logo">
-        <img src="{{ section.settings.alt_logo | img_url: img_size }}" alt="{{ shop.name | escape }}" itemprop="logo"
-             width="{{ section.settings.alt_logo.width }}" height="{{ section.settings.alt_logo.height }}"/>
-      </span>
+ <span class="alt-logo">
+  <img
+    src="{{ section.settings.alt_logo | image_url: width: desktop_w }}"
+    srcset="
+      {{ section.settings.alt_logo | image_url: width: mobile_w }} {{ mobile_w }}w,
+      {{ section.settings.alt_logo | image_url: width: mobile_w2 }} {{ mobile_w2 }}w,
+      {{ section.settings.alt_logo | image_url: width: desktop_w }} {{ desktop_w }}w,
+      {{ section.settings.alt_logo | image_url: width: desktop_w2 }} {{ desktop_w2 }}w"
+    sizes="(min-width:768px) {{ desktop_w }}px, {{ mobile_w }}px"
+    alt="{{ shop.name | escape }}"
+    width="{{ section.settings.alt_logo.width }}"
+    height="{{ section.settings.alt_logo.height }}"
+    decoding="async"
+    fetchpriority="low" />
+</span>
+
       {% endif %}
     {% else %}
       {{ shop.name | escape }}

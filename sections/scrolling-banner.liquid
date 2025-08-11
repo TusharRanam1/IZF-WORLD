@@ -48,11 +48,13 @@
        style="--duration: {{ 21 | minus: section.settings.speed }}s;" role="marquee">
     {% if section.settings.image %}
 
+      {% comment %} new code {% endcomment %}
        <style>
     .section-id-{{ section.id }} .image-overlay .rimage-wrapper {
       padding-top: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
     }
   </style>
+  {% comment %} end new code {% endcomment %}
 
       <div class="image-overlay{% if section.settings.overlay_style_tint %} image-overlay--bg-full{% endif %}">
         <div class="rimage-outer-wrapper rimage-background lazyload fade-in"

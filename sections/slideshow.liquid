@@ -37,6 +37,32 @@
     }
   {% endstyle %}
 
+   {% comment %} new code {% endcomment %}
+
+  {%- assign __first = section.blocks.first -%}
+{%- if __first and __first.settings.image -%}
+  {%- assign first_desktop = __first.settings.image -%}
+  <link rel="preload" as="image"
+        href="{{ first_desktop | image_url: width: 1600 }}"
+        imagesrcset="
+          {{ first_desktop | image_url: width: 768 }} 768w,
+          {{ first_desktop | image_url: width: 1200 }} 1200w,
+          {{ first_desktop | image_url: width: 1600 }} 1600w"
+        imagesizes="(min-width: 768px) 100vw, 0vw" fetchpriority="high">
+{%- endif -%}
+{%- if __first and __first.settings.mobile_image -%}
+  {%- assign first_mobile = __first.settings.mobile_image -%}
+  <link rel="preload" as="image"
+        href="{{ first_mobile | image_url: width: 1024 }}"
+        imagesrcset="
+          {{ first_mobile | image_url: width: 480 }} 480w,
+          {{ first_mobile | image_url: width: 768 }} 768w,
+          {{ first_mobile | image_url: width: 1024 }} 1024w"
+        imagesizes="(max-width: 767px) 100vw, 0vw" fetchpriority="high">
+{%- endif -%}
+
+  {% comment %} end new code {% endcomment %}
+
   {%- unless section.settings.full_width -%}<div class="wide-container half-gutter section-spacing">{%- endunless -%}
 
     <div class="slideshow

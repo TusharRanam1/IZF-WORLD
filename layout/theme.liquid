@@ -281,21 +281,7 @@
 
   {% section 'header' %}
 
-  {% comment %} new section  {% endcomment %}
-
-  <!-- Reserve header height to prevent main jump (CLS) -->
-<script>
-(function(){
-  var sc = document.getElementById('site-control'); // from header section
-  var main = document.querySelector('main#page-content');
-  if(!sc || !main) return;
-  var ann = document.querySelector('.cc-announcement');
-  var total = sc.offsetHeight + (ann ? ann.offsetHeight : 0);
-  main.style.paddingTop = total + 'px';
-})();
-</script>
-
-  {% comment %} end section {% endcomment %}
+  
 
   <main id="page-content">
     {{ content_for_layout }}

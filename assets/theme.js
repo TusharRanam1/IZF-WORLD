@@ -7988,3 +7988,45 @@ jQuery(function ($) {
 
 })(theme.jQuery);  
 /* Built with Barry v1.0.8 */
+
+
+
+
+// new code for menifest.json
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/assets/sw.js')
+          .then(function(registration) {
+            console.log('Service Worker registered successfully:', registration.scope);
+          })
+          .catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+
+->
+
+    // Service Worker Registration
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/assets/sw.js')
+          .then(function(registration) {
+            console.log('Service Worker registered successfully:', registration.scope);
+          })
+          .catch(function(error) {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+
+    // Prevent Payment Manifest Errors
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.addEventListener('message', function(event) {
+        if (event.data && event.data.type === 'PAYMENT_MANIFEST_REQUEST') {
+          // Block payment manifest requests to prevent console errors
+          event.preventDefault();
+        }
+      });
+    }

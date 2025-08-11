@@ -11,7 +11,15 @@
           <a href="{{ link_url }}">
             <div class="icon-circle">
               {% if block.settings.icon %}
-                <img src="{{ block.settings.icon | img_url: '100x100' }}" alt="{{ label }}">
+                <img
+  src="{{ block.settings.icon | image_url: width: 100 }}"
+  alt="{{ label }}"
+  width="100"
+  height="100"
+  loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
+/>
+
+
               {% endif %}
             </div>
             <p class="slide-label">{{ label }}</p>
@@ -86,6 +94,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
+  aspect-ratio: 1 / 1;
   transition: transform 0.3s ease;
 }
 .collection-slide:hover .icon-circle img {
@@ -227,23 +236,3 @@
   ]
 }
 {% endschema %}
-
-<!-- <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const slider = document.querySelector('.collection-slider');
-
-  function adjustSliderAlignment() {
-    if (slider.scrollWidth > slider.clientWidth) {
-      slider.style.justifyContent = 'flex-start'; // More content, allow scroll from left
-    } else {
-      slider.style.justifyContent = 'center'; // All items visible, center them
-    }
-  }
-
-  // Run on page load
-  adjustSliderAlignment();
-
-  // Optional: run again if window resizes
-  window.addEventListener('resize', adjustSliderAlignment);
-});
-</script> -->

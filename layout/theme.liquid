@@ -73,6 +73,25 @@
 
   {{ 'styles.css' | asset_url | stylesheet_tag: preload: true }}
 
+  {% comment %} lazy load for third party app {% endcomment %}
+
+  <script>
+  // generic lazy loader
+  function lazyLoadScript(src, attrs){
+    var s = document.createElement('script');
+    s.src = src;
+    s.async = true;
+    if (attrs) Object.keys(attrs).forEach(k => s.setAttribute(k, attrs[k]));
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => document.head.appendChild(s), {timeout:3000});
+    } else {
+      setTimeout(() => document.head.appendChild(s), 2000);
+    }
+  }
+</script>
+
+  {% comment %} end third party {% endcomment %}
+
   {{ content_for_header }}
 
   {%- if request.design_mode -%}

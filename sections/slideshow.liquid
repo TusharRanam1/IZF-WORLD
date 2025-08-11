@@ -1,5 +1,29 @@
 <div id="section-id-{{ section.id }}" data-section-type="slideshow" data-cc-animate {% if section.settings.full_width %}class="needs-alt-logo"{% endif %}>
   {% style %}
+/* ensure only one variant is active */
+.desktop-only{ display:none; }
+.mobile-only{ display:block; }
+@media(min-width:768px){
+  .desktop-only{ display:block; }
+  .mobile-only{ display:none; }
+}
+
+/* don’t spend paint time on hidden slides */
+#section-id-{{ section.id }} .slideshow .slide:not(:first-child){
+  content-visibility: auto;
+  contain-intrinsic-size: var(--slide-h, 600px) 100vw;
+}
+
+:root{
+  --slide-h: {{ section.settings.height_desktop | default: 600 }}px;
+}
+@media(max-width:767px){
+  :root{ --slide-h: {{ section.settings.height_mobile  | default: 500 }}px; }
+}
+
+
+
+
     {%- if section.settings.height == 'fixed' -%}
       #section-id-{{ section.id }} .rimage-outer-wrapper,
       #section-id-{{ section.id }} .placeholder-image {

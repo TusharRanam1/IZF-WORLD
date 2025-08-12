@@ -1,13 +1,58 @@
 <style>
 
+  /* Align qty + Add to Cart perfectly */
+.product-detail__form__action {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Quantity */
+.product-detail__form__action .quantity-wrapper {
+  order: 1;
+  flex: 0 0 auto;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add to Cart */
+.product-detail__form__action button[name="add"] {
+  order: 1;
+  flex: 1; /* fill remaining space */
+  height: 44px;
+  border-radius: 999px;
+  display: flex; /* center text vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buy it now full width below */
+.product-detail__form__action .shopify-payment-button {
+  order: 2;
+  flex: 1 0 100%;
+}
+
+.product-detail__form__action .shopify-payment-button button,
+.product-detail__form__action .shopify-payment-button .gokwik-buy-now-btn,
+.product-detail__form__action .shopify-payment-button *[type="button"] {
+  width: 100%;
+  height: 44px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
-
+  {% comment %} 
    .product-detail__form__options, .product-detail__custom-option{
     padding-top:20px !important;
     padding-bottom:0px !important;
     
-  }
+  } {% endcomment %}
   @media screen and (max-width: 992px){
   .product-area .product-area__media .theme-img{
       padding:20px 20px 0px;

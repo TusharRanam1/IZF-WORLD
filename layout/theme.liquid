@@ -268,7 +268,7 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {% if settings.animation_enabled_mobile %}
-    <script>
+ <script>
       if(window.innerWidth < 768 && window.localStorage.getItem('is_first_visit') !== null) {
         var pageFadedIn = false;
         document.body.style.opacity = 0;
@@ -292,7 +292,7 @@
         document.getElementById('cc-veil').classList.remove('-in');
       });
     </script>
-  {% endif %}
+  {% endif %} 
 
   {% if settings.animation_enabled_desktop %}
     <script>

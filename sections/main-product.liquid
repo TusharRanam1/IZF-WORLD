@@ -1,48 +1,9 @@
 <style>
-  {% comment %} .product-detail__form__options, .product-detail__custom-option{
+  .product-detail__form__options, .product-detail__custom-option{
     padding-top:20px !important;
     padding-bottom:0px !important;
     
-  } {% endcomment %}
-
-  * Make the buy-buttons row behave like the screenshot */
-.product-detail__form__action{
-  display:flex;
-  align-items:center;
-  gap:14px;            /* space between qty and ATC */
-  flex-wrap:wrap;      /* lets the Buy Now wrap to the next line */
-}
-
-/* Quantity (left) */
-.product-detail__form__action .quantity-wrapper{
-  order:1;
-  flex:0 0 auto;       /* keep its natural width */
-  height:44px;
-}
-
-/* Add to Cart (right, same row) */
-.product-detail__form__action button[name="add"]{
-  order:1;
-  flex:1 1 auto;       /* take remaining space on the row */
-  height:44px;
-  border-radius:999px; /* pill look like your SS */
-}
-
-/* Buy it now (full width below) */
-.product-detail__form__action .shopify-payment-button{
-  order:2;
-  flex:1 0 100%;       /* force to next line and full width */
-}
-
-.product-detail__form__action .shopify-payment-button button,
-.product-detail__form__action .shopify-payment-button .gokwik-buy-now-btn,
-.product-detail__form__action .shopify-payment-button *[type="button"]{
-  width:100%;
-  height:44px;
-  border-radius:999px; /* pill */
-}
-
-
+  }
   @media screen and (max-width: 992px){
   .product-area .product-area__media .theme-img{
       padding:20px 20px 0px;

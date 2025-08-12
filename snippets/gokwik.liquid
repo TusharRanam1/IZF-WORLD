@@ -18,13 +18,7 @@ var cart = {{ cart | json }}
 var templateName = '{{template.name}}'
 </script>
 
-{% comment %} <script src="https://{{ env }}.gokwik.co/merchant-integration/build/merchant.integration.js?v4" defer></script> {% endcomment %}
- window.addEventListener('load', function() {
-  var s = document.createElement('script');
-  s.src = "https://{{ env }}.gokwik.co/merchant-integration/build/merchant.integration.js?v4";
-  document.body.appendChild(s);
-});
-
+<script src="https://{{ env }}.gokwik.co/merchant-integration/build/merchant.integration.js?v4" defer></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
 <script>
   window.addEventListener('gokwikLoaded', e => {

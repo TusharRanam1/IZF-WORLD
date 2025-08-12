@@ -268,7 +268,7 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {% if settings.animation_enabled_mobile %}
- <script>
+ {% comment %} <script>
       if(window.innerWidth < 768 && window.localStorage.getItem('is_first_visit') !== null) {
         var pageFadedIn = false;
         document.body.style.opacity = 0;
@@ -291,7 +291,54 @@
       window.addEventListener("pageshow", function(){
         document.getElementById('cc-veil').classList.remove('-in');
       });
-    </script>
+    </script> {% endcomment %}
+
+
+    {% comment %} new optimize code {% endcomment %}
+
+    <script>
+/**
+ * Mobile-safe, LCP-friendly reveal
+ * - No pre-paint opacity=0
+ * - Enables animations only after first paint
+ * - Keeps your original condition (mobile + not first visit)
+ * - Respects prefers-reduced-motion
+ * - Removes veil on pageshow (as before)
+ */
+(function () {
+  var isMobile = window.innerWidth < 768;
+  var hasVisitedBefore = window.localStorage.getItem('is_first_visit') !== null;
+  var reduceMotion = (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+
+  // Mark first visit (so subsequent loads can animate if you want)
+  if (!hasVisitedBefore) {
+    try { window.localStorage.setItem('is_first_visit', '1'); } catch (e) {}
+  }
+
+  // Only enable the animation class on subsequent mobile visits,
+  // but do it AFTER first paint so it doesn't delay FCP/LCP.
+  if (isMobile && hasVisitedBefore && !reduceMotion) {
+    // Ensure styles are applied, then schedule class add post-paint
+    requestAnimationFrame(function () {
+      // microtask/timeout ensures we come after style/calculation
+      setTimeout(function () {
+        document.body.classList.add("cc-animate-enabled");
+        // Optionally, if your theme varies speed:
+        // document.body.style.setProperty('--cc-anim-speed', '{{ settings.animation_speed == "fast" ? 0.2 : 0.4 }}s');
+      }, 0);
+    });
+  }
+
+  // Remove veil ASAP after page is shown (keeps your behavior)
+  window.addEventListener("pageshow", function () {
+    var veil = document.getElementById('cc-veil');
+    if (veil) veil.classList.remove('-in');
+  });
+})();
+</script>
+
+{% comment %} End new optimize code {% endcomment %}
+
   {% endif %} 
 
   {% if settings.animation_enabled_desktop %}

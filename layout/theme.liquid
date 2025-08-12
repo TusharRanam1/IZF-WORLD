@@ -229,19 +229,9 @@
     };
   </script>
     <!-- Gokwik theme code start -->
-{% assign need_gokwik = false %}
-{% if request.page_type == 'product' or request.page_type == 'cart' %}
-  {% assign need_gokwik = true %}
-{% endif %}
-
-{% if need_gokwik %}
-  <link rel="preconnect" href="https://pdp.gokwik.co" crossorigin>
-  <link rel="preconnect" href="https://api.gokwik.co" crossorigin>
-  <link rel="dns-prefetch" href="https://pdp.gokwik.co">
+  <link rel="dns-prefetch" href="https://pdp.gokwik.co/">
   <link rel="dns-prefetch" href="https://api.gokwik.co">
-  {% render 'gokwik' %}
-{% endif %}
-
+    {% render 'gokwik' %}
  <!-- Gokwik theme code End -->
 
   {% if template contains 'product' %}

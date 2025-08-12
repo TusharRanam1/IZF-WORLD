@@ -19,9 +19,27 @@
 	<!-- Added by AVADA SEO Suite -->
 	{% comment %} {% include 'avada-seo' %} {% endcomment %}
 
+{% comment %} 
   {% unless is_home %}
   {% include 'avada-seo' %}
-{% endunless %}
+{% endunless %} {% endcomment %}
+
+{% if is_home %}
+  <script>
+    // Run after first visible content (near LCP)
+    new IntersectionObserver((entries, observer) => {
+      if (entries[0].isIntersecting) {
+        observer.disconnect();
+        var script = document.createElement('script');
+        script.src = "{{ 'avada-seo.js' | asset_url }}"; // Or your snippet output
+        document.body.appendChild(script);
+      }
+    }).observe(document.querySelector('main')); // Trigger when main content is visible
+  </script>
+{% else %}
+  {% include 'avada-seo' %}
+{% endif %}
+
 
 	<!-- /Added by AVADA SEO Suite -->
   

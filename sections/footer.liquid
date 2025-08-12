@@ -173,7 +173,7 @@
                 </div>
               {% endif %}
 
-              {% comment %} <div class="signup-form">
+              <div class="signup-form">
                 {% form 'customer', id: 'footer_newsletter_signup' %}
                   {% if form.posted_successfully? %}
                     <p class="section-footer__newsletter-block__message signup-form__response">{{ 'layout.signup.post_success' | t }}</p>
@@ -199,7 +199,7 @@
                     </button>
                   {% endif %}
                 {% endform %}
-              </div> {% endcomment %}
+              </div>
 
               {% if block.settings.show_social_icons_newsletter != blank %}
                 <div class="section-footer__text-block__social">

@@ -18,8 +18,8 @@ var cart = {{ cart | json }}
 var templateName = '{{template.name}}'
 </script>
 
-<script src="https://{{ env }}.gokwik.co/merchant-integration/build/merchant.integration.js?v4"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://{{ env }}.gokwik.co/merchant-integration/build/merchant.integration.js?v4" defer></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
 <script>
   window.addEventListener('gokwikLoaded', e => {
 

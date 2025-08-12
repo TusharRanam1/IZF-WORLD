@@ -1,0 +1,238 @@
+{% if section.blocks.size > 0 %}
+<div class="collection-slider-wrapper">
+  <h2 class="slider-heading {{ section.settings.heading_alignment }}">{{ section.settings.heading }}</h2>
+
+  <div class="collection-slider-center-wrap">
+    <div class="collection-slider">
+      {% for block in section.blocks %}
+        {% assign link_url = block.settings.custom_link %}
+        {% assign label = block.settings.custom_label %}
+        <div class="collection-slide {{ section.settings.block_alignment }}">
+          <a href="{{ link_url }}">
+            <div class="icon-circle">
+              {% if block.settings.icon %}
+                <img
+  src="{{ block.settings.icon | image_url: width: 100 }}"
+  alt="{{ label }}"
+  width="100"
+  height="100"
+  loading="{% if forloop.index <= 2 %}eager{% else %}lazy{% endif %}"
+/>
+
+
+              {% endif %}
+            </div>
+            <p class="slide-label">{{ label }}</p>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+<style>
+  
+.collection-slider-wrapper {
+  padding: 60px 40px;
+  overflow-x: hidden;
+}
+
+.slider-heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.slider-heading.left { text-align: left; }
+.slider-heading.center { text-align: center; }
+
+/* Center wrap trick */
+.collection-slider-center-wrap {
+  text-align: center;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Scrollable flex items, inline so it centers if narrow */
+.collection-slider {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+  scroll-snap-type: x mandatory;
+  padding: 10px 16px;
+}
+
+.collection-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.collection-slide {
+  flex: 0 0 auto;
+  min-width: 140px;
+  scroll-snap-align: start;
+  text-align: center;
+}
+.collection-slide.left { text-align: left; }
+
+.icon-circle {
+  background: linear-gradient(to bottom, #e9f2f9, #d4e9f7);
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.collection-slide.left .icon-circle {
+  margin-left: 0;
+}
+.icon-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.3s ease;
+}
+.collection-slide:hover .icon-circle img {
+  transform: scale(1.1);
+}
+
+.slide-label {
+  font-size: 1rem;
+  color: #2e3a59;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  display: block;
+  max-width: 140px;
+  word-break: break-word;
+  text-align: center;
+}
+.collection-slide:hover .slide-label {
+  color: #4f2aaa;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .collection-slider-wrapper {
+    padding: 50px 20px;
+  }
+  .collection-slider {
+    gap: 24px;
+  }
+  .collection-slide {
+    min-width: 100px;
+  }
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .slide-label {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 426px) {
+  .collection-slider-wrapper {
+    padding: 30px 16px;
+  }
+  .collection-slider {
+    gap: 24px;
+  }
+  .collection-slide {
+    min-width: 100px;
+  }
+  .icon-circle {
+    width: 80px;
+    height: 80px;
+  }
+  .slide-label {
+    font-size: 0.75rem;
+    max-width: 100px;
+  }
+}
+
+ 
+/* Optional: Hide scrollbars for Webkit (Chrome/Safari) */
+.collection-slider::-webkit-scrollbar {
+  display: none;
+}
+</style>
+
+
+
+{% schema %}
+{
+  "name": "Homepage-category-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Slider Heading",
+      "default": "Shop by Category"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "block_alignment",
+      "label": "Block Alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "custom_label",
+          "label": "Custom Label"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon Image"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "Homepage-category-slider",
+      "category": "Custom",
+      "settings": {
+        "heading_alignment": "left",
+        "block_alignment": "left"
+      },
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}

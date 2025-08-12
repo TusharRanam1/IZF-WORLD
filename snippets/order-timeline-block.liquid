@@ -1,0 +1,181 @@
+
+      {% assign now_ts = 'now' | date: "%s" %}
+      {% assign seconds_in_day = 86400 %}
+      {% assign midnight_tomorrow = now_ts | divided_by: seconds_in_day | floor | plus: 1 | times: seconds_in_day %}
+      {% assign countdown_target = midnight_tomorrow | plus: 32400 %}
+
+      {% assign dispatch_offset = block.settings.dispatch_days | default: 1 | times: seconds_in_day %}
+      {% assign delivery_start_offset = block.settings.delivery_start_days | default: 5 | times: seconds_in_day %}
+      {% assign delivery_end_offset = block.settings.delivery_end_days | default: 9 | times: seconds_in_day %}
+
+      {% assign today_date = now_ts | date: "%b %d" %}
+      {% assign dispatch_ts = now_ts | plus: dispatch_offset %}
+      {% assign dispatch_date = dispatch_ts | date: "%b %d" %}
+      {% assign delivery_start_ts = now_ts | plus: delivery_start_offset %}
+      {% assign delivery_start_date = delivery_start_ts | date: "%b %d" %}
+      {% assign delivery_end_ts = now_ts | plus: delivery_end_offset %}
+      {% assign delivery_end_date = delivery_end_ts | date: "%b %d" %}
+
+      <div class="order-timeline-container" {{ block.shopify_attributes }}>
+        <div class="order-timeline-wrapper">
+          <div class="timeline-step">
+            <div class="timeline-icon"><img  src="{{ 'cart-1.svg' | asset_url }}" alt="Icon" class="icon"></img></div>
+            <div class="timeline-text">
+              <strong>Order Today</strong><br>
+              {{ today_date }}
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon"><img  src="{{ 'truck.svg' | asset_url }}" alt="Icon" class="icon"></img></div>
+            <div class="timeline-text">
+              <strong>Dispatched By</strong><br>
+              {{ dispatch_date }}
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon"><img  src="{{ 'location.svg' | asset_url }}" alt="Icon" class="icon"></img></div>
+            <div class="timeline-text">
+              <strong>Delivered By</strong><br>
+              {{ delivery_start_date }} - {{ delivery_end_date }}
+            </div>
+          </div>
+        </div>
+
+        <p id="countdown-{{ block.id }}" class="countdown-message"
+           data-target="{{ countdown_target }}"
+           data-start="{{ delivery_start_date }}"
+           data-end="{{ delivery_end_date }}">
+           Loading countdown...
+        </p>
+      </div>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const el = document.getElementById('countdown-{{ block.id }}');
+          if (!el) return;
+
+          const target = parseInt(el.dataset.target, 10) * 1000;
+          const deliveryStart = el.dataset.start;
+          const deliveryEnd = el.dataset.end;
+
+          function update() {
+            const now = new Date().getTime();
+            let left = Math.max(target - now, 0);
+
+            const hrs = Math.floor(left / 3600000);
+            const mins = Math.floor((left % 3600000) / 60000);
+
+            el.innerHTML = `Order in <strong>${hrs.toString().padStart(2, '0')} Hours ${mins.toString().padStart(2, '0')} Minutes</strong> to get it by <strong>${deliveryStart}–${deliveryEnd}</strong>`;
+            if (left <= 0) clearInterval(timer);
+          }
+
+          update();
+          const timer = setInterval(update, 1000);
+        });
+      </script>
+
+
+<style>
+.order-timeline-container {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.order-timeline-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+/* 👇 Connecting line centered at 23px (46px / 2) */
+.order-timeline-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #4f2aaa;
+  z-index: 0;
+}
+
+.timeline-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.timeline-step:first-child {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.timeline-step:last-child {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* 👇 Fixed icon size across all devices */
+.timeline-icon {
+  width: 46px;
+  height: 46px;
+  font-size: 20px;
+  background-color: #4f2aaa;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+  z-index: 2;
+}
+
+
+.timeline-text {
+  font-size: 14px;
+  line-height: 1.3;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
+.countdown-message {
+  text-align: left;
+  font-weight: 500;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  padding: 0 0rem;
+}
+
+/* ✅ Responsive tweaks (text only) */
+@media screen and (max-width: 768px) {
+  .timeline-text {
+    font-size: 11px;
+  }
+
+  .countdown-message {
+    font-size: 0.85rem;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline-text {
+    font-size: 11px;
+  }
+
+  .countdown-message {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+}
+
+</style>

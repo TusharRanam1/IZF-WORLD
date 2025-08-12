@@ -1,0 +1,823 @@
+<div id="section-id-{{ section.id }}" data-section-type="slideshow" data-cc-animate {% if section.settings.full_width %}class="needs-alt-logo"{% endif %}>
+  {% style %}
+    {%- if section.settings.height == 'fixed' -%}
+      #section-id-{{ section.id }} .rimage-outer-wrapper,
+      #section-id-{{ section.id }} .placeholder-image {
+        height: {{ section.settings.height_mobile }}px;
+      }
+    {%- endif -%}
+    {% for block in section.blocks %}
+      #section-id-{{ section.id }} .slide-{{ forloop.index }} .line-1 {
+        max-width: {{ block.settings.title_width }}em;
+      }
+    {% endfor %}
+
+    @media (min-width: 768px) {
+      {%- if section.settings.height == 'fixed' -%}
+        #section-id-{{ section.id }} .rimage-outer-wrapper ,
+        #section-id-{{ section.id }} .placeholder-image {
+          height: {{ section.settings.height_desktop }}px;
+        }
+      {%- endif -%}
+
+      {% for block in section.blocks %}
+        #section-id-{{ section.id }} .slide-{{ forloop.index }} .line-1 {
+          {%- assign title_size_medium = block.settings.title_size | times: 0.7 | at_least: settings.font_size_heading_int -%}
+          font-size: {{ title_size_medium }}px;
+        }
+      {% endfor %}
+    }
+
+    @media (min-width: 992px) {
+      {% for block in section.blocks %}
+        #section-id-{{ section.id }} .slide-{{ forloop.index }} .line-1 {
+          font-size: {{ block.settings.title_size }}px;
+        }
+      {% endfor %}
+    }
+  {% endstyle %}
+
+  {%- unless section.settings.full_width -%}<div class="wide-container half-gutter section-spacing">{%- endunless -%}
+       {% if section.settings.title != blank %}
+      <div class="section-heading wide-container " data-cc-animate>
+        <h2 class="h2">{{ section.settings.title | escape }}</h2>
+      </div>
+    {% endif %}
+    <div class="slideshow
+        slideshow--navigation-{{ section.settings.slide_navigation }}
+        slick-slider-overlay-dots-desktop
+        {% if section.settings.mobile_overlay_under %}slick-slider-dots-light-xs{% endif %}
+        {% unless section.settings.mobile_overlay_under %}slick-slider-overlay-dots{% endunless %} margin-top"
+
+       data-transition="{{ section.settings.slide_transition }}"
+       data-autoplay="{{ section.settings.autoplay }}"
+       data-autoplay-speed="{{ section.settings.autoplay_speed }}"
+       data-navigation="{{ section.settings.slide_navigation }}">
+
+    {% for block in section.blocks %}
+      {%- liquid
+        assign show_overlay_text = false
+        if block.settings.title != blank or block.settings.subheading != blank or block.settings.text != blank or block.settings.button_label != blank
+          assign show_overlay_text = true
+        endif
+
+        assign heading_tag = "h2"
+        if block.settings.heading_h1
+          assign heading_tag = "h1"
+        endif
+      -%}
+
+      <div class="slide slide-{{ forloop.index }} height--{{ section.settings.height }} image-overlay {% if section.settings.overlay_style_tint %}image-overlay--bg-full{% endif %} {% if section.settings.mobile_overlay_under %}overlay-text-static-xs{% endif %}" {{ block.shopify_attributes }}>
+        {%- unless block.settings.slide_link == blank or block.settings.text contains '</a>' -%}<a data-cc-animate-click href="{{ block.settings.slide_link }}">{%- endunless -%}
+
+        {% if block.settings.image != blank %}
+          <div class="rimage-outer-wrapper lazyload--manual fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %} {% if block.settings.mobile_image != blank %}desktop-only{% endif %}"
+              data-bgset="{% render 'bgset', image: block.settings.image %}"
+              data-sizes="auto"
+              data-parent-fit="cover"
+              style="background-position: {{ block.settings.image.presentation.focal_point }}">
+            {%- if section.settings.height == 'adapt' -%}
+              {%- assign aspect_ratio = section.blocks.first.settings.image.aspect_ratio | default: 2.0 -%}
+              <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
+            {%- endif -%}
+              <noscript>
+                <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100 }}%">
+                  <img src="{{ block.settings.image | img_url: '1024x1024' }}" alt="{{ block.settings.image.alt | escape }}" class="rimage__image"/>
+                </div>
+              </noscript>
+          </div>
+          {% if block.settings.mobile_image != blank %}
+            <div class="rimage-outer-wrapper lazyload--manual mobile-only fade-in {% if section.settings.height == 'full' %}fill-viewport{% endif %}"
+                data-bgset="{% render 'bgset', image: block.settings.mobile_image %}"
+                data-sizes="auto"
+                data-parent-fit="cover"
+                style="background-position: {{ block.settings.mobile_image.presentation.focal_point }}">
+              {%- if section.settings.height == 'adapt' -%}
+                {%- assign aspect_ratio = section.blocks.first.settings.mobile_image.aspect_ratio | default: 2.0 -%}
+                <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: aspect_ratio | times: 100 }}%"></div>
+              {%- endif -%}
+                <noscript>
+                  <div class="rimage-wrapper" style="padding-top:{{ 1 | divided_by: block.settings.mobile_image.aspect_ratio | times: 100 }}%">
+                    <img src="{{ block.settings.mobile_image | img_url: '1024x1024' }}" alt="{{ block.settings.mobile_image.alt | escape }}" class="rimage__image"/>
+                  </div>
+                </noscript>
+            </div>
+          {% endif %}
+        {% else %}
+          <div class="rimage-outer-wrapper lazyload--manual fade-in placeholder-image placeholder--banner
+            {% if block.settings.title != blank or block.settings.subheading != blank %}dark{% endif %}"
+            {% if section.settings.height == 'adapt' %}style="padding-top: 50%"{% endif %}
+          >
+            {% capture current %}{% cycle 1, 2 %}{% endcapture %}
+            {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+        {% endif %}
+
+          <div class="overlay-type overlay {{ block.settings.overlay_position }} {{ block.settings.overlay_position_mobile }}">
+            <div class="inner">
+              <div>
+                <div class="overlay__content">
+                  {%- if block.settings.subheading != blank -%}
+                    <div class="feature-subheader">
+                      {{ block.settings.subheading }}
+                    </div>
+                  {% endif %}
+
+                  {%- if block.settings.title != blank -%}
+                    <{{ heading_tag }} class="line-1 {% if section.settings.title_size >= 86 %}line-1--large{% endif %}">
+                      {{ block.settings.title }}
+                    </{{ heading_tag }}>
+                  {%- endif -%}
+
+                  {%- if block.settings.text != blank -%}
+                    <div class="rte line-2 {% if block.settings.enlarge_text %}large-text{% endif %}">
+                      {{ block.settings.text }}
+                    </div>
+                  {%- endif -%}
+
+                  {%- if block.settings.button_label != blank -%}
+                    <div class="line-3">
+                      <span class="button hover-grow">{{ block.settings.button_label | escape }}</span>
+                    </div>
+                  {%- endif -%}
+                </div>
+  
+      {% for i in (1..3) %}
+        {% assign look_product = "product_" | append: i %}
+        {% assign vertical = "vertical_position_" | append: i %}
+        {% assign horizontal = "horizontal_position_" | append: i %}
+        {% assign mb_vertical = "mb_vertical_position_" | append: i %}
+        {% assign mb_horizontal = "mb_horizontal_position_" | append: i %}
+
+          {% if block.settings[look_product] != blank%}
+            <a href="{{  block.settings[look_product].url }}" data-cc-quick-buy-look-bok class="position-{{ block.id }}-{{ i }}" >
+            <div class="shop_look-product" >
+             <div>
+              <p class="shop_look-product_title">{{ block.settings[look_product].title }}</p>
+             <p class="shop_look-product_price">
+               <span>{{ block.settings[look_product].price | money_with_currency}}</span>
+               <span>{{ block.settings[look_product].compare_at_price | money_with_currency }}</span>
+             </p>
+              </div>
+              <div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M0-.25H24v24H0Z" transform="translate(0 0.25)" style="fill:none"></path>
+                    <polyline points="10 17.83 15.4 12.43 10 7.03" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:8;stroke-width:2px"></polyline>
+                  </svg>
+              </div>
+            </div>
+            </a>
+                      
+            <style>
+              .position-{{ block.id }}-{{ i }} {
+                position:absolute;
+                top:{{ block.settings[vertical] }}%;
+                left:{{ block.settings[horizontal] }}%;
+                transform: translate(-100%, -50%) !important;
+              }
+              @media screen and (max-width:767px){
+                .position-{{ block.id }}-{{ i }} {
+                top:{{ block.settings[mb_vertical] }}% !important;
+                left:{{ block.settings[mb_horizontal] }}% !important;
+                }
+              }
+            </style>
+          {% endif %}
+                      
+      {% endfor %}
+                      
+              </div>
+            </div>
+          </div>
+      
+        {%- unless block.settings.slide_link == blank or block.settings.text contains '</a>' -%}</a>{%- endunless -%}
+      </div>
+
+    {% endfor %}
+
+    {%- unless section.settings.full_width -%}</div>{%- endunless -%}
+  </div>
+</div>
+<style>
+ .shop_look-product {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 0;
+  color: #2c004c;
+  font-family: inherit;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  max-width: 170px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  /* transform: scale(1.05); */
+  overflow: hidden;
+   text-align:left;
+} 
+
+.slick-current .shop_look-product {
+  animation: popupGrow 1s ease forwards;
+  height: 80px;
+  width: 170px;
+  opacity: 1;
+}
+
+/* Animation keyframes */
+@keyframes popupGrow {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    /* transform: scale(1.05); */
+  }
+   40% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    /* transform: scale(1.05); */
+  }
+  70% {
+    opacity: 1;
+    width: 180px;
+    height: 90px;
+    padding: 12px 8px 12px 16px;
+    transform: scale(1);
+  }
+  100% {
+    width: 170px;
+    height: 80px;
+    padding: 10px 5px 10px 15px;
+    transform: scale(1);
+  }
+}
+
+.shop_look-product_title {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+  color: #2c004c;
+  line-height:16px;
+  
+   display: -webkit-box;
+  -webkit-line-clamp: 2; /* Show max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 32px; /* 2 lines × 16px line-height */
+  
+}
+
+.shop_look-product_price {
+  font-size: 16px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height:18px;
+
+}
+
+.shop_look-product_price span:first-child {
+  color: #cc0000; /* red */
+  /* font-weight: bold; */
+}
+
+.shop_look-product_price span:last-child {
+  text-decoration: line-through;
+  color: #9a87af;
+  font-size: 13px;
+}
+@media screen and (max-width:767px){
+  @keyframes popupGrow {
+  0% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    /* transform: scale(1.05); */
+  }
+   40% {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    /* transform: scale(1.05); */
+  }
+  70% {
+    opacity: 1;
+    width: 120px;
+    height: 60px;
+    padding: 6px;
+    transform: scale(1);
+  }
+  100% {
+    width: 110px;
+    height: 50px;
+    padding: 6px;
+    transform: scale(1);
+  }
+}
+
+
+.slick-current .shop_look-product {
+  animation: popupGrow 1s ease forwards;
+  height: 50px;
+  width: 110px;
+  opacity: 1;
+  max-width: 110px;
+  padding: 6px !important;
+  gap: 0px;
+}
+
+.shop_look-product_title {
+  font-size: 10px; 
+  margin: 0 0 4px 0;
+  line-height:10px;
+  max-height: 20px; 
+}
+
+.shop_look-product_price {
+  font-size: 10px;
+  gap: 1px;
+  line-height:12px;
+}
+.shop_look-product_price span:first-child {
+  font-weight: bold;
+}
+.shop_look-product_price span:last-child {
+  font-size: 10px;
+}
+ .shop_look-product svg {
+    width: 14px;
+    height: 14px;
+}
+}
+</style>
+
+{% schema %}
+  {
+    "name": "Look Book",
+    "class": "section-slideshow header-overlap-section",
+    "max_blocks": 8,
+    "settings": [
+       {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+         "default": "Look Book"
+      },
+      {
+        "type": "radio",
+        "id": "height",
+        "label": "Slide height",
+        "options": [
+          {
+            "value": "adapt",
+            "label": "Adapt to first image"
+          },
+          {
+            "value": "full",
+            "label": "Full screen"
+          },
+          {
+            "value": "fixed",
+            "label": "Fixed height"
+          }
+        ],
+        "default": "fixed"
+      },
+      {
+        "type": "range",
+        "id": "height_desktop",
+        "min": 200,
+        "max": 1000,
+        "step": 20,
+        "unit": "px",
+        "label": "Desktop fixed height",
+        "default": 600
+      },
+      {
+        "type": "range",
+        "id": "height_mobile",
+        "min": 100,
+        "max": 1000,
+        "step": 20,
+        "unit": "px",
+        "label": "Mobile fixed height",
+        "default": 500
+      },
+      {
+        "id": "full_width",
+        "type": "checkbox",
+        "label": "Full page width",
+        "default": true
+      },
+      {
+        "id": "mobile_overlay_under",
+        "type": "checkbox",
+        "label": "Show text below image on mobile",
+        "default": false
+      },
+      {
+        "id": "overlay_style_tint",
+        "type": "checkbox",
+        "label": "Show overlay tint",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Slideshow navigation"
+      },
+      {
+        "type": "select",
+        "id": "slide_transition",
+        "label": "Transition",
+        "options": [
+          {
+            "value": "zoom",
+            "label": "Zoom"
+          },
+          {
+            "value": "slide",
+            "label": "Slide"
+          },
+          {
+            "value": "fade",
+            "label": "Fade"
+          },
+          {
+            "value": "instant",
+            "label": "Instant"
+          }
+        ],
+        "default": "slide"
+      },
+      {
+        "id": "slide_navigation",
+        "type": "select",
+        "label": "Slide navigation style",
+        "default": "dots",
+        "options": [
+          {
+            "value": "arrows",
+            "label": "Arrows"
+          },
+          {
+            "value": "dots",
+            "label": "Dots"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ],
+        "info": "Navigation will always display as dots on mobile."
+      },
+      {
+        "id": "autoplay",
+        "type": "checkbox",
+        "label": "Auto-rotate slides",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "autoplay_speed",
+        "min": 1,
+        "max": 20,
+        "step": 1,
+        "unit": "s",
+        "label": "Change slides every",
+        "default": 7
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Slide",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "2048 x 1024px recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile image",
+            "info": "1024px x 1024px recommended"
+          },
+          {
+            "type": "url",
+            "id": "slide_link",
+            "label": "Slide link"
+          },
+          {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "Subheading"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Slideshow"
+          },
+          {
+            "type": "range",
+            "id": "title_size",
+            "min": 20,
+            "max": 150,
+            "step": 2,
+            "unit": "px",
+            "label": "Heading text size",
+            "default": 60
+          },
+          {
+            "type": "range",
+            "id": "title_width",
+            "min": 4,
+            "max": 40,
+            "step": 2,
+            "unit": "em",
+            "label": "Maximum heading width",
+            "default": 12
+          },
+          {
+            "type": "checkbox",
+            "id": "heading_h1",
+            "label": "Set as primary page heading",
+            "info": "Uses <h1> tag. One per page recommended. [Learn more](https://cleancanvas.co.uk/support/showcase/seo#inner-anchor-0)",
+            "default": false
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>and optional subtext</p>"
+          },
+          {
+            "type": "checkbox",
+            "id": "enlarge_text",
+            "label": "Enlarge text",
+            "default": true
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button"
+          },
+          {
+            "type": "select",
+            "id": "overlay_position",
+            "label": "Desktop text alignment",
+            "options": [
+              {
+                "value": "position--left position--top",
+                "label": "Top left"
+              },
+              {
+                "value": "position--hcenter position--top",
+                "label": "Top center"
+              },
+              {
+                "value": "position--right position--top",
+                "label": "Top right"
+              },
+              {
+                "value": "position--left position--vcenter",
+                "label": "Middle left"
+              },
+              {
+                "value": "position--hcenter position--vcenter",
+                "label": "Middle center"
+              },
+              {
+                "value": "position--right position--vcenter",
+                "label": "Middle right"
+              },
+              {
+                "value": "position--left position--bottom",
+                "label": "Bottom left"
+              },
+              {
+                "value": "position--hcenter position--bottom",
+                "label": "Bottom center"
+              },
+              {
+                "value": "position--right position--bottom",
+                "label": "Bottom right"
+              }
+            ],
+            "default": "position--hcenter position--vcenter"
+          },
+          {
+            "type": "select",
+            "id": "overlay_position_mobile",
+            "label": "Mobile text alignment",
+            "options": [
+              {
+                "value": "position--left-xs position--top-xs",
+                "label": "Top left"
+              },
+              {
+                "value": "position--hcenter-xs position--top-xs",
+                "label": "Top center"
+              },
+              {
+                "value": "position--right-xs position--top-xs",
+                "label": "Top right"
+              },
+              {
+                "value": "position--left-xs position--vcenter-xs",
+                "label": "Middle left"
+              },
+              {
+                "value": "position--hcenter-xs position--vcenter-xs",
+                "label": "Middle center"
+              },
+              {
+                "value": "position--right-xs position--vcenter-xs",
+                "label": "Middle right"
+              },
+              {
+                "value": "position--left-xs position--bottom-xs",
+                "label": "Bottom left"
+              },
+              {
+                "value": "position--hcenter-xs position--bottom-xs",
+                "label": "Bottom center"
+              },
+              {
+                "value": "position--right-xs position--bottom-xs",
+                "label": "Bottom right"
+              }
+            ],
+            "default": "position--hcenter-xs position--vcenter-xs"
+          },
+          {
+            "type": "header",
+            "content": "Product 1"
+          },
+          {
+            "type": "product",
+            "id": "product_1",
+            "label": "Product 1"
+          },
+          {
+            "type": "range",
+            "id": "vertical_position_1",
+            "label": "Vertical Position",
+            "max": 99,
+            "min": 1,
+            "step": 1,
+            "default": 45
+          },
+          {
+            "type": "range",
+            "id": "horizontal_position_1",
+            "label": "Horizontal Position",
+            "max": 85,
+            "min": 1,
+            "step": 1,
+            "default": 45
+          },
+          {
+            "type": "range",
+            "id": "mb_vertical_position_1",
+            "label": "Mobile Vertical Position",
+            "max": 99,
+            "min": 1,
+            "step": 1,
+            "default": 45
+          },
+          {
+            "type": "range",
+            "id": "mb_horizontal_position_1",
+            "label": "Mobile Horizontal Position",
+            "max": 85,
+            "min": 20,
+            "step": 1,
+            "default": 45
+          },
+          {
+            "type": "header",
+            "content": "Product 2"
+          },
+          {
+            "type": "product",
+            "id": "product_2",
+            "label": "Product 2"
+          },
+          {
+            "type": "range",
+            "id": "vertical_position_2",
+            "label": "Vertical Position",
+            "max": 99,
+            "min": 1,
+            "step": 1,
+            "default": 75
+          },
+          {
+            "type": "range",
+            "id": "horizontal_position_2",
+            "label": "Horizontal Position",
+            "max": 85,
+            "min": 1,
+            "step": 1,
+            "default": 35
+          },
+          {
+            "type": "range",
+            "id": "mb_vertical_position_2",
+            "label": "Mobile Vertical Position",
+            "max": 99,
+            "min": 1,
+            "step": 1,
+            "default": 45
+          },
+          {
+            "type": "range",
+            "id": "mb_horizontal_position_2",
+            "label": "Mobile Horizontal Position",
+            "max": 85,
+            "min": 20,
+            "step": 1,
+            "default": 45
+          },
+          {
+            "type": "header",
+            "content": "Product 3"
+          },
+          {
+            "type": "product",
+            "id": "product_3",
+            "label": "Product 3"
+          },
+          {
+            "type": "range",
+            "id": "vertical_position_3",
+            "label": "Vertical Position",
+            "max": 99,
+            "min": 1,
+            "step": 1,
+            "default": 65
+          },
+          {
+            "type": "range",
+            "id": "horizontal_position_3",
+            "label": "Horizontal Position",
+            "max": 85,
+            "min": 1,
+            "step": 1,
+            "default": 75
+          },
+          {
+            "type": "range",
+            "id": "mb_vertical_position_3",
+            "label": "Mobile Vertical Position",
+            "max": 99,
+            "min": 1,
+            "step": 1,
+            "default": 45
+          },
+          {
+            "type": "range",
+            "id": "mb_horizontal_position_3",
+            "label": "Mobile Horizontal Position",
+            "max": 85,
+            "min": 20,
+            "step": 1,
+            "default": 45
+          },
+          
+        ]
+        
+      
+      }
+    ],
+    "presets": [
+      {
+        "name": "Look Book",
+        "settings": {
+        },
+        "blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -9,59 +9,6 @@
  
 <head>
 
-{%- comment -%}
-Defer Corner widget CSS (Lighthouse flagged as render-blocking)
-- Converts link[rel=stylesheet] that matches *cornerWidget.css* into a non-blocking preload
-- Switches back to stylesheet after load (no FOUC for the widget)
-{%- endcomment -%}
-<script>
-(function(){
-  var re = /cornerWidget\.css/i;
-
-  function deferCorner(link){
-    if (!link || link.dataset._cornerDeferred) return;
-    link.dataset._cornerDeferred = "1";
-
-    // Make it non-blocking:
-    // 1) turn into a preload
-    link.as = 'style';
-    link.rel = 'preload';
-    // 2) ensure it doesn't apply until we switch back
-    link.media = 'print';
-
-    // After the file is fetched, apply it as a stylesheet
-    link.onload = function(){
-      this.onload = null;
-      this.media = 'all';
-      this.rel = 'stylesheet';
-    };
-  }
-
-  // Catch if the app injected it before our script ran
-  document.querySelectorAll('link[rel="stylesheet"]').forEach(function(l){
-    if (re.test(l.href)) deferCorner(l);
-  });
-
-  // Watch for the app injecting it later
-  var obs = new MutationObserver(function(muts){
-    for (var i=0; i<muts.length; i++){
-      var nodes = muts[i].addedNodes || [];
-      for (var j=0; j<nodes.length; j++){
-        var n = nodes[j];
-        if (n && n.tagName === 'LINK' && /stylesheet/i.test(n.rel) && re.test(n.href)) {
-          deferCorner(n);
-        } else if (n && n.querySelectorAll){
-          n.querySelectorAll('link[rel="stylesheet"]').forEach(function(l){
-            if (re.test(l.href)) deferCorner(l);
-          });
-        }
-      }
-    }
-  });
-  obs.observe(document.documentElement, { childList: true, subtree: true });
-})();
-</script>
-
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

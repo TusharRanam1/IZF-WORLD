@@ -176,6 +176,59 @@ Defer Corner widget CSS (Lighthouse flagged as render-blocking)
 
   {% comment %} end third party {% endcomment %}
 
+
+  <script>
+(function(){
+  var RE = /cornerWidget\.css/i;
+
+  // If it already exists (very early injection), grab & replace immediately.
+  function replaceLink(link){
+    if (!link || link.dataset._cwDone) return;
+    link.dataset._cwDone = "1";
+
+    var href = link.href;
+    // Remove the blocking stylesheet before it can block further
+    link.parentNode && link.parentNode.removeChild(link);
+
+    // Re-add as non-blocking
+    var pre = document.createElement('link');
+    pre.rel = 'preload';
+    pre.as  = 'style';
+    pre.href = href;
+    pre.onload = function(){
+      this.onload = null;
+      this.rel = 'stylesheet';
+    };
+    document.head.appendChild(pre);
+  }
+
+  // Replace any that already slipped in
+  document.querySelectorAll('link[rel="stylesheet"]').forEach(function(l){
+    if (RE.test(l.href)) replaceLink(l);
+  });
+
+  // Catch new ones as soon as they’re injected
+  new MutationObserver(function(muts){
+    for (var i=0;i<muts.length;i++){
+      var ns = muts[i].addedNodes;
+      for (var j=0;j<ns.length;j++){
+        var n = ns[j];
+        if (!n) continue;
+
+        if (n.tagName === 'LINK' && /stylesheet/i.test(n.rel) && RE.test(n.href)) {
+          replaceLink(n);
+        } else if (n.querySelectorAll){
+          n.querySelectorAll('link[rel="stylesheet"]').forEach(function(l){
+            if (RE.test(l.href)) replaceLink(l);
+          });
+        }
+      }
+    }
+  }).observe(document.head, { childList:true, subtree:true });
+})();
+</script>
+
+
   {{ content_for_header }}
 
   {%- if request.design_mode -%}

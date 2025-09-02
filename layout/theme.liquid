@@ -46,11 +46,11 @@
 	<!-- /Added by AVADA SEO Suite -->
   
   <!-- Showcase 7.1.6 -->
-{% if request.path contains 'apps/return_prime' and customer == nil %}
+{% comment %} {% if request.path contains 'apps/return_prime' and customer == nil %}
   <script>
     window.location.href = "/account/login";
   </script>
-{% endif %}
+{% endif %} {% endcomment %}
 
   <!-- <style>
     body.template-index .shopify-section {

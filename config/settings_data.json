@@ -81,7 +81,7 @@
     "social_pinterest_url": "https://in.pinterest.com/inspiringzfashion/",
     "social_twitter_url": "",
     "social_twitter_icon": "x",
-    "search_type": "product",
+    "search_type": "product,article,page",
     "blog_show_author": false,
     "blog_excerpt": "hover",
     "blog_image_shape": "portrait_tall",

@@ -1,0 +1,68 @@
+# Query: use-alt-bg
+# ContextLines: 1
+
+51 results - 11 files
+
+assets\styles.css:
+   1790  
+   1791: .use-alt-bg {
+   1792    background-color: #ebe8f9;
+
+   1794  }
+   1795: .use-alt-bg h1, .use-alt-bg h2, .use-alt-bg h3, .use-alt-bg h4, .use-alt-bg .under-cart .subtotal, .under-cart .use-alt-bg .subtotal, .use-alt-bg blockquote, .use-alt-bg h5, .use-alt-bg .rte a, .use-alt-bg #comments a, .use-alt-bg #template a, .use-alt-bg #address_tables a, .use-alt-bg .link-display {
+   1796    color: currentColor;
+
+   1798  }
+   1799: .use-alt-bg .feature-header {
+   1800    color: currentColor;
+   1801  }
+   1802: .use-alt-bg .feature-header:after {
+   1803    border-top-color: currentColor;
+
+   8849  }
+   8850: .use-alt-bg .product-block.product-block--quickbuy .cc-quick-buy-btn, .use-alt-bg .product-block--quickbuy.collection-block .cc-quick-buy-btn, .product-recommendations-container .product-block.product-block--quickbuy .cc-quick-buy-btn, .product-recommendations-container .product-block--quickbuy.collection-block .cc-quick-buy-btn {
+   8851    border-color: #423f3f;
+
+   8853  }
+   8854: .use-alt-bg .product-block.product-block--quickbuy .cc-quick-buy-btn:hover, .use-alt-bg .product-block--quickbuy.collection-block .cc-quick-buy-btn:hover, .product-recommendations-container .product-block.product-block--quickbuy .cc-quick-buy-btn:hover, .product-recommendations-container .product-block--quickbuy.collection-block .cc-quick-buy-btn:hover {
+   8855    
+
+  12552  
+  12553: .section-featured-blog .wide-container:not(.use-alt-bg) .article-block__title {
+  12554    color: #423f3f;
+
+assets\styles.css.liquid:
+   2073: .use-alt-bg {
+   2077: .use-alt-bg h1, .use-alt-bg h2, .use-alt-bg h3, .use-alt-bg h4, .use-alt-bg .under-cart .subtotal, .under-cart .use-alt-bg .subtotal, .use-alt-bg blockquote, .use-alt-bg h5, .use-alt-bg .rte a, .use-alt-bg #comments a, .use-alt-bg #template a, .use-alt-bg #address_tables a, .use-alt-bg .link-display {
+   2081: .use-alt-bg .feature-header {
+   2084: .use-alt-bg .feature-header:after {
+   9168: .use-alt-bg .product-block.product-block--quickbuy .cc-quick-buy-btn, .use-alt-bg .product-block--quickbuy.collection-block .cc-quick-buy-btn, .product-recommendations-container .product-block.product-block--quickbuy .cc-quick-buy-btn, .product-recommendations-container .product-block--quickbuy.collection-block .cc-quick-buy-btn {
+   9172: .use-alt-bg .product-block.product-block--quickbuy .cc-quick-buy-btn:hover, .use-alt-bg .product-block--quickbuy.collection-block .cc-quick-buy-btn:hover, .product-recommendations-container .product-block.product-block--quickbuy .cc-quick-buy-btn:hover, .product-recommendations-container .product-block--quickbuy.collection-block .cc-quick-buy-btn:hover {
+  13945: .section-featured-blog .wide-container:not(.use-alt-bg) .article-block__title {
+
+assets\theme.js:
+  5509:     document.querySelectorAll('#page-content .shopify-section > .use-alt-bg').forEach((elem) => elem.parentElement.classList.add('has-alt-bg'));
+
+sections\accordions.liquid:
+  1: <div id="section-id-{{ section.id }}" data-section-type="accordion" class="half-gutter section-spacing {% if section.settings.alternate_bg_color %}use-alt-bg{% endif %}" data-components="accordion">
+
+sections\collection-list.liquid:
+  13: <div class="wide-container half-gutter section-spacing {% if section.settings.alternate_bg_color %}use-alt-bg {% endif %}" data-section-type="collection-list" data-cc-animate>
+
+sections\custom-collection-list.liquid:
+  13: <div class="wide-container half-gutter section-spacing {% if section.settings.alternate_bg_color %}use-alt-bg {% endif %}" data-section-type="collection-list" data-cc-animate>
+
+sections\featured-blog.liquid:
+  218:       <div class="wide-container half-gutter section-spacing {% if section.settings.alternate_bg_color %}use-alt-bg {% endif %}">
+
+sections\featured-collection.liquid:
+  20: <div class="wide-container half-gutter section-spacing {% if section.settings.alternate_bg_color %}use-alt-bg {% endif %}" data-section-type="featured-collection" data-components="product-block" data-cc-animate>
+
+sections\gallery.liquid:
+  1: <div id="section-id-{{ section.id }}" class=" {% if section.settings.alternate_bg_color %}use-alt-bg {% endif %}" data-section-type="gallery" data-cc-animate>
+
+sections\testimonials.liquid:
+  3:      class="half-gutter section-spacing section-spacing--top-only {% if section.settings.alternate_bg_color %}use-alt-bg{% endif %}" data-cc-animate>
+
+sections\text-columns-with-images.liquid:
+  1: <div id="section-id-{{ section.id }}" class="half-gutter section-spacing {% if section.settings.alternate_bg_color %}use-alt-bg{% endif %}" data-cc-animate>

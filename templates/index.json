@@ -160,7 +160,7 @@
         "rows": 3,
         "grid_mobile": "2",
         "hide_swatches": false,
-        "alternate_bg_color": true,
+        "alternate_bg_color": false,
         "show_view_all": true
       }
     },

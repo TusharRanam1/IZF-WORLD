@@ -1124,9 +1124,9 @@
                       {% render 'order-timeline-block', block: block %}
 
                {% when 'short_description' %}
-      <div class="product-short-description" {{ block.shopify_attributes }}>
-        {{ block.settings.text }}
-      </div>
+      <div class="product-short-description rte" {{ block.shopify_attributes }}>
+    {{ block.settings.text }}
+  </div>
 
               {%- endcase -%}
             {%- endfor -%}

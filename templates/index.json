@@ -108,7 +108,7 @@
           "type": "collection",
           "settings": {
             "custom_label": "Denim",
-            "custom_link": "shopify://pages/tribe",
+            "custom_link": "shopify://collections/mens-denims",
             "icon": "shopify://shop_images/denim_ea1b4237-6343-42b8-9b80-d9597728f6c3.jpg"
           }
         }

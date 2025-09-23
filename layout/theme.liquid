@@ -300,8 +300,12 @@
         "@type": "Offer",
         "priceCurrency": "INR",
         {% if product.compare_at_price > product.price %}
-        "price": "{{ product.compare_at_price | money_without_currency | remove: ',' }}",
-        "salePrice": "{{ product.price | money_without_currency | remove: ',' }}",
+        "price": "{{ product.price | money_without_currency | remove: ',' }}",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "INR",
+          "price": "{{ product.compare_at_price | money_without_currency | remove: ',' }}"
+        },
         {% else %}
         "price": "{{ product.price | money_without_currency | remove: ',' }}",
         {% endif %}

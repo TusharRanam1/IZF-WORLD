@@ -310,7 +310,7 @@
         {% else %}
         "price": "{{ product.price | money_without_currency | remove: ',' }}",
         {% endif %}
-        "availability": "https://schema.org/InStock",
+        "availability": "http://schema.org/InStock",
         "url": "{{ shop.url }}{{ product.url }}"
       }
     }

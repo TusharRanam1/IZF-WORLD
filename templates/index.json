@@ -43,7 +43,7 @@
             "heading_h1": false,
             "text": "",
             "enlarge_text": false,
-            "button_label": "Shop Now",
+            "button_label": "",
             "overlay_position": "position--left position--bottom",
             "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
           }

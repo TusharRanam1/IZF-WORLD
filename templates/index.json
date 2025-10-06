@@ -15,9 +15,9 @@
         "image_wgTiYy": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Wesbite-Design_Your_Store_Image-24th_June_2025.png",
-            "mobile_image": "shopify://shop_images/Mobile-Design_Your_Store_Image-24th_June_2025_11zon.webp",
-            "slide_link": "",
+            "image": "shopify://shop_images/1_4.webp",
+            "mobile_image": "shopify://shop_images/1_3.webp",
+            "slide_link": "shopify://collections/womens-pants",
             "subheading": "",
             "title": "",
             "title_size": 60,
@@ -33,9 +33,9 @@
         "1499426736627": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/desktop_banners_4.png",
-            "mobile_image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_32_11zon.webp",
-            "slide_link": "shopify://collections/all-pants",
+            "image": "shopify://shop_images/2_4.webp",
+            "mobile_image": "shopify://shop_images/2_3.webp",
+            "slide_link": "shopify://collections/mens-t-shirts",
             "subheading": "",
             "title": "",
             "title_size": 60,
@@ -51,9 +51,9 @@
         "image_VnpKnr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/banner_3_-_1_1.png",
-            "mobile_image": "shopify://shop_images/Smart_comfy_and_styled_for_everyday_hustle_22_11zon.webp",
-            "slide_link": "shopify://collections/coord-sets",
+            "image": "shopify://shop_images/3_4.webp",
+            "mobile_image": "shopify://shop_images/3_3.webp",
+            "slide_link": "shopify://collections/womens-tops-tees",
             "subheading": "",
             "title": "",
             "title_size": 60,

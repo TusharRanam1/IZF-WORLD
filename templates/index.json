@@ -83,73 +83,13 @@
             "overlay_position": "position--hcenter position--vcenter",
             "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs"
           }
-        },
-        "image_wgTiYy": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/1_5.webp",
-            "mobile_image": "shopify://shop_images/1_6.webp",
-            "slide_link": "shopify://collections/womens-pants",
-            "subheading": "",
-            "title": "",
-            "title_size": 60,
-            "title_width": 12,
-            "heading_h1": false,
-            "text": "",
-            "enlarge_text": false,
-            "button_label": "",
-            "overlay_position": "position--hcenter position--vcenter",
-            "overlay_position_mobile": "position--hcenter-xs position--vcenter-xs"
-          }
-        },
-        "1499426736627": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/2_5.webp",
-            "mobile_image": "shopify://shop_images/2_6.webp",
-            "slide_link": "shopify://collections/mens-t-shirts",
-            "subheading": "",
-            "title": "",
-            "title_size": 60,
-            "title_width": 12,
-            "heading_h1": false,
-            "text": "",
-            "enlarge_text": false,
-            "button_label": "",
-            "overlay_position": "position--left position--bottom",
-            "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
-          }
-        },
-        "image_VnpKnr": {
-          "type": "image",
-          "disabled": true,
-          "settings": {
-            "image": "shopify://shop_images/3_5.webp",
-            "mobile_image": "shopify://shop_images/3_6.webp",
-            "slide_link": "shopify://collections/womens-tops-tees",
-            "subheading": "",
-            "title": "",
-            "title_size": 60,
-            "title_width": 12,
-            "heading_h1": false,
-            "text": "",
-            "enlarge_text": false,
-            "button_label": "",
-            "overlay_position": "position--hcenter position--bottom",
-            "overlay_position_mobile": "position--hcenter-xs position--bottom-xs"
-          }
         }
       },
       "block_order": [
         "image_pqQfDX",
         "image_e8CYq9",
         "image_E6K3Yr",
-        "image_x8PeTD",
-        "image_wgTiYy",
-        "1499426736627",
-        "image_VnpKnr"
+        "image_x8PeTD"
       ],
       "settings": {
         "height": "adapt",

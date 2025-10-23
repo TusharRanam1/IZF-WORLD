@@ -326,30 +326,7 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   {% if settings.animation_enabled_mobile %}
- {% comment %} <script>
-      if(window.innerWidth < 768 && window.localStorage.getItem('is_first_visit') !== null) {
-        var pageFadedIn = false;
-        document.body.style.opacity = 0;
 
-        function fadeInPageMob(){
-          if(!pageFadedIn) {
-            document.body.classList.add("cc-animate-enabled");
-            document.body.style.transition = 'opacity 0.{% if settings.animation_speed == "fast" %}2{% else %}4{% endif %}s';
-            setTimeout(function () {
-              document.body.style.opacity = 1;
-            }, {% if settings.animation_speed == "fast" %}50{% else %}200{% endif %});
-            pageFadedIn = true;
-          }
-        }
-
-        window.addEventListener("load", fadeInPageMob);
-        setTimeout(fadeInPageMob, 3000);
-      }
-
-      window.addEventListener("pageshow", function(){
-        document.getElementById('cc-veil').classList.remove('-in');
-      });
-    </script> {% endcomment %}
 
 
     {% comment %} new optimize code {% endcomment %}

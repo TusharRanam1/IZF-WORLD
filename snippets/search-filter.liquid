@@ -304,19 +304,19 @@
     {%- when 'Availability' -%}
       
     {%- when 'Price' -%}
-      <img src="{{ 'Price.svg' | asset_url }}" class="filter-icon" alt="Price" />
+      <img src="{{ 'Price.svg' | asset_url }}" class="filter-icon" alt="Price" loading="lazy" />
     {%- when 'Size' -%}
-      <img src="{{ 'Size.svg' | asset_url }}" class="filter-icon" alt="Size" />
+      <img src="{{ 'Size.svg' | asset_url }}" class="filter-icon" alt="Size" loading="lazy" />
     {%- when 'Body Fit' -%}
-       <img src="{{ 'Bodyfit.svg' | asset_url }}" class="filter-icon" alt="Size" />
+       <img src="{{ 'Bodyfit.svg' | asset_url }}" class="filter-icon" alt="Size" loading="lazy" />
     {%- when 'Necklines' -%}
       
     {%- when 'Sleeve length' -%}
       
      {%- when 'Fabric' -%}
-      <img src="{{ 'Fabric.svg' | asset_url }}" class="filter-icon" alt="Fabric" />
+      <img src="{{ 'Fabric.svg' | asset_url }}" class="filter-icon" alt="Fabric" loading="lazy" />
     {%- when 'Gender' -%}
-      <img src="{{ 'Gender.svg' | asset_url }}" class="filter-icon" alt="Gender" />
+      <img src="{{ 'Gender.svg' | asset_url }}" class="filter-icon" alt="Gender" loading="lazy" />
     
   {%- endcase -%}
   {{ filter.label | escape }}
@@ -338,7 +338,7 @@
   -%}
 
    {%- capture filter_title_with_icon -%}
-  <img src="{{ 'filter-icon.svg' | asset_url }}" class="filter-icon" alt="Sort" />
+  <img src="{{ 'filter-icon.svg' | asset_url }}" class="filter-icon" alt="Sort" loading="lazy" />
   {{ translation_sort_title | escape }}
 {%- endcapture -%}
 

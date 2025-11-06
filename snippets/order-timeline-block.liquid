@@ -19,7 +19,7 @@
       <div class="order-timeline-container" {{ block.shopify_attributes }}>
         <div class="order-timeline-wrapper">
           <div class="timeline-step">
-            <div class="timeline-icon"><img  src="{{ 'cart-1.svg' | asset_url }}" alt="Icon" class="icon"></img></div>
+            <div class="timeline-icon"><img  src="{{ 'cart-1.svg' | asset_url }}" alt="Icon" class="icon" loading="lazy"></img></div>
             <div class="timeline-text">
               <strong>Order Today</strong><br>
               {{ today_date }}
@@ -27,7 +27,7 @@
           </div>
 
           <div class="timeline-step">
-            <div class="timeline-icon"><img  src="{{ 'truck.svg' | asset_url }}" alt="Icon" class="icon"></img></div>
+            <div class="timeline-icon"><img  src="{{ 'truck.svg' | asset_url }}" alt="Icon" class="icon" loading="lazy"></img></div>
             <div class="timeline-text">
               <strong>Dispatched By</strong><br>
               {{ dispatch_date }}
@@ -35,7 +35,7 @@
           </div>
 
           <div class="timeline-step">
-            <div class="timeline-icon"><img  src="{{ 'location.svg' | asset_url }}" alt="Icon" class="icon"></img></div>
+            <div class="timeline-icon"><img  src="{{ 'location.svg' | asset_url }}" alt="Icon" class="icon" loading="lazy"></img></div>
             <div class="timeline-text">
               <strong>Delivered By</strong><br>
               {{ delivery_start_date }} - {{ delivery_end_date }}

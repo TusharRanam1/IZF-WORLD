@@ -164,6 +164,16 @@
             "open": false
           }
         },
+        "accordion_FGK6nn": {
+          "type": "accordion",
+          "settings": {
+            "icon": "return",
+            "title": "Returns and Exhchange",
+            "content": "<p>If you would like to cancel before your order is shipped, please write an email to <a href=\"mailto:support@izfworld.com\">support@izfworld.com</a></p><p><br/>If you would like to exchange or return the product, pl click on the link <a href=\"https://izfworld.com/apps/return_prime\">https://izfworld.com/apps/return_prime</a> or go to the hamburger menu and search for \"Exchange & Returns\".</p><p><br/>You can exchange or return within 3 days of delivery of the product. Return Pick ups are chargeable.</p>",
+            "page": "",
+            "open": false
+          }
+        },
         "0aa56ea0-1187-4de9-9888-6cfe5da00544": {
           "type": "complementary",
           "settings": {
@@ -198,6 +208,7 @@
         "accordion_mNhWGY",
         "accordion_mJtJPL",
         "accordion_UgDCRJ",
+        "accordion_FGK6nn",
         "0aa56ea0-1187-4de9-9888-6cfe5da00544",
         "e50f4b6a-51f7-45b9-bafe-c2bd034ddd10"
       ],
@@ -368,7 +379,9 @@
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
             "review_data": "sample_data",
-            "max_width": 1200
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
           }
         }
       },

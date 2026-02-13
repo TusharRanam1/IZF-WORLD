@@ -174,6 +174,16 @@
             "open": false
           }
         },
+        "accordion_ntEwxM": {
+          "type": "accordion",
+          "settings": {
+            "icon": "star",
+            "title": "Legal Metrology",
+            "content": "{{ product.metafields.custom.legal_metrology | metafield_tag }}",
+            "page": "",
+            "open": false
+          }
+        },
         "0aa56ea0-1187-4de9-9888-6cfe5da00544": {
           "type": "complementary",
           "settings": {
@@ -209,6 +219,7 @@
         "accordion_mJtJPL",
         "accordion_UgDCRJ",
         "accordion_FGK6nn",
+        "accordion_ntEwxM",
         "0aa56ea0-1187-4de9-9888-6cfe5da00544",
         "e50f4b6a-51f7-45b9-bafe-c2bd034ddd10"
       ],

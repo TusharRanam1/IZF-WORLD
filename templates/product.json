@@ -134,6 +134,30 @@
           "disabled": true,
           "settings": {}
         },
+        "confidence_carousel_R3FH3k": {
+          "type": "confidence_carousel",
+          "settings": {
+            "heading": "Shop With Confidence",
+            "enable_autoplay": true,
+            "autoplay_speed": 3000,
+            "bg_color": "#e9e2d8",
+            "text_color": "#333333",
+            "heading_color": "#000000",
+            "enable_icon_invert": false,
+            "dot_color": "#c8c3ba",
+            "dot_active_color": "#5a5a5a",
+            "heading_1": "Hottest Trends",
+            "heading_2": "Premium Quality",
+            "heading_3": "Affordable Prices",
+            "heading_4": "Shipping within 48 hours",
+            "heading_5": "20% Off",
+            "heading_6": "",
+            "heading_7": "",
+            "heading_8": "",
+            "heading_9": "",
+            "heading_10": ""
+          }
+        },
         "accordion_mNhWGY": {
           "type": "accordion",
           "settings": {
@@ -215,6 +239,7 @@
         "buy_buttons",
         "order_timeline_9yBjCr",
         "plex_delivery_estimation_date_product_block_8EBpTc",
+        "confidence_carousel_R3FH3k",
         "accordion_mNhWGY",
         "accordion_mJtJPL",
         "accordion_UgDCRJ",

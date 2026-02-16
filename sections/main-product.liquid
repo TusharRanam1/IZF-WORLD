@@ -1211,6 +1211,63 @@
                 {%- when 'divider' -%}
                   <hr class="divider__line-{{ block.settings.show_line }} divider__gap-above-{{ block.settings.spacing_above }}  divider__gap-below-{{ block.settings.spacing_below }}" {{ block.shopify_attributes }}/>
 
+                     {% when 'confidence_carousel' %}
+
+<div class="confidence-carousel"
+     data-autoplay="{{ block.settings.enable_autoplay }}"
+     data-speed="{{ block.settings.autoplay_speed }}"
+     style="
+       background: {{ block.settings.bg_color }};
+       color: {{ block.settings.text_color }};
+       --dot-color: {{ block.settings.dot_color }};
+       --dot-active-color: {{ block.settings.dot_active_color }};
+     "
+     {{ block.shopify_attributes }}>
+
+  {% if block.settings.heading != blank %}
+    <h3 class="confidence-carousel__title"    style="color: {{ block.settings.heading_color }} !important;">
+      {{ block.settings.heading }}
+    </h3>
+  {% endif %}
+
+  <div class="confidence-carousel__wrapper">
+    <div class="confidence-carousel__track">
+
+      {% for i in (1..10) %}
+        {% assign image_key = 'image_' | append: i %}
+        {% assign heading_key = 'heading_' | append: i %}
+
+        {% if block.settings[image_key] != blank or block.settings[heading_key] != blank %}
+          <div class="confidence-card">
+
+            {% if block.settings[image_key] != blank %}
+              <div class="confidence-card__icon">
+                <img 
+                  src="{{ block.settings[image_key] | image_url: width: 120 }}"
+                  alt="{{ block.settings[heading_key] }}"
+                  loading="lazy"
+                  {% if block.settings.enable_icon_invert %}
+                  style="filter: invert(1);"
+                  {% endif %}
+                >
+              </div>
+            {% endif %}
+
+            {% if block.settings[heading_key] != blank %}
+              <div class="confidence-card__title">
+                {{ block.settings[heading_key] }}
+              </div>
+            {% endif %}
+
+          </div>
+        {% endif %}
+      {% endfor %}
+
+    </div>
+
+    <div class="confidence-carousel__dots"></div>
+  </div>
+</div>
                 {% when 'order_timeline' %}
                       {% render 'order-timeline-block', block: block %}
 

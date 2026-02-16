@@ -91,6 +91,97 @@
   gap: 8px;
   margin-top:2px;
 }
+
+
+
+/* ===== Confidence Carousel ===== */
+
+.confidence-carousel {
+  background: #e9e2d8;
+  padding: 30px 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.confidence-carousel__title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+     color: {{ block.settings.heading_color }} ;
+}
+
+.confidence-carousel__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.confidence-carousel__track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.confidence-card {
+  flex: 0 0 33.333%;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.confidence-card__title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .confidence-card {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .confidence-card {
+    flex: 0 0 50%;
+  }
+}
+
+.confidence-card__icon img {
+  max-width: 40px;
+  margin-bottom: 10px;
+}
+
+.confidence-card__title {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Dots */
+/* ===== Small Minimal Dots ===== */
+
+.confidence-carousel__dots {
+  text-align: center;
+  margin-top: 18px;
+}
+
+/* Dots */
+
+.confidence-carousel__dots button {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  border: none;
+  background: var(--dot-color);
+  margin: 0 5px;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.confidence-carousel__dots button.active {
+  background: var(--dot-active-color);
+  transform: scale(1.2);
+  opacity: 1;
+}
 </style>
 
 {%- assign is_featured_product = false -%}

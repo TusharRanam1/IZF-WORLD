@@ -138,7 +138,7 @@
           "type": "confidence_carousel",
           "settings": {
             "heading": "Shop With Confidence",
-            "enable_autoplay": true,
+            "enable_autoplay": false,
             "autoplay_speed": 3000,
             "bg_color": "#4f2aaa",
             "text_color": "#ffffff",

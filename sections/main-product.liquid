@@ -1375,103 +1375,6 @@
   {{ product | json }}
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  document.querySelectorAll(".confidence-carousel").forEach(function (carousel) {
-
-    const track = carousel.querySelector(".confidence-carousel__track");
-    const dotsContainer = carousel.querySelector(".confidence-carousel__dots");
-
-    if (!track) return;
-
-    const originalCards = Array.from(track.children);
-    const total = originalCards.length;
-
-    if (total === 0) return;
-
-    let autoplay = carousel.dataset.autoplay === "true";
-    let speed = parseInt(carousel.dataset.speed) || 3000;
-
-    function getVisibleCount() {
-      if (window.innerWidth < 576) return 2;  // mobile = 2
-      if (window.innerWidth < 992) return 2;  // tablet = 2
-      return 3;                               // desktop = 3
-    }
-
-    let visible = getVisibleCount();
-
-    // Clone ALL slides for smooth infinite loop
-    originalCards.forEach(card => {
-      track.appendChild(card.cloneNode(true));
-    });
-
-    const allCards = Array.from(track.children);
-    let index = 0;
-
-    function updateCarousel(animate = true) {
-      const cardWidth = 100 / visible;
-
-      track.style.transition = animate ? "transform 0.4s ease" : "none";
-      track.style.transform = `translateX(-${index * cardWidth}%)`;
-
-      updateDots();
-    }
-
-    function nextSlide() {
-      index++;
-
-      if (index >= total) {
-        // When reaching duplicate area, jump back instantly
-        setTimeout(() => {
-          track.style.transition = "none";
-          index = 0;
-          track.style.transform = `translateX(0%)`;
-        }, 400);
-      }
-
-      updateCarousel();
-    }
-
-    function createDots() {
-      dotsContainer.innerHTML = "";
-
-      for (let i = 0; i < total; i++) {
-        const dot = document.createElement("button");
-
-        dot.addEventListener("click", () => {
-          index = i;
-          updateCarousel();
-        });
-
-        dotsContainer.appendChild(dot);
-      }
-    }
-
-    function updateDots() {
-      const dots = dotsContainer.querySelectorAll("button");
-      dots.forEach(dot => dot.classList.remove("active"));
-
-      const realIndex = index % total;
-      if (dots[realIndex]) dots[realIndex].classList.add("active");
-    }
-
-    createDots();
-    updateCarousel(false);
-
-    if (autoplay) {
-      setInterval(nextSlide, speed);
-    }
-
-    window.addEventListener("resize", function () {
-      location.reload();
-    });
-
-  });
-
-});
-</script>
-
 {% render 'structured-data-product', product: product, current_variant: current_variant %}
 
 
@@ -1482,6 +1385,20 @@ document.addEventListener("DOMContentLoaded", function () {
     "blocks": [
       {
          "type": "@app"
+      },
+      {
+        "type": "title",
+        "name": "Title",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "heading_h1",
+            "label": "Set as primary page heading",
+            "info": "Uses <h1> tag. One per page recommended. [Learn more](https://cleancanvas.co.uk/support/showcase/seo#inner-anchor-0)",
+            "default": true
+          }
+        ]
       },
        {
   "type": "confidence_carousel",
@@ -1580,20 +1497,6 @@ document.addEventListener("DOMContentLoaded", function () {
   ]
 }
 ,
-      {
-        "type": "title",
-        "name": "Title",
-        "limit": 1,
-        "settings": [
-          {
-            "type": "checkbox",
-            "id": "heading_h1",
-            "label": "Set as primary page heading",
-            "info": "Uses <h1> tag. One per page recommended. [Learn more](https://cleancanvas.co.uk/support/showcase/seo#inner-anchor-0)",
-            "default": true
-          }
-        ]
-      },
 
        {
   "type": "order_timeline",

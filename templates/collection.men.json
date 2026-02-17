@@ -53,23 +53,6 @@
         "block_alignment": "center"
       }
     },
-    "featured_collection_DLDwqJ": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "title": "Combos",
-        "collection": "mens-combos",
-        "layout": "carousel",
-        "custom_sale_label": "SALE",
-        "show_vendor": false,
-        "grid": 3,
-        "rows": 2,
-        "grid_mobile": "2",
-        "hide_swatches": false,
-        "alternate_bg_color": false,
-        "show_view_all": true
-      }
-    },
     "main": {
       "type": "main-collection",
       "disabled": true,
@@ -138,6 +121,23 @@
         "show_view_all": true
       }
     },
+    "featured_collection_DLDwqJ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "title": "Combos",
+        "collection": "mens-combos",
+        "layout": "carousel",
+        "custom_sale_label": "SALE",
+        "show_vendor": false,
+        "grid": 3,
+        "rows": 2,
+        "grid_mobile": "2",
+        "hide_swatches": false,
+        "alternate_bg_color": false,
+        "show_view_all": true
+      }
+    },
     "video_reels_VYDfe3": {
       "type": "video-reels",
       "blocks": {
@@ -179,10 +179,10 @@
   "order": [
     "image_with_text_overlay_zjPLGj",
     "homepage_category_slider_a7ExCL",
-    "featured_collection_DLDwqJ",
     "main",
     "featured_collection_F3R68K",
     "featured_collection_EWgbmU",
+    "featured_collection_DLDwqJ",
     "video_reels_VYDfe3"
   ]
 }

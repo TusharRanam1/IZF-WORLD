@@ -1469,9 +1469,22 @@ document.addEventListener("DOMContentLoaded", function () {
       setInterval(nextSlide, speed);
     }
 
-    window.addEventListener("resize", function () {
-      location.reload();
-    });
+    let resizeTimer;
+
+window.addEventListener("resize", function () {
+  clearTimeout(resizeTimer);
+
+  resizeTimer = setTimeout(function () {
+    const newVisible = getVisibleCount();
+
+    if (newVisible !== visible) {
+      visible = newVisible;
+      index = 0;
+      updateCarousel(false);
+    }
+  }, 250);
+});
+
 
   });
 

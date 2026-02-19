@@ -136,7 +136,6 @@
         },
         "confidence_carousel_R3FH3k": {
           "type": "confidence_carousel",
-          "disabled": true,
           "settings": {
             "heading": "Shop With Confidence",
             "enable_autoplay": true,

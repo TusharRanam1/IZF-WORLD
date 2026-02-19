@@ -1465,9 +1465,12 @@ document.addEventListener("DOMContentLoaded", function () {
     createDots();
     updateCarousel(false);
 
-    if (autoplay) {
-      setInterval(nextSlide, speed);
-    }
+    let interval;
+
+if (autoplay) {
+  interval = setInterval(nextSlide, speed);
+}
+
 
     let resizeTimer;
 

@@ -2,9 +2,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+{% comment %} Keep ≤4 preconnects for LCP; monorail (analytics) removed to avoid "more than 4 preconnect" warning. {% endcomment %}
 <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
 <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
-<link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
 
 {%- liquid
   assign base_font = settings.type_base_font
@@ -33,9 +33,7 @@
   <link rel="preload" as="font" href="{{ logo_font | font_url }}" type="font/woff2" crossorigin>
 {%- endunless -%}
 
-<link rel="preload" href="{{ 'vendor.min.js' | asset_url }}" as="script">
-<link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
-
+{% comment %} Script preloads removed so browser prioritizes LCP image; scripts already load deferred at bottom. {% endcomment %}
 {%- if canonical_url != blank  -%}
   <link rel="canonical" href="{{ canonical_url }}" />
 {%- endif -%}

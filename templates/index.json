@@ -15,8 +15,8 @@
         "image_7TmRGJ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/all_new_20260220_143710_0000.png",
-            "mobile_image": "shopify://shop_images/Copy_of_all_new_20260220_143620_0000.png",
+            "image": "shopify://shop_images/all_new_desktop.webp",
+            "mobile_image": "shopify://shop_images/all_new_mobile.webp",
             "slide_link": "shopify://collections/all",
             "subheading": "",
             "title": "",
